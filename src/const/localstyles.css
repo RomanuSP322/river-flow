@@ -1,0 +1,45 @@
+:root {
+    --color-bg:  linear-gradient(261.21deg, #E4E9E3 4.83%, #ECEBE7 85.85%);;
+    --color-paper: #FCFAE7;
+    --color-font: #0E2A36;
+    --color-accent: #47B48F;
+    --color-secondary: #F07B59;
+    --color-red: #B44748;
+    --color-yellow: #D9C108;
+    --color-grey: #CBCDCA;
+  }
+  
+  .h2 {
+    color:var(--color-font);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 72px; 
+    margin: 0;
+  
+  }
+  
+  .h3{
+    color:var(--color-accent);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px; 
+    margin: 0;
+    padding-top: 16px;
+  }
+  
+  .h4 {
+    color:var(--color-font);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 0; 
+  }
+  
+  .p {
+    color:var(--color-font);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+  }
+  

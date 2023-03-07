@@ -1,0 +1,28 @@
+import React from 'react';
+import logoGradient from '../../images/logo-gradient.svg';
+import './Intro.css';
+import Socials from '../Socials/Socials';
+import Button from '../Button/Button';
+
+function Intro() {
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  return (
+    <div className='intro'>
+      <div className='intro__socials'>
+        <Socials />
+      </div>
+      <div className='intro__heading'>
+        <img src={logoGradient} alt='River flow logo gradient' />
+        <h2 className='h2'> Поймай речную волну</h2>
+        <h3 className='h3'>В Москве и подмосковье</h3>
+      </div>
+      <div className='intro__button'>
+        <p className='intro__price'>Сет от 3000р</p>
+        <Button color={'var(--color-accent)'} name={"Записаться"}/>
+      </div>
+    </div>
+  );
+}
+
+export default Intro;
