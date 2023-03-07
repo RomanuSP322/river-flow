@@ -14,7 +14,7 @@ function Intro() {
       </div>
       <div className='intro__heading'>
         <img src={logoGradient} alt='River flow logo gradient' />
-        <h2 className='h2'> Поймай речную волну</h2>
+        <h2 className='h1'> Поймай речную волну</h2>
         <h3 className='h3'>В Москве и подмосковье</h3>
       </div>
       <div className='intro__button'>

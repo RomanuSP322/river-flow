@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import introbg from "../../images/mainbg.png";
+import About from '../About/About';
 import Intro from "../Intro/Intro";
 import "./Main.css";
 
@@ -28,6 +29,9 @@ function Main() {
     <div className="main">
       <section className="main__section main__intro" style={{"--introbg": `url(${introbg})`}}>
          <Intro/>
+      </section>
+      <section className='main__section main__about'>
+        <About/>
       </section>
     </div>
   );
