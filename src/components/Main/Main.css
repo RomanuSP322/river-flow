@@ -1,28 +1,28 @@
 .main {
   width: 100%;
- 
+
   z-index: 1;
   scroll-snap-type: y mandatory;
 }
 
 .main__section {
-
   box-sizing: border-box;
 }
-
 
 .main__intro {
   background-image: var(--introbg);
   background-size: cover;
   background-position: top;
- 
 }
 
 .main__about {
-  
-background: linear-gradient(256.35deg, #E3E8E2 0%, #ECEBE7 91.6%);
-  height: 100vh;
- 
+  background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
+  padding-bottom: 100px;
+}
+
+.main__wakesurf {
+  background-image: var(--wakesurfbg);  
+
 }
 
 .noselect {
@@ -33,8 +33,3 @@ background: linear-gradient(256.35deg, #E3E8E2 0%, #ECEBE7 91.6%);
   -ms-user-select: none;
   user-select: none;
 }
-
-
-
-
-

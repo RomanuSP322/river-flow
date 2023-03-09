@@ -7,6 +7,7 @@
     --color-red: #B44748;
     --color-yellow: #D9C108;
     --color-grey: #CBCDCA;
+    --color-darkgrey: #9D9D9D;
   }
   
   .h1{
@@ -51,7 +52,7 @@
     color:var(--color-font);
     font-size: 18px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 26px;
     margin: 0;
     padding-top: 20px;
   }

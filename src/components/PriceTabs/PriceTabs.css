@@ -1,0 +1,129 @@
+.tabs{
+  background-image: var(--pricebg);
+  background-size: 370px 205px;
+  background-position: center right;
+  background-repeat: no-repeat;
+display: flex;
+align-items: center;
+width: 580px;
+}
+
+
+
+.tabs__titles{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  
+
+}
+
+.tab__title{
+  font-size: 20px;
+  height: 60px;
+  display: inline-block;
+  color: var(--color-darkgrey);
+  cursor: pointer;
+  width: 254px;
+  padding-top: 24px;
+  box-sizing: border-box;
+  padding-left: 15px;
+  transition: color 0.4s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.tab__title:not(.tab__title_active):hover {
+  filter: drop-shadow(0 0 12px var(--color-accent));
+  transition: filter  0.4s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+
+
+.tab__title_active {
+  background-image: var(--activetab);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  color: var(--color-secondary);
+  font-weight: 700;
+
+}
+
+.tabs__content { 
+  min-height: 220px; 
+  padding-top: 40px; 
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 20px;
+  border: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tab__content{
+  opacity: 0;
+  transition: opacity  .4s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+}
+
+
+
+.tab__content_active {
+  opacity: 1;
+
+  z-index: 5;
+}
+
+
+.tab__ico{
+  fill: var(--color-darkgrey);
+  padding-right: 6px;
+  transition: all  0.4s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.tab__ico_active {
+  fill: var(--color-secondary);
+}
+
+.tab-table {
+  min-width: 350px;
+}
+
+.tab-table__name {
+  margin: 0;
+
+
+}
+
+.tab-table__value {
+  margin: 0;
+  font-weight: 700;
+
+}
+
+
+
+.tab-table__string {
+  height: 32px;
+
+}
+
+.tab-table__link {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  text-decoration: none;
+  color: var(--color-text);
+  padding-top: 15px;
+  transition: all  0.4s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.tab-table__link:hover {
+  filter: drop-shadow(0 0 10px var(--color-accent));
+}
+
+.tab-table__location {
+  margin-left: 15px;
+}
