@@ -7,10 +7,10 @@ import './PriceTabs.css';
 
 function PriceTabs(props) {
   const [visibleTab, setVisibleTab] = React.useState(props.data[0].id);
-
+  const setboat = props.boat;
   const listTitles = props.data.map((item) => (
     <li
-      onClick={() => setVisibleTab(item.id)}
+      onClick={() => { setVisibleTab(item.id);  setboat(item.id)}}
       style={{ '--activetab': `url(${activetab})` }}
       className={
         visibleTab === item.id ? 'tab__title tab__title_active' : 'tab__title'

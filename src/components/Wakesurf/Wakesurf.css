@@ -1,4 +1,12 @@
 .wakesurf {
+  display: flex;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.wakesurf__info {
   width: 900px;
   background-image: var(--wakesurf);
   background-size: 932px 997px;
@@ -9,7 +17,7 @@
   margin-left: 90px;
 }
 
-.wakesurf__content {
+.wakesurf__board {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,4 +26,15 @@
 
 .wakesurf__subtitle {
 padding-bottom: 20px;
+}
+
+.wakesurf__contact { 
+  padding-left: 80px;
+  display: flex;
+  padding-top: 20px;
+}
+
+.wakesurf__callme {
+  align-self:flex-end;
+  
 }

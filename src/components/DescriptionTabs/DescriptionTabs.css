@@ -1,0 +1,126 @@
+.desc-tabs {
+  position: relative;
+  overflow: hidden;
+  width: 700px;
+  padding-bottom: 40px;
+}
+
+.desc-tabs__titles {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.desc-tabs__title {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.076, 1);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.desc-tabs__title:not(.desc-tabs__title_active):hover {
+ transform: translateY(-10px);
+ cursor: pointer;
+}
+
+.desc-tabs__title::before {
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  content: "";
+  width: 120%;
+  height: 140%;
+  background-image: var(--tab);
+
+  background-size: 100% 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  z-index: -1;
+  padding: 6px;
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.076, 1);
+}
+.desc-tabs__title_active.desc-tabs__title::before {
+  opacity: 0;
+}
+
+.desc-tabs__marker {
+  position: absolute;
+  left: 0px;
+  background-image: var(--tabmarker);
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.076, 1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 180px;
+  height: 10px;
+}
+
+.desc-tab__content-wrapper {
+ 
+}
+
+.desc-tabs__content {
+  display: flex;
+
+  transition: all 0.6s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.desc-tab__content {
+  width: 635px;
+  padding-left: 40px;
+  padding-right: 40px;
+  
+}
+
+.desc-tab__include {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: space-between;
+    
+}
+
+.desc-tab__include-item {
+  display: flex;
+  flex-basis: 49%;
+  align-items: center; 
+}
+
+.desc-tab__include-ico {  
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.desc-tab__include-ico-wrapper {
+    flex-basis: 22%;
+   
+}
+
+.desc-tab__include-info {
+    font-size: 18px;
+}
+
+.desc-tab__info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.desc-tab__info-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.desc-tab__info-text {
+    font-size: 18px;
+    line-height: 30px;
+}

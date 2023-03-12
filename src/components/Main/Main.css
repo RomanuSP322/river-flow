@@ -22,7 +22,12 @@
 
 .main__wakesurf {
   background-image: var(--wakesurfbg);  
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.main__boatrent {
+  background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
 }
 
 .noselect {

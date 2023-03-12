@@ -2,14 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import introbg from '../../images/mainbg.png';
 import wakesurfbg from '../../images/wakesurf-bg.png';
-
+import {panels} from "../../const/info";
 import About from '../About/About';
 import Intro from '../Intro/Intro';
 import Wakesurf from '../Wakesurf/Wakesurf';
+import Accordion from '../Accordion/Accordion';
 import './Main.css';
 
 function Main() {
-  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // useEffect(() => {
   //   document.title = "ЦТИ";
@@ -39,6 +40,12 @@ function Main() {
       <section className='main__section main__wakesurf' style={{ '--wakesurfbg': `url(${wakesurfbg})`}}>
         <Wakesurf/>
       </section>
+      <section className='main__section main__boatrent'>
+      <Accordion
+          panels={panels}
+          type={windowWidth < 901 ? "horizontal" : "vertical"}
+        />
+        </section>
     </div>
   );
 }

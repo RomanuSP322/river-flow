@@ -51,8 +51,12 @@ class Panel extends React.Component {
           >
             <h3
               className={`panel__title ${
-                orientation === "horizontal" ? "panel__title_horizontal" : ""
+                orientation === "horizontal" ? "panel__title_horizontal" : ""                
+              } ${
+                isActive ? "" : "panel__title_active"                
               }`}
+              style={{       
+                color: `${text_color}`}}
             >
               {label}
             </h3>
