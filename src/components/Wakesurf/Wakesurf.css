@@ -28,6 +28,11 @@
 padding-bottom: 20px;
 }
 
+.wakesurf__photos-img {
+  object-fit: cover;
+  width: 100%;
+}
+
 .wakesurf__contact { 
   padding-left: 80px;
   display: flex;

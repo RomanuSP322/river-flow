@@ -19,7 +19,7 @@ function Intro() {
       </div>
       <div className='intro__button'>
         <p className='intro__price'>Сет от 3000р</p>
-        <Button color={'var(--color-accent)'} name={"Записаться"}/>
+        <Button name={"Записаться"}/>
       </div>
     </div>
   );

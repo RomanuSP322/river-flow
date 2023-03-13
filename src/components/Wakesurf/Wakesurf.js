@@ -31,7 +31,7 @@ function Wakesurf() {
         </div>
       </div>
       <div className="wakesurf__photos">
-        <img src={wakesurfPhotos} />
+        <img src={wakesurfPhotos} className="wakesurf__photos-img"/>
         <div className="wakesurf__contact">
           <div>
             {/* {visibleBoat === "1" && (

@@ -8,12 +8,36 @@ import wakeboardico from "../images/wakeboard-ico.svg";
 import waterskiico from "../images/waterski-ico.svg";
 import tubingico from "../images/tubing-ico.svg";
 import mapico from "../images/map-ico.svg";
-
+import wakesurfico from "../images/wakesurf-ico.svg";
 
 import searay1 from "../images/searay1.png";
 import searay2 from "../images/searay2.png";
 import searay3 from "../images/searay3.png";
 import searay4 from "../images/searay4.png";
+
+import priceSearay from "../images/expensive-green.svg";
+import groupSearay from "../images/groupsearay.svg";
+import sportSearay from "../images/wakeboard-ico-green.svg";
+
+
+import favourit1 from "../images/favourit1.png";
+import favourit2 from "../images/favourit2.png";
+import favourit3 from "../images/favourit3.png";
+import favourit4 from "../images/favourit4.png";
+
+import priceFavourit from "../images/cheap.svg";
+import groupFavourit from "../images/groupfavourit.svg";
+import sportFavourit from "../images/wakeboard-ico-red.svg";
+
+import regal1 from "../images/regal1.png";
+import regal2 from "../images/regal2.png";
+import regal3 from "../images/regal3.png";
+import regal4 from "../images/regal4.png";
+
+import priceRegal from "../images/expensive-yellow.svg";
+import groupRegal from "../images/groupregal.svg";
+import sportRegal from "../images/wakesurf-ico-yellow.svg";
+
 
 import accordionImg1 from "../images/searaybg.png";
 import accordionImg2 from "../images/favouritbg.png";
@@ -90,11 +114,16 @@ const panels = [
     {
       label: "Sea Ray 230",
       title: "Аренда Катера",
+      icons: [
+        {img: priceSearay},
+        {img: groupSearay},
+        {img: sportSearay},    
+      ],      
       subtitle: "С капитаном и без",
       text_color: "#47B48F",
       content_title: "Sea Ray 230",
       content:
-        "Путешествуете ли вы вдоль береговой линии, занимаетесь водными видами спорта или просто отдыхаете с друзьями и семьей, в Sea Ray 230 Sundancer есть все необходимое для незабываемого и приятного времяпровождения на реке.",
+        "Первоклассный катер, предлагающий роскошный и комфортный отдых на реке. Элегантный и стильный дизайн, вместительные каюты, просторный салон и мощные ходовые качества, Sea Ray 230 идеально подходит для дня, проведенного на воде.",
       imgurl: accordionImg1,
       include: [
         {
@@ -119,8 +148,8 @@ const panels = [
           ico: tubingico,
         },
         {
-          name: "Долгопрудный",
-          url: "",
+          name: "Мякинино",
+          url: "https://yandex.ru/maps/-/CCUOaBTvxC",
           ico: mapico,
         },
       ],
@@ -135,7 +164,7 @@ const panels = [
         },
         {
           name: 'Без капитана',
-          value: '9000 р/ч',
+          value: '9.000 р/ч',
         },
         {
           name: '24 часа',
@@ -165,12 +194,18 @@ const panels = [
     },
     {
       label: "Favourit 480",
+      color: 'red',
       title: "Аренда Катера",
+      icons: [
+        {img: priceFavourit},
+        {img: groupFavourit},
+        {img: sportFavourit},    
+      ], 
       subtitle: "С капитаном и без",
       content_title: "Favourit 480",
       text_color: "#B44748",
       content:
-        "Модуль проектирования технологических процессов на базе интерактивного каталога изделия позволяет формировать любую технологическую и проектную документацию в цифровом виде и способствует введению безбумажной технологии производства",
+        "Отличный выбор для небольшой компании, которая ищет универсальную и практичную моторную лодку. Благодаря просторному кокпиту, мощному подвесному двигателю Favourit 480 идеально подходит для круизов, рыбалки и водных видов спорта.",
       imgurl: accordionImg2,
       include: [
         {
@@ -178,7 +213,7 @@ const panels = [
           ico: capico,
         },
         {
-          name: "7 гостей + кэп",
+          name: "5 гостей + кэп",
           ico: groupico,
         },
 
@@ -196,36 +231,35 @@ const panels = [
         },
         {
           name: "Долгопрудный",
-          url: "",
+          url: "https://yandex.ru/maps/-/CCUOaJFNxD",
           ico: mapico,
         },
       ],
       prices: [
         {
           name: 'Будни',
-          value: '10.000 р/ч',
+          value: '5.000 р/ч',
         },
         {
           name: 'Выходные',
-          value: '11.000 р/ч',
+          value: '6.000 р/ч',
         },
         {
           name: 'Без капитана',
-          value: '9000 р/ч',
+          value: '4.000 р/ч',
         },
         {
           name: '24 часа',
-          value: '120.000 р/сут',
+          value: '60.000 р/сут',
         },
       ],
       info: 
         {
           title: "Характеристики:",
           strings: [
-            { string: "Длина 7 метров" },
-            { string: "Каюта в полный рост" },
-            { string: "Туалет" },
-            { string: "Газовая печь" },
+            { string: "Длина 5 метров" },
+            { string: "Ширина 2 метра" },
+            { string: "Мотор Suzuki 90 л.с" },               
             { string: "Bluetooth" },  
             { string: "Гидрокостюмы" },  
             { string: "Доставка по запросу" },  
@@ -233,31 +267,40 @@ const panels = [
           ],
         },      
       photos: [
-        {img: searay1},
-        {img: searay2},
-        {img: searay3},
-        {img: searay4},
+        {img: favourit1},
+        {img: favourit2},
+        {img: favourit3},
+        {img: favourit4},
       ]
     },
     {
       label: "Regal Session22",
+      color: 'yellow',
       title: "Аренда Катера",
-      subtitle: "С капитаном и без",
+      icons: [
+        {img: priceRegal},
+        {img: groupRegal},
+        {img: sportRegal},    
+      ], 
+      subtitle: "С капитаном ",
       text_color: "#D9C108",
       content_title: "Regal Session22",
       content:
-        "Интерактивный каталог позволяет провести подетальную паспортизацию подвижного состава. Цифровая копия каждого локомотива и вагона доступна в реальном времени от выпуска до утилизации",
+        "Идеальный катер для любителей вейксерфа c передовой конструкцией корпуса, современными технологиями и вместительному салону. Regal Session 22 обеспечивает комфортный ход и является превосходной базой для водных видов спорта.",
       imgurl: accordionImg3,
       include: [
         {
-          name: "C капитаном и без",
+          name: "C капитаном",
           ico: capico,
         },
         {
           name: "7 гостей + кэп",
           ico: groupico,
         },
-
+        {
+          name: "Вейксерф",
+          ico: wakesurfico,
+        },
         {
           name: "Вейкборд",
           ico: wakeboardico,
@@ -267,12 +310,8 @@ const panels = [
           ico: waterskiico,
         },
         {
-          name: "Ватрушка",
-          ico: tubingico,
-        },
-        {
-          name: "Долгопрудный",
-          url: "",
+          name: "Мякинино",
+          url: "https://yandex.ru/maps/-/CCUOaBTvxC",
           ico: mapico,
         },
       ],
@@ -284,10 +323,6 @@ const panels = [
         {
           name: 'Выходные',
           value: '11.000 р/ч',
-        },
-        {
-          name: 'Без капитана',
-          value: '9000 р/ч',
         },
         {
           name: '24 часа',
@@ -309,10 +344,10 @@ const panels = [
           ],
         },      
       photos: [
-        {img: searay1},
-        {img: searay2},
-        {img: searay3},
-        {img: searay4},
+        {img: regal1},
+        {img: regal2},
+        {img: regal3},
+        {img: regal4},
       ]
     },
   ];

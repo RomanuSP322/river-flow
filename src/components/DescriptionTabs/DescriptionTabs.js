@@ -1,7 +1,7 @@
 import React from 'react';
 import pricebg from '../../images/pricebg.png';
 import tab from '../../images/desctabbg.svg';
-import tabmarker from '../../images/tabmarker.svg';
+import tabmarker from '../../images/tabmarker.png';
 
 import './DescriptionTabs.css';
 

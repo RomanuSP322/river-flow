@@ -28,6 +28,8 @@
 
 .main__boatrent {
   background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .noselect {

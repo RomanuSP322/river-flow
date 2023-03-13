@@ -1,4 +1,6 @@
 import React from "react";
+import linegrunge from "../../images/grungeline.png"
+import Button from "../Button/Button";
 
 class Panel extends React.Component {
   render() {
@@ -13,6 +15,8 @@ class Panel extends React.Component {
       closedWidth,
       orientation,
       length,
+      icons,
+      color
     } = this.props;
 
     const isActive = activeTab === index;
@@ -33,6 +37,7 @@ class Panel extends React.Component {
         className={`panel ${orientation === "horizontal" ? "" : ""} ${
           index === length - 1 ? "" : "panel__border"
         }`}
+        style={{ "--line": `url(${linegrunge})`, "--color": `${text_color}` }}
         aria-expanded={isActive}
       >
         <div
@@ -60,6 +65,14 @@ class Panel extends React.Component {
             >
               {label}
             </h3>
+            <div className="panel__label-icons">
+                  {icons.map((ico, i) => (
+                    <img src={ico.img} className="panel__label-icon" />
+                  ))}
+                </div>
+                <div className="panel__button">
+                <Button bg={color} name='Подробнее' width="140" height='50'  />
+                </div>
           </button>
         </div>
       </div>
