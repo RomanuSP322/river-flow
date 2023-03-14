@@ -1,6 +1,6 @@
 .tabs{
   background-image: var(--pricebg);
-  background-size: 370px 205px;
+  background-size: 380px 205px;
   background-position: center right;
   background-repeat: no-repeat;
 display: flex;
@@ -22,19 +22,19 @@ width: 580px;
 
 .tab__title{
   font-size: 20px;
-  height: 60px;
+  height: 55px;
   display: inline-block;
   color: var(--color-darkgrey);
   cursor: pointer;
   width: 254px;
-  padding-top: 24px;
+  padding-top: 18px;
   box-sizing: border-box;
   padding-left: 15px;
   transition: color 0.4s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
 .tab__title:not(.tab__title_active):hover {
-  filter: drop-shadow(0 0 12px var(--color-accent));
+  filter: drop-shadow(0 0 12px var(--active-color));
   transition: filter  0.4s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
@@ -42,10 +42,10 @@ width: 580px;
 
 .tab__title_active {
   background-image: var(--activetab);
-  background-size: contain;
+  background-size: 260px 50px;
   background-repeat: no-repeat;
   background-position: left;
-  color: var(--color-secondary);
+  color: var(--active-color);
   font-weight: 700;
 
 }
@@ -84,7 +84,7 @@ width: 580px;
 }
 
 .tab__ico_active {
-  fill: var(--color-secondary);
+  fill: var(--active-color);
 }
 
 .tab-table {
@@ -100,7 +100,7 @@ width: 580px;
 .tab-table__value {
   margin: 0;
   font-weight: 700;
-
+  /* color: var(--active-color); */
 }
 
 

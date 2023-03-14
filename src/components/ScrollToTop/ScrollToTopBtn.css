@@ -1,10 +1,15 @@
 .scrolltop {
   position: fixed;
   bottom: 20px;
-  right: 30px;
-  animation: fadeIn 700ms ease-in-out 1s both;
+  right: 30px; 
   cursor: pointer;
-  z-index: 4;
+  z-index: 10;
+  transition: all ease-in-out .4s;
+  display: none;
+}
+
+.scrolltop_active {
+ display: block;
 }
 
 @media screen and (max-width: 800px) {
@@ -19,10 +24,12 @@
   }
 }
 
-.scrolltop:hover .scrolltop__ico {
-  opacity: 1;
-  animation: none;
-  transition: opacity 0.5s ease-in-out;
+.scrolltop:hover {
+  filter: drop-shadow(0 0 14px var(--color-accent));
+}
+
+.scrolltop__btn:focus {
+  display: none;
 }
 
 @keyframes fadeIn {
@@ -34,7 +41,7 @@
   }
 }
 
-.scrolltop__ico {
+/* .scrolltop__ico {
   margin-left: 20px;
   width: 20px;
   height: 20px;
@@ -61,17 +68,22 @@
   top: 32px;
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.5s;
+} */
+  
+.scrolltop__arrow {
+  height: 60px;
+  width: 35px;
 }
 
 .scrolltop__btn_text {
-  color: #12abdb;
+  color: var(--color-accent);
   margin: 0;
-  min-width: 64px;
+  
   text-align: center;
   font-size: 13px;
-  font-weight: 500px;
+  font-weight: 400px;
 }
-@-webkit-keyframes sdb07 {
+/* @-webkit-keyframes sdb07 {
   0% {
     opacity: 0;
   }
@@ -92,4 +104,4 @@
   100% {
     opacity: 1;
   }
-}
+} */

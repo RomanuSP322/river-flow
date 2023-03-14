@@ -1,6 +1,4 @@
-.callme {
-    width: 270px;
-    height: 130px;
+.callme {  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,6 +10,8 @@
     background-image: var(--callmebg);
     background-size: 270px 130px;
     background-repeat: no-repeat;
+    width: 270px;
+    height: 130px;
 }
 
 .callme__title {

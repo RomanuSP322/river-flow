@@ -28,6 +28,11 @@
 padding-bottom: 20px;
 }
 
+
+.wakesurf__desc-tabs {
+  padding-bottom: 40px;
+}
+
 .wakesurf__photos-img {
   object-fit: cover;
   width: 100%;

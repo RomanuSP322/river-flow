@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   width: 700px;
-  padding-bottom: 40px;
+  
 }
 
 .desc-tabs__titles {
@@ -123,4 +123,9 @@
 .desc-tab__info-text {
     font-size: 18px;
     line-height: 30px;
+}
+
+.desc-tab__map {
+  padding-top: 20px;
+padding-left: 50px
 }

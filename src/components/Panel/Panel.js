@@ -67,11 +67,11 @@ class Panel extends React.Component {
             </h3>
             <div className="panel__label-icons">
                   {icons.map((ico, i) => (
-                    <img src={ico.img} className="panel__label-icon" />
+                    <img src={ico.img} className="panel__label-ico" />
                   ))}
                 </div>
                 <div className="panel__button">
-                <Button bg={color} name='Подробнее' width="140" height='50'  />
+                <Button bg={color} name='Подробнее' width="140" height='55'  />
                 </div>
           </button>
         </div>

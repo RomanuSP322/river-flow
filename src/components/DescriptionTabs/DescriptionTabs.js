@@ -5,7 +5,7 @@ import tabmarker from '../../images/tabmarker.png';
 
 import './DescriptionTabs.css';
 
-function DescriptionTabs({ data }) {
+function DescriptionTabs({ data, boat}) {
   const [visibleTab, setVisibleTab] = React.useState(data[0].id);
 
   const listTitles = data.map((item) => (
@@ -32,13 +32,13 @@ function DescriptionTabs({ data }) {
       )}
       {item.include && (
         <div className='desc-tab__content desc-tab__include'>
-          {' '}
+       
           {item.include.map((pos) => (
             <div className='desc-tab__include-item'>
               <div className='desc-tab__include-ico-wrapper'>
                 <img src={pos.ico} className='desc-tab__include-ico' />
               </div>
-              <p className='desc-tab__include-info'>{pos.name}</p>
+              <p className='desc-tab__include-info'>{pos.name}{' '}{pos.name ==='Вместимость' ? (boat === 'Favourit 480' ? '5 гостей' : (boat === 'Sea Ray 230' ? '7 гостей' : (boat === 'Regal Session 22' ? '7 гостей' : ''))) : ''}{pos.name ==='Катер' && boat }</p>
             </div>
           ))}
         </div>
@@ -55,6 +55,18 @@ function DescriptionTabs({ data }) {
           ))}
         </div>
       )}
+
+{/* {item.url && (  
+     <div className='desc-tab__map'>
+            <iframe
+            src={(boat === 'Favourit 480' ? item.url[0] : (boat === 'Sea Ray 230' ? item.url[1] : (boat === 'Regal Session 22' ? item.url[2] : '')))}
+            width="480"
+            height="210"
+            frameborder="0"
+          ></iframe>
+          </div>
+      
+      )} */}
     </div>
   ));
 

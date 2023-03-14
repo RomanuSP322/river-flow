@@ -32,6 +32,18 @@
   padding-bottom: 100px;
 }
 
+
+.main__wakeboard{
+  background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
+
+  
+ 
+}
+
+
+
+
+
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;

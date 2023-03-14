@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import pricebg from "../../images/pricebg.png";
 import "./Accordion.css";
 
-// {` ${type === 'horizontal' ? '' : ''}`}
+
 
 class Accordion extends React.Component {
   constructor(props) {

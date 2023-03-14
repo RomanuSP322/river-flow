@@ -118,14 +118,18 @@
 .panel__label-icons {
   display: flex;
   justify-content: space-between;
-  max-width: 200px;
+  max-width: 180px;
   width: 100%;
   padding-top: 20px;
 }
 
+.panel__label-ico {
+  height: 35px;
+}
+
 .panel__button {
   margin-top: auto;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .panel__title {

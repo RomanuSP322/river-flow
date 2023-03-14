@@ -10,8 +10,8 @@ function PriceTabs(props) {
   const setboat = props.boat;
   const listTitles = props.data.map((item) => (
     <li
-      onClick={() => { setVisibleTab(item.id);  setboat(item.id)}}
-      style={{ '--activetab': `url(${activetab})` }}
+      onClick={() => { setVisibleTab(item.id);  setboat(item.boat)}}
+      style={{ '--activetab': `url(${activetab})`, "--active-color": `${item.color}` }}
       className={
         visibleTab === item.id ? 'tab__title tab__title_active' : 'tab__title'
       }
@@ -33,7 +33,7 @@ function PriceTabs(props) {
 
   const listContent = props.data.map((item) => (
     <div className={`tab__content ${visibleTab === item.id ? `tab__content_active` : ``} `}>
-      <table className='tab-table'>
+      <table className='tab-table'   style={{"--active-color": `${item.color}` }}>
         <tbody>
           {item.prices.map((price, i) => (
             <tr className='tab-table__string' key={i}>

@@ -8,6 +8,7 @@ import Intro from '../Intro/Intro';
 import Wakesurf from '../Wakesurf/Wakesurf';
 import Accordion from '../Accordion/Accordion';
 import './Main.css';
+import Wakeboard from '../Wakeboard/Wakeboard';
 
 function Main() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -16,13 +17,13 @@ function Main() {
   //   document.title = "ЦТИ";
   // });
 
-  // useEffect(() => {
-  //   function handleResize() {
-  //     setWindowWidth(window.innerWidth);
-  //   }
-  //   window.addEventListener("resize", handleResize);
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const next = useRef(null);
 
@@ -45,6 +46,9 @@ function Main() {
           panels={panels}
           type={windowWidth < 901 ? "horizontal" : "vertical"}
         />
+        </section>
+        <section className='main__section main__wakeboard'>
+          <Wakeboard/>
         </section>
     </div>
   );
