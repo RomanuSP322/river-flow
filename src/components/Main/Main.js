@@ -9,6 +9,7 @@ import Wakesurf from '../Wakesurf/Wakesurf';
 import Accordion from '../Accordion/Accordion';
 import './Main.css';
 import Wakeboard from '../Wakeboard/Wakeboard';
+import Walks from '../Walks/Walks';
 
 function Main() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -49,6 +50,9 @@ function Main() {
         </section>
         <section className='main__section main__wakeboard'>
           <Wakeboard/>
+        </section>
+        <section className='main__slider'>
+        <Walks/>
         </section>
     </div>
   );

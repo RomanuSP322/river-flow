@@ -1,0 +1,29 @@
+.walks {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: var(--walksbg);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.walks__intro {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.walks__title {
+    max-width: 550px; 
+    color: #ffffff !important;
+}
+
+.walks__subtitle {
+    max-width: 550px;
+}
+
+
+.walks__description {
+    color: #ffffff !important;
+    max-width: 715px; 
+    padding-bottom: 50px; 
+}

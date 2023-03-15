@@ -10,7 +10,16 @@ import tubingico from '../images/tubing-ico.svg';
 import mapico from '../images/map-ico.svg';
 import wakesurfico from '../images/wakesurf-ico.svg';
 import wakeboardBoard from '../images/wakeboard-board-ico.svg';
-import waterskiSki from '../images/waterski-ski-ico.svg';
+
+import boaticoWhite from '../images/boatico-white.svg';
+import groupicoWhite from '../images/group-ico-white.svg';
+import capicoWhite from '../images/cap-ico-white.svg';
+import tubingicoWhite from '../images/tubing-ico-white.svg';
+import wakeboardWhite from '../images/wakeboard-ico-white.svg';
+import baloonsWhite from '../images/baloons-ico-white.svg';
+import eatsWhite from '../images/eats-ico-white.svg';
+import waterskiicoWhite from '../images/waterski-ico-white.svg';
+import bluetoothWhite from '../images/bluetooth-ico-white.svg';
 
 import searay1 from '../images/searay1.png';
 import searay2 from '../images/searay2.png';
@@ -42,6 +51,11 @@ import sportRegal from '../images/wakesurf-ico-yellow.svg';
 import accordionImg1 from '../images/searaybg.png';
 import accordionImg2 from '../images/favouritbg.png';
 import accordionImg3 from '../images/regalbg.png';
+
+import sliderBirthday from '../images/birthday-img.png';
+import sliderDate from '../images/date-img.png';
+import sliderDay from '../images/day-img.png';
+import sliderParty from '../images/party-img.png';
 
 const wakesurfInfo = [
   {
@@ -403,4 +417,190 @@ const wakeboardInfo = [
   },
 ];
 
-export { wakesurfInfo, panels, wakeboardInfo };
+const walksInfo = [
+  {
+    id: 0,
+    title: 'День рождения',
+    price: '35.000 р',
+    img: sliderBirthday,
+    description: 'Вечеринка на нашем катере Sea Ray 230 станет запоминающимся событием для всех. Собирайте своих друзей и близких и отправляйтесь на воду, чтобы провести день рождения оригинально, весело и солнечно!',
+    include: [
+      {
+        name: 'Sea Ray 230 на 3 часа',
+        ico: boaticoWhite,
+      },
+      {
+        name: '7 гостей',
+        ico: groupicoWhite,
+      },
+      {
+        name: 'Водные лыжи',
+        ico: waterskiicoWhite,
+      },
+      {
+        name: 'Праздничное оформление',
+        ico: baloonsWhite,
+      },
+      {
+        name: 'Bluetooth',
+        ico: bluetoothWhite,
+      },
+      {
+        name: 'Вейкборд',
+        ico: wakeboardWhite,
+      },
+      {
+        name: 'Капитан/Инструктор',
+        ico: capicoWhite,
+      },
+      {
+        name: 'Фуршет',
+        ico: eatsWhite,
+      },
+      {
+        name: 'Тюбинг',
+        ico: tubingicoWhite,
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: 'Свидание',
+    price: '35.000 р',
+    img: sliderDate,
+    description: 'Вечеринка на нашем катере Sea Ray 230 станет запоминающимся событием для всех. Собирайте своих друзей и близких и отправляйтесь на воду, чтобы провести день рождения оригинально, весело и солнечно!',
+    include: [
+      {
+        name: 'Sea Ray 230 на 3 часа',
+        ico: boaticoWhite,
+      },
+      {
+        name: '7 гостей',
+        ico: groupicoWhite,
+      },
+      {
+        name: 'Водные лыжи',
+        ico: waterskiicoWhite,
+      },
+      {
+        name: 'Праздничное оформление',
+        ico: baloonsWhite,
+      },
+      {
+        name: 'Bluetooth',
+        ico: bluetoothWhite,
+      },
+      {
+        name: 'Вейкборд',
+        ico: wakeboardWhite,
+      },
+      {
+        name: 'Капитан/Инструктор',
+        ico: capicoWhite,
+      },
+      {
+        name: 'Фуршет',
+        ico: eatsWhite,
+      },
+      {
+        name: 'Тюбинг',
+        ico: tubingicoWhite,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: 'День на воде',
+    price: '35.000 р',
+    img: sliderDay,
+    description: 'Вечеринка на нашем катере Sea Ray 230 станет запоминающимся событием для всех. Собирайте своих друзей и близких и отправляйтесь на воду, чтобы провести день рождения оригинально, весело и солнечно!',
+    include: [
+      {
+        name: 'Sea Ray 230 на 3 часа',
+        ico: boaticoWhite,
+      },
+      {
+        name: '7 гостей',
+        ico: groupicoWhite,
+      },
+      {
+        name: 'Водные лыжи',
+        ico: waterskiicoWhite,
+      },
+      {
+        name: 'Праздничное оформление',
+        ico: baloonsWhite,
+      },
+      {
+        name: 'Bluetooth',
+        ico: bluetoothWhite,
+      },
+      {
+        name: 'Вейкборд',
+        ico: wakeboardWhite,
+      },
+      {
+        name: 'Капитан/Инструктор',
+        ico: capicoWhite,
+      },
+      {
+        name: 'Фуршет',
+        ico: eatsWhite,
+      },
+      {
+        name: 'Тюбинг',
+        ico: tubingicoWhite,
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    title: 'Мальчишник/Девичник',
+    price: '35.000 р',
+    img: sliderParty,
+    description: 'Вечеринка на нашем катере Sea Ray 230 станет запоминающимся событием для всех. Собирайте своих друзей и близких и отправляйтесь на воду, чтобы провести день рождения оригинально, весело и солнечно!',
+    include: [
+      {
+        name: 'Sea Ray 230 на 3 часа',
+        ico: boaticoWhite,
+      },
+      {
+        name: '7 гостей',
+        ico: groupicoWhite,
+      },
+      {
+        name: 'Водные лыжи',
+        ico: waterskiicoWhite,
+      },
+      {
+        name: 'Праздничное оформление',
+        ico: baloonsWhite,
+      },
+      {
+        name: 'Bluetooth',
+        ico: bluetoothWhite,
+      },
+      {
+        name: 'Вейкборд',
+        ico: wakeboardWhite,
+      },
+      {
+        name: 'Капитан/Инструктор',
+        ico: capicoWhite,
+      },
+      {
+        name: 'Фуршет',
+        ico: eatsWhite,
+      },
+      {
+        name: 'Тюбинг',
+        ico: tubingicoWhite,
+      },
+    ],
+  },
+];
+
+
+
+export { wakesurfInfo, panels, wakeboardInfo, walksInfo };

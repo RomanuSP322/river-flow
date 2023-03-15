@@ -8,6 +8,8 @@ import './DescriptionTabs.css';
 function DescriptionTabs({ data, boat}) {
   const [visibleTab, setVisibleTab] = React.useState(data[0].id);
 
+ 
+
   const listTitles = data.map((item) => (
     <li
       onClick={() => setVisibleTab(item.id)}
