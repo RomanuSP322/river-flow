@@ -1,0 +1,32 @@
+.certificates {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.certificates__columns {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.certificates__column_left {
+  flex-basis: 50%;
+}
+
+.certificates__button {
+  padding-top: 45px;
+ display: flex;
+ justify-content: center;
+}
+
+.certificates__column_right {
+  padding-left: 50px;
+  
+}
+
+.certificates__img {
+  width: 100%;
+}

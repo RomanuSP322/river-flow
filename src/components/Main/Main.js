@@ -10,6 +10,8 @@ import Accordion from '../Accordion/Accordion';
 import './Main.css';
 import Wakeboard from '../Wakeboard/Wakeboard';
 import Walks from '../Walks/Walks';
+import Certificates from '../Сertificates/Сertificates';
+import FAQ from '../FAQ/FAQ';
 
 function Main() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -53,6 +55,12 @@ function Main() {
         </section>
         <section className='main__slider'>
         <Walks/>
+        </section>
+        <section className='main__certificats'>
+        <Certificates/>
+        </section>
+        <section className='main__faq'>
+        <FAQ/>
         </section>
     </div>
   );

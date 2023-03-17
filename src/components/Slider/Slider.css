@@ -44,13 +44,19 @@
 
 .slider-item__content-wrapper {
     display: flex;
-    column-gap: 80px;
-    transition: all 0.6s cubic-bezier(0.65, 0, 0.076, 1);
+    
 }
 
+.slider-item__content-wrapper:hover {
+  cursor: grab;
+}
+
+.slider-item__content-wrapper:active {
+  cursor: grabbing;
+}
 
 .slider-item {
-      
+  padding: 0 40px;
 }
 
 .slider-item__columns {

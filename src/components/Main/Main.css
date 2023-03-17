@@ -46,6 +46,14 @@
 }
 
 
+.main__certificats {
+  background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
+
+}
+
+.main__faq {
+  background: linear-gradient(261.21deg, #E4E9E3 4.83%, #ECEBE7 85.85%);
+}
 
 .noselect {
   -webkit-touch-callout: none;
