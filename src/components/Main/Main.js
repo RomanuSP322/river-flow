@@ -12,6 +12,7 @@ import Wakeboard from '../Wakeboard/Wakeboard';
 import Walks from '../Walks/Walks';
 import Certificates from '../Сertificates/Сertificates';
 import FAQ from '../FAQ/FAQ';
+import Footer from '../Footer/Footer';
 
 function Main() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -28,7 +29,10 @@ function Main() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const next = useRef(null);
+  const wakesurfRef = useRef(null);
+  const wakeboardRef = useRef(null);
+  const boatrentRef = useRef(null);
+  const walksRef = useRef(null);
 
   return (
     <div className='main'>
@@ -39,21 +43,26 @@ function Main() {
         <Intro />
       </section>
       <section className='main__section main__about'>
-        <About />
+        <About   refs={{
+    wakesurfRef: wakesurfRef,
+    wakeboardRef: wakeboardRef,
+    boatrentRef: boatrentRef,
+    walksRef: walksRef,
+  }} />
       </section>
-      <section className='main__section main__wakesurf' style={{ '--wakesurfbg': `url(${wakesurfbg})`}}>
+      <section className='main__section main__wakesurf' style={{ '--wakesurfbg': `url(${wakesurfbg})`}} ref={wakesurfRef}>
         <Wakesurf/>
       </section>
-      <section className='main__section main__boatrent'>
+      <section className='main__section main__boatrent' ref={boatrentRef}>
       <Accordion
           panels={panels}
           type={windowWidth < 901 ? "horizontal" : "vertical"}
         />
         </section>
-        <section className='main__section main__wakeboard'>
+        <section className='main__section main__wakeboard' ref={wakeboardRef}>
           <Wakeboard/>
         </section>
-        <section className='main__slider'>
+        <section className='main__slider' ref={walksRef}>
         <Walks/>
         </section>
         <section className='main__certificats'>
@@ -61,6 +70,7 @@ function Main() {
         </section>
         <section className='main__faq'>
         <FAQ/>
+        <Footer/>
         </section>
     </div>
   );

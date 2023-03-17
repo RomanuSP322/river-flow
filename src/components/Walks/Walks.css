@@ -23,7 +23,9 @@
 
 
 .walks__description {
-    color: #ffffff !important;
+  color: #fff !important;
+  
+   
     max-width: 715px; 
     padding-bottom: 50px; 
 }

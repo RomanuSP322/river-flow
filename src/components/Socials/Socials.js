@@ -6,10 +6,10 @@ import inst from '../../images/instagram-logo.svg';
 import phone from '../../images/phone-logo.svg';
 import './Socials.css';
 
-function Socials() {
+function Socials({row}) {
   return (
     <div className='socials'>
-      <ul className='socials__list'>
+      <ul className={`socials__list ${row && 'socials__list_row'}`}>
         <li className='socials__item'>
           <a href='https://vk.com/' target='_blank' className='socials__link'>
             <img

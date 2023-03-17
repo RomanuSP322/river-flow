@@ -6,7 +6,8 @@ import wakeboard from '../../images/wakeboard.png';
 import Chapter from '../Chapter/Chapter';
 import './About.css';
 
-function About() {
+function About({refs}) {
+  const { wakesurfRef, wakeboardRef, boatrentRef, walksRef } = refs;
   return (
     <div className='about'>
       <div className='about__description'>
@@ -31,6 +32,7 @@ function About() {
           img={wakesurf}
           border='20px 20px 20px 115px'
           titlepos='translate(-28%, 200px) rotate(18deg)'
+          refs={wakesurfRef}
         />
       </div>
       <div className='about__chapter-wrapper about__chapter-wrapper_third'>
@@ -41,6 +43,7 @@ function About() {
           img={walks}
           border='20px 115px 20px 20px '
           titlepos='translate(-25%, 10px) rotate(-18deg)'
+          refs={walksRef}
         />
       </div>
       <div className='about__chapter-wrapper about__chapter-wrapper_half'>
@@ -51,6 +54,7 @@ function About() {
           img={rent}
           border='20px 20px 20px 115px '
           titlepos='translate(32%, 10px) rotate(-10deg)'
+          refs={boatrentRef}
         />
       </div>
       <div className='about__chapter-wrapper about__chapter-wrapper_half'>
@@ -61,6 +65,7 @@ function About() {
           img={wakeboard}
           border='20px 115px 20px 20px '
           titlepos='translate(30%, 20px) rotate(18deg)'
+          refs={wakeboardRef}
         />
       </div>
     </div>

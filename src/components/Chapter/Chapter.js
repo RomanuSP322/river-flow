@@ -2,7 +2,15 @@ import React from 'react';
 import Button from '../Button/Button';
 import './Chapter.css';
 
-function Chapter({title, price, info, img, border, titlepos}) {
+function Chapter({title, price, info, img, border, titlepos, refs}) {
+  
+  const scrollDown = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <figure className=' chapter' style={{"border-radius": `${border}`}}>
     <img className='chapter-image'
@@ -18,7 +26,7 @@ function Chapter({title, price, info, img, border, titlepos}) {
         <p className='chapter-info'>{info}</p>           
       </div>
       <div className='chapter-btn'>
-        <Button name="Подробнее"/>
+        <Button name="Подробнее" action={()=> scrollDown(refs)}/>
         </div>     
     </figcaption>
   </figure>
