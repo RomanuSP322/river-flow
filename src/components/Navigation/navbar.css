@@ -1,0 +1,157 @@
+.box-menu {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  cursor: pointer;
+  background: #f58b6c;
+  width: 50px;
+  height: 50px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  transition: width 0.4s, height 0.5s;
+  overflow: hidden;
+}
+
+.full-menu {
+  height: 400px;
+  width: 220px;
+}
+
+.wrapper {
+  width: 50px;
+  height: 50px;
+}
+
+.hamburger {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  width: 16px;
+  height: 16px;
+}
+
+.hamburger span {
+  position: absolute;
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background: #050d4b;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.hamburger span:nth-child(1) {
+  top: 3px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(4) {
+  top: 13px;
+}
+
+.hamburger.active span:nth-child(1) {
+  width: 0;
+  margin-left: 8px;
+}
+
+.hamburger.active span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(4) {
+  width: 0;
+  margin-left: 8px;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu a {
+  white-space: nowrap;
+  position: relative;
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  width: 220px;
+  height: 48px;
+  line-height: 48px;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  width: 15px;
+
+  background: #000;
+  transition: height 0.3s, top 0.3s;
+  transform: rotateZ(43deg);
+}
+.menu a.active::after {
+  top: 19px;
+  height: 20px;
+}
+
+.menu a span {
+  opacity: 0;
+  display: inline-block;
+}
+
+.menu a span.text {
+  opacity: 0;
+  color: #fff;
+  transition: margin 0.3s, opacity 0.3s, transform 0.3s;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+
+.full-menu .menu {
+  left: 0;
+}
+
+.full-menu .menu a:hover span {
+  opacity: 1;
+}
+
+.full-menu .menu a span {
+  opacity: 1;
+}
+
+.full-menu .menu a span.icon {
+  transform: scale(1.1);
+}
+
+.full-menu .menu a:hover span.text {
+  transform: translateX(5px);
+  transition-delay: 0s;
+}
+
+.menu a:nth-child(1) span {
+  transition: all 0.5s 0.1s, opacity 0.5s 0s, transform 0.5s 0s;
+}
+
+.menu a:nth-child(2) span {
+  transition: all 0.5s 0.15s, opacity 0.5s 0s, transform 0.5s 0s;
+}
+
+.menu a:nth-child(3) span {
+  transition: all 0.5s 0.2s, opacity 0.5s 0s, transform 0.5s 0s;
+}
+
+.menu a:nth-child(4) span {
+  transition: all 0.5s 0.25s, opacity 0.5s 0s, transform 0.5s 0s;
+}

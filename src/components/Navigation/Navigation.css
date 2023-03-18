@@ -1,0 +1,58 @@
+.navigation {
+  max-width: 800px;
+  width: 100%;
+}
+
+.navigation__menu {
+  height: 44px;
+
+}
+
+.navigation__list {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.navigation__button {
+  outline: none;
+  border: none;
+  background: transparent; 
+  padding: 0; 
+  color: var(--color-font);
+  transition: ease-in-out .3s;
+}
+
+.navigation__button:hover  {
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+
+
+.navigation__link_type_header {  
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 40px;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

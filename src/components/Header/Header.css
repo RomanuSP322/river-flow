@@ -2,19 +2,18 @@
   display: flex;
   position: absolute;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  background: transparent;
-  padding: 14px 350px;
-  gap: 44px;
+  padding: 10px 350px; 
   margin: 0 auto;
-  z-index: 5;
-  height: 70px;
+  z-index: 10;
   box-sizing: border-box;
+  background-color: var(--color-paper);
 }
 
 @media screen and (max-width: 1920px) {
   .header {
-    padding: 14px 150px;
+    padding: 0px 150px;
   }
 }
 
@@ -48,11 +47,7 @@
   }
 }
 
-.header_sticky {
-  background: rgb(3, 85, 137, 0.9);
-  position: fixed;
-  height: 50px;
-  top: 0;
-  transition: all 0.7s ease-in-out;
-  transition-delay: 150ms;
+.header__logo {
+  height: 40px;
+ 
 }

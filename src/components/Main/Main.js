@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-
+import React, { useState, useEffect,useRef } from 'react';
+import Header from "../Header/Header";
 import introbg from '../../images/mainbg.png';
 import wakesurfbg from '../../images/wakesurf-bg.png';
 import {panels} from "../../const/info";
@@ -14,12 +14,20 @@ import Certificates from '../Сertificates/Сertificates';
 import FAQ from '../FAQ/FAQ';
 import Footer from '../Footer/Footer';
 
-function Main() {
+function Main({refs}) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // useEffect(() => {
   //   document.title = "ЦТИ";
   // });
+
+  const wakesurfRef = useRef(null);
+  const wakeboardRef = useRef(null);
+  const boatrentRef = useRef(null);
+  const walksRef = useRef(null);
+  const faqRef = useRef(null);
+  const contactsRef = useRef(null);
+  const certificatsRef = useRef(null);
 
   useEffect(() => {
     function handleResize() {
@@ -29,13 +37,18 @@ function Main() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const wakesurfRef = useRef(null);
-  const wakeboardRef = useRef(null);
-  const boatrentRef = useRef(null);
-  const walksRef = useRef(null);
 
   return (
     <div className='main'>
+             <Header refs={{
+    wakesurfRef: wakesurfRef,
+    wakeboardRef: wakeboardRef,
+    boatrentRef: boatrentRef,
+    walksRef: walksRef,
+    certificatsRef: certificatsRef,
+    faqRef: faqRef,
+    contactsRef: contactsRef,
+  }}/>
       <section
         className='main__section main__intro'
         style={{ '--introbg': `url(${introbg})` }}
@@ -65,12 +78,15 @@ function Main() {
         <section className='main__slider' ref={walksRef}>
         <Walks/>
         </section>
-        <section className='main__certificats'>
+        <section className='main__certificats' ref={certificatsRef}>
         <Certificates/>
         </section>
-        <section className='main__faq'>
+        <section className='main__faq' ref={faqRef}>
         <FAQ/>
-        <Footer/>
+        
+        </section>
+        <section ref={contactsRef}>
+        <Footer />
         </section>
     </div>
   );
