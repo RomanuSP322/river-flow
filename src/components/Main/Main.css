@@ -28,12 +28,13 @@
 
 .main__boatrent {
   background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+
 }
 
 
 .main__wakeboard{
+  padding-top: 50px;
   background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
 
   
@@ -42,17 +43,24 @@
 
 
 .main__slider {
+
   background-color: var(--color-font);
 }
 
 
 .main__certificats {
+  padding-top: 50px;
   background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
 
 }
 
 .main__faq {
-  background: linear-gradient(261.21deg, #E4E9E3 4.83%, #ECEBE7 85.85%);
+   padding-top: 50px;
+  background: linear-gradient(261.21deg, #E3E8E2 4.83%, #ECEBE7 85.85%);
+}
+
+.main__footer {
+  background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
 }
 
 .noselect {

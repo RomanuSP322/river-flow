@@ -75,7 +75,7 @@ function Main({refs}) {
         <section className='main__section main__wakeboard' ref={wakeboardRef}>
           <Wakeboard/>
         </section>
-        <section className='main__slider' ref={walksRef}>
+        <section className=' main__slider' ref={walksRef}>
         <Walks/>
         </section>
         <section className='main__certificats' ref={certificatsRef}>
@@ -85,7 +85,7 @@ function Main({refs}) {
         <FAQ/>
         
         </section>
-        <section ref={contactsRef}>
+        <section className='main__footer' ref={contactsRef}>
         <Footer />
         </section>
     </div>

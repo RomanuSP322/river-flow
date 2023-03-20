@@ -2,18 +2,16 @@ import React, { useState, useEffect } from "react";
 
 import "./Navigation.css";
 
-function Navigation({ refs }) {
+
+function Navigation({ refs, scrollDown }) {
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { wakesurfRef, wakeboardRef, boatrentRef, walksRef, faqRef, contactsRef, certificatsRef } = refs;
 
-  const scrollDown = (ref) => {
-    window.scrollTo({
-      top: ref.current.offsetTop,
-      behavior: "smooth",
-    });
-  };
+
+
+
 
   useEffect(() => {
     function handleResize() {
@@ -28,7 +26,6 @@ function Navigation({ refs }) {
 
   return (
     <div className="navigation">
-     
         {windowWidth > 1270 ? (
           <nav className="navigation__menu">
             <ul className="navigation__list ">
@@ -91,12 +88,11 @@ function Navigation({ refs }) {
             </ul>
             </nav>
         ) : (
-          <div className="navigation__menu_type_burger ">
-          
+          <div className="navigation__menu_type_burger ">      
        
           </div>
         )}
-     
+
     </div>
   );
 }

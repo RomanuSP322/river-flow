@@ -6,7 +6,7 @@ function Chapter({title, price, info, img, border, titlepos, refs}) {
   
   const scrollDown = (ref) => {
     window.scrollTo({
-      top: ref.current.offsetTop,
+      top: ref.current.offsetTop+50,
       behavior: "smooth",
     });
   };

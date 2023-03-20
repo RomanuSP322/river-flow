@@ -5,11 +5,12 @@
   cursor: pointer;
   z-index: 10;
   transition: all ease-in-out .4s;
-  display: none;
+  opacity: 0;
 }
 
 .scrolltop_active {
  display: block;
+ opacity: 1;
 }
 
 @media screen and (max-width: 800px) {
@@ -83,25 +84,4 @@
   font-size: 13px;
   font-weight: 400px;
 }
-/* @-webkit-keyframes sdb07 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes sdb07 {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
+
