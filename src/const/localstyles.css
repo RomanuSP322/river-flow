@@ -26,9 +26,17 @@
     font-weight: 700;
     line-height: 68px; 
     margin: 0;
-    text-align: center;
-  
+    text-align: center;  
   }
+
+  @media screen and (max-width: 1500px) {
+    .h2 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 58px; 
+    }
+  }
+  
   
   .h3{
     color:var(--color-accent);
@@ -38,6 +46,13 @@
     margin: 0;
     padding-top: 16px;
     text-align: center;
+  }
+
+  @media screen and (max-width: 1500px) {
+    .h3 {
+      font-size: 24px;     
+      line-height: 32px; 
+    }
   }
   
   .h4 {

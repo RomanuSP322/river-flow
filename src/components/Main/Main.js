@@ -14,7 +14,7 @@ import Certificates from '../Сertificates/Сertificates';
 import FAQ from '../FAQ/FAQ';
 import Footer from '../Footer/Footer';
 
-function Main({refs}) {
+function Main({onPhotoClick}) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // useEffect(() => {
@@ -70,6 +70,7 @@ function Main({refs}) {
       <Accordion
           panels={panels}
           type={windowWidth < 901 ? "horizontal" : "vertical"}
+          onPhotoClick={onPhotoClick}
         />
         </section>
         <section className='main__section main__wakeboard' ref={wakeboardRef}>

@@ -6,8 +6,16 @@
     margin-right: auto;
 }
 
+
+@media screen and (max-width: 1600px) {
+  .intro {
+    padding-left: 20px;
+    padding-right: 20px;  
+  }
+}
+
+
 .intro__socials {
-   
     padding-top: 100px;
 }
 
@@ -20,10 +28,24 @@
     margin: auto;
 }
 
+@media screen and (max-width: 1600px) {
+  .intro__heading {
+    padding-left: 20px;
+    padding-right: 20px;  
+  }
+}
+
 .intro__button{
 position: absolute;
 bottom: 20px;
 right: 0;
+}
+
+@media screen and (max-width: 1600px) {
+  .intro__button{
+
+    right: 20px;
+    }
 }
 
 .intro__price {

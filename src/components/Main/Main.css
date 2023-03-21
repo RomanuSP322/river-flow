@@ -21,7 +21,7 @@
 }
 
 .main__wakesurf {
-  background-image: var(--wakesurfbg);  
+  background-image: var(--wakesurfbg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -29,34 +29,25 @@
 .main__boatrent {
   background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
   padding-top: 50px;
-
 }
 
-
-.main__wakeboard{
+.main__wakeboard {
   padding-top: 50px;
   background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
-
-  
- 
 }
-
 
 .main__slider {
-
   background-color: var(--color-font);
 }
-
 
 .main__certificats {
   padding-top: 50px;
   background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
-
 }
 
 .main__faq {
-   padding-top: 50px;
-  background: linear-gradient(261.21deg, #E3E8E2 4.83%, #ECEBE7 85.85%);
+  padding-top: 50px;
+  background: linear-gradient(261.21deg, #e3e8e2 4.83%, #ecebe7 85.85%);
 }
 
 .main__footer {
@@ -70,8 +61,8 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  
-  -webkit-user-drag: none; 
+
+  -webkit-user-drag: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;

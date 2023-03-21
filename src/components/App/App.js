@@ -6,7 +6,7 @@ import Main from "../Main/Main";
 
 import ScrollToTopBtn from "../ScrollToTop/ScrollToTopBtn";
 import NotFound from "../NotFound/NotFound";
-
+import ImagePopup from '../ImagePopup/ImagePopup';
 import "./App.css";
 import "../../const/localstyles.css"
 
@@ -29,6 +29,17 @@ function App() {
   // });
 
 
+  const [selectedCard, setSelectedCard] = React.useState({  photos: [], title: '' });
+
+  function closeAllPopus() {
+    setSelectedCard({  photos: [], title: '' });
+  }
+
+  function handlePhotoClick(card) {
+    setSelectedCard(card);
+    console.log(card)
+  }
+
 
   return (
     <Suspense fallback={<Preloader />}>
@@ -36,7 +47,7 @@ function App() {
 
         <Switch>
           <Route path="/" >
-            <Main />
+            <Main onPhotoClick={handlePhotoClick} />
           </Route>          
           <Route path="*">
             <NotFound />
@@ -44,6 +55,7 @@ function App() {
         </Switch>
         <ScrollToTopBtn />
       </div>
+      <ImagePopup card={selectedCard} onClose={closeAllPopus}/>
     </Suspense>
   );
 }

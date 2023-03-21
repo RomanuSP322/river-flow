@@ -191,10 +191,10 @@ const panels = [
       ],
     },
     photos: [
-      { img: searay1 },
-      { img: searay2 },
-      { img: searay3 },
-      { img: searay4 },
+       searay1 ,
+       searay2 ,
+       searay3 ,
+       searay4 ,
     ],
   },
   {
@@ -271,10 +271,10 @@ const panels = [
       ],
     },
     photos: [
-      { img: favourit1 },
-      { img: favourit2 },
-      { img: favourit3 },
-      { img: favourit4 },
+       favourit1 ,
+      favourit2,
+      favourit3,
+      favourit4 ,
     ],
   },
   {
@@ -343,10 +343,10 @@ const panels = [
       ],
     },
     photos: [
-      { img: regal1 },
-      { img: regal2 },
-      { img: regal3 },
-      { img: regal4 },
+      regal1 ,
+      regal2,
+      regal3 ,
+      regal4 ,
     ],
   },
 ];

@@ -16,7 +16,10 @@ class Accordion extends React.Component {
     };
 
     this.activateTab = this.activateTab.bind(this);
+  
   }
+
+  
 
   activateTab(index) {
     this.setState((prev) => ({
@@ -30,8 +33,9 @@ class Accordion extends React.Component {
     const { activeTab } = this.state;
     const sum = panels.length;
     const openedWidth = document.body.clientWidth / 2 + 300;
-    const closedWidth = openedWidth / sum - 140;
-
+    const closedWidth = openedWidth / sum - 150;   
+    const { onPhotoClick } = this.props;
+  
     return (
       <div
         className={`accordion ${
@@ -63,7 +67,7 @@ class Accordion extends React.Component {
                     ? `translateY(${activeTab * 200}px)`
                     : `translateX(${activeTab * closedWidth}px)`
                 }`,
-                width: `${openedWidth - 100}px`,
+                width: `${openedWidth }px`,
               }}
               aria-expanded={activeTab === index}
             >
@@ -83,9 +87,9 @@ class Accordion extends React.Component {
                 {panel.subtitle}
               </h3>
               <div className="panel__content">
-                <div className="panel__photos">
+                <div className="panel__photos" onClick={()=> onPhotoClick({titile: panel.label, photos: panel.photos })}>
                   {panel.photos.map((photo, i) => (
-                    <img src={photo.img} className="panel__photo" />
+                    <img src={photo} alt={panel.label} className="panel__photo" key={i}/>
                   ))}
                 </div>
                 <div className="panel__description-wrapper">
@@ -110,9 +114,9 @@ class Accordion extends React.Component {
 
                 {panel.include && (
                   <div className="panel__include">
-                    {panel.include.map((pos) =>
+                    {panel.include.map((pos, i) =>
                       pos.url ? (
-                        <a className="panel__include-item panel__include-link" href={pos.url} target='_blank'>                          
+                        <a className="panel__include-item panel__include-link" href={pos.url} target='_blank' key={i}>                          
                           <div className="panel__include-ico-wrapper">
                             <img src={pos.ico} className="panel__include-ico" />
                           </div>
@@ -122,7 +126,7 @@ class Accordion extends React.Component {
                           </div>
                         </a>
                       ) : (
-                        <div className="panel__include-item">              
+                        <div className="panel__include-item" key={i}>              
                           <div className="panel__include-ico-wrapper">
                           <img src={pos.ico} className="panel__include-ico" />
                         </div>
@@ -136,8 +140,8 @@ class Accordion extends React.Component {
                   <div className="panel__info">
                     <h4 className="panel__info-title">{panel.info.title}</h4>
                     <ul className="panel__info-list">
-                      {panel.info.strings.map((item) => (
-                        <li className="panel__info-item">{item.string}</li>
+                      {panel.info.strings.map((item, i) => (
+                        <li className="panel__info-item" key={i}>{item.string}</li>
                       ))}
                     </ul>
                     <div className="panel__callme">

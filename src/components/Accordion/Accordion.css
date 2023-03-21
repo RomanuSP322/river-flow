@@ -15,12 +15,13 @@
 @media screen and (max-width: 1600px) {
   .accordion {
     height: 700px;
+    padding-left: 20px;
   }
 }
 
 @media screen and (max-width: 1300px) {
   .accordion {
-    padding-left: 50px;
+    padding-left: 10px;
   }
 }
 
@@ -181,16 +182,12 @@
 
 @media screen and (max-width: 1600px) {
   .panel__inner {
-    background-size: 700px;
-    background-position: bottom -200px right -180px;
+    background-position: top 120px left 30px;
+    background-size: 400px;
   }
 }
 
-@media screen and (max-width: 900px) {
-  .panel__inner {
-    transition: 0.7s height cubic-bezier(0.5, 0, 0, 1);
-  }
-}
+
 
 .panel__inner_horizontal {
   background-size: 600px;
@@ -215,7 +212,14 @@
   z-index: 0;
   padding-top: 20px;
   padding-left: 80px;
- 
+  padding-right: 80px;
+}
+
+@media screen and (max-width: 1600px) {
+  .panel__content-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .panel__content-wrapper[aria-expanded="true"] {
@@ -247,8 +251,7 @@
 
 
 
-.panel__subtitle {
-   color: var(--color);
+.panel__subtitle {  
   font-size: 60px;
   margin: 0;
   font-weight: 700;
@@ -258,9 +261,7 @@
 
 @media screen and (max-width: 1600px) {
   .panel__subtitle {
-    font-size: 40px;
-    max-width: 500px;
-    padding: 0px 0 40px 50px;
+
   }
 }
 
@@ -308,10 +309,25 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 1600px) {
+  .panel__photos { 
+    padding-top: 10px;
+    gap: 15px;
+  }
+}
+
 .panel__photo {
   width: 200px;
   height: 112px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 1600px) {
+  .panel__photo {
+    width: 180px;
+    height: 102px;
+    object-fit: cover;
+  }
 }
 
 /* -------------------------------------------------INCLUDE---------------------------------------------------- */
@@ -327,6 +343,13 @@
   
 }
 
+@media screen and (max-width: 1600px) {
+  .panel__include {
+    flex-basis: 45%;
+     padding-top: 20px;
+     
+   }
+}
 
 .panel__include-item {
   display: flex;
@@ -334,6 +357,9 @@
   align-items: center;
   height: 40px; 
 }
+
+
+
 
 .panel__include-ico-wrapper {
   flex-basis: 22%;
@@ -471,6 +497,14 @@ color: var(--color-font);
   padding-top: 50px;
 }
 
+@media screen and (max-width: 1600px) {
+  .panel__description-wrapper {
+    padding-top: 20px;
+    padding-right: 20px;
+  }
+}
+
+
 .panel__description {
   flex-basis: 100%;
 
@@ -481,13 +515,7 @@ color: var(--color-font);
 
 }
 
-@media screen and (max-width: 1600px) {
-  .panel__description {
-    font-size: 18px;
-    line-height: 24px;
-    width: 430px;
-  }
-}
+
 
 @media screen and (max-width: 650px) {
   .panel__description {
