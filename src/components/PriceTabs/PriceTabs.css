@@ -8,6 +8,19 @@ align-items: center;
 width: 580px;
 }
 
+@media screen and (max-width: 1400px) {
+  .tabs{
+    background-image: var(--pricebg);
+    background-size: 380px 195px;
+    background-position: top right;
+    background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  width: 580px;
+  }
+  
+}
+
 
 
 .tabs__titles{
@@ -32,6 +45,25 @@ width: 580px;
   padding-left: 15px;
   transition: color 0.4s cubic-bezier(0.65, 0, 0.076, 1);
 }
+
+
+@media screen and (max-width: 1400px) {
+  .tab__title{
+    font-size: 18px;
+    height: 55px;
+    display: inline-block;
+    color: var(--color-darkgrey);
+    cursor: pointer;
+    width: 254px;
+    padding-top: 18px;
+    box-sizing: border-box;
+    padding-left: 35px;
+    transition: color 0.4s cubic-bezier(0.65, 0, 0.076, 1);
+  }
+}
+
+
+
 
 .tab__title:not(.tab__title_active):hover {
   filter: drop-shadow(0 0 12px var(--active-color));
@@ -60,6 +92,14 @@ width: 580px;
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+  .tabs__content { 
+    padding-top: 25px; 
+    font-size: 18px;
+    min-height: 190px;
+  }
 }
 
 .tab__content{

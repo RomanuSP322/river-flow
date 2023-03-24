@@ -4,13 +4,21 @@
     background-image: var(--walksbg);
     background-position: top right;
     background-repeat: no-repeat;
+    background-size: 65%;
 }
+@media screen and (max-width: 1600px) {
+    .walks {
+       padding-left: 20px;
+    }
+    
+  }
 
 .walks__intro {
     margin: 0 auto;
     width: 100%;
     max-width: 1600px;
 }
+
 
 .walks__title {
     max-width: 550px; 
@@ -29,3 +37,10 @@
     max-width: 715px; 
     padding-bottom: 50px; 
 }
+
+@media screen and (max-width: 1600px) {
+    .walks__description {
+      
+          padding-bottom: 90px; 
+      }
+  }

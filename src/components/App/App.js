@@ -1,25 +1,15 @@
 import React, { Suspense, useRef } from "react";
 import { Route, Switch } from "react-router-dom";
 import Preloader from "../Preloader/Preloader";
-
+import ImagePopup from '../ImagePopup/ImagePopup';
 import Main from "../Main/Main";
 
 import ScrollToTopBtn from "../ScrollToTop/ScrollToTopBtn";
 import NotFound from "../NotFound/NotFound";
-import ImagePopup from '../ImagePopup/ImagePopup';
+
+
 import "./App.css";
 import "../../const/localstyles.css"
-
-// const Company = React.lazy(() => import("../Company/Company"));
-// const Main = React.lazy(() => import("../Main/Main"));
-// const IETR = React.lazy(() => import("../IETR/IETR"));
-// const Learning = React.lazy(() => import("../Learning/Learning"));
-// const Databases = React.lazy(() => import("../Databases/Databases"));
-// const Ksptr = React.lazy(() => import("../Ksptr/Ksptr"));
-// const Portfolio = React.lazy(() => import("../Portfolio/Portfolio"));
-// const News = React.lazy(() => import("../News/News"));
-// const Project = React.lazy(() => import("../Project/Project"));
-// const Contacts = React.lazy(() => import("../Contacts/Contacts"));
 
 function App() {
   // let history = useHistory();
@@ -29,15 +19,15 @@ function App() {
   // });
 
 
-  const [selectedCard, setSelectedCard] = React.useState({  photos: [], title: '' });
+  const [selectedCard, setSelectedCard] = React.useState({  photos: [], title: '', color:'' });
 
   function closeAllPopus() {
-    setSelectedCard({  photos: [], title: '' });
+    setSelectedCard({  photos: [], title: '', color:'' });
   }
 
   function handlePhotoClick(card) {
     setSelectedCard(card);
-    console.log(card)
+    
   }
 
 
@@ -54,8 +44,9 @@ function App() {
           </Route>
         </Switch>
         <ScrollToTopBtn />
+        <ImagePopup card={selectedCard} onClose={closeAllPopus}/>
       </div>
-      <ImagePopup card={selectedCard} onClose={closeAllPopus}/>
+      
     </Suspense>
   );
 }

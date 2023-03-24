@@ -11,7 +11,7 @@ import Button from "../Button/Button";
 import CallMe from "../CallMe/CallMe";
 
 function Wakesurf() {
-  const [visibleBoat, setVisibleBoat] = React.useState("1");
+  const [visibleBoat, setVisibleBoat] = React.useState(wakesurfPrice[0].boat);
   const boat = (r) => {
     setVisibleBoat(r);
   };
@@ -36,7 +36,7 @@ function Wakesurf() {
         <img src={wakesurfPhotos} className="wakesurf__photos-img"/>
         <div className="wakesurf__contact">
           <div>
-            {/* {visibleBoat === 'Regal Session 22' && (
+            {visibleBoat === 'Regal Session 22' && (
               <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3Adda236157aa315486602678d6bf3c09d59fe7ebad5037745381ee885e806b9f7&amp;source=constructor"
                 width="480"
@@ -51,7 +51,7 @@ function Wakesurf() {
                 height="240"
                 frameborder="0"
               ></iframe>
-            )} */}
+            )}
           </div>
           <div className="wakesurf__callme">
             <CallMe bg={true} />

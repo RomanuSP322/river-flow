@@ -6,6 +6,18 @@
   min-height: 700px;
   display: flex;
 }
+
+@media screen and (max-width: 1600px) {
+  .footer{  
+    min-height: 600px;   
+ }
+} 
+
+@media screen and (max-width: 1400px) {
+  .footer{  
+    min-height: 500px;   
+ }
+} 
  
 .footer__content{
   display: flex;
@@ -16,6 +28,18 @@
   max-width: 1600px; 
   margin: 0 auto;
 }
+
+@media screen and (max-width: 1600px) {
+   .footer__content{  
+    max-width: 1400px;    
+  }
+} 
+
+@media screen and (max-width: 1400px) {
+  .footer__content{  
+   max-width: 1300px;    
+ }
+} 
 
 .footer__socials {
   display: flex;

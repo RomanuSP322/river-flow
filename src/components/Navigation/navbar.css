@@ -90,6 +90,7 @@
   width: 220px;
   height: 48px;
   line-height: 48px;
+  
 }
 
 
@@ -114,7 +115,7 @@
 }
 
 .full-menu .menu a:hover span {
-  color: var(--color-secondary)
+  filter: drop-shadow(0 0 12px #fff);
 }
 
 .full-menu .menu a span {

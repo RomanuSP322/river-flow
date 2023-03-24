@@ -4,6 +4,7 @@
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 
@@ -14,6 +15,25 @@
   }
 }
 
+
+.intro__logo {
+  width: 600px;
+ object-fit: cover;
+}
+
+@media screen and (max-width: 1600px) {
+  .intro__logo {
+    width: 550px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .intro__logo {
+    width: 500px;
+    
+  }
+}
 
 .intro__socials {
     padding-top: 100px;

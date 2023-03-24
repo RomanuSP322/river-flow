@@ -7,6 +7,7 @@ import siuteico from '../images/siuteico.svg';
 import wakeboardico from '../images/wakeboard-ico.svg';
 import waterskiico from '../images/waterski-ico.svg';
 import tubingico from '../images/tubing-ico.svg';
+import table from '../images/table-ico.svg';
 import mapico from '../images/map-ico.svg';
 import wakesurfico from '../images/wakesurf-ico.svg';
 import wakeboardBoard from '../images/wakeboard-board-ico.svg';
@@ -150,8 +151,8 @@ const panels = [
         ico: waterskiico,
       },
       {
-        name: 'Ватрушка',
-        ico: tubingico,
+        name: 'Обеденная зона',
+        ico: table,
       },
       {
         name: 'Мякинино',
@@ -273,6 +274,12 @@ const panels = [
     photos: [
        favourit1 ,
       favourit2,
+      favourit3,
+      favourit4 ,
+      favourit3,
+      favourit4 ,
+      favourit3,
+      favourit4 ,
       favourit3,
       favourit4 ,
     ],
@@ -470,7 +477,7 @@ const walksInfo = [
     price: '35.000 р',
     img: sliderDate,
     description:
-      'Вечеринка на нашем катере Sea Ray 230 станет запоминающимся событием для всех. Собирайте своих друзей и близких и отправляйтесь на воду, чтобы провести день рождения оригинально, весело и солнечно!',
+      'Ищете уникальную и романтическую идею для свидания? Насладитесь безмятежной атмосферой и потрясающими пейзажами вместе со своим близким человеком. Позвольте нам позаботиться о деталях и сделать вашу встречу незабываемой.',
     include: [
       {
         name: 'Sea Ray 230 на 3 часа',
@@ -516,7 +523,7 @@ const walksInfo = [
     price: '35.000 р',
     img: sliderDay,
     description:
-      'Вечеринка на нашем катере Sea Ray 230 станет запоминающимся событием для всех. Собирайте своих друзей и близких и отправляйтесь на воду, чтобы провести день рождения оригинально, весело и солнечно!',
+      'Проведите незабываемый день на воде со своими близкими. Насладитесь круизом по живописным местам, катанием на водных лыжах и обедом на реке. Наш дружелюбный и опытный экипаж обеспечит вашу безопасность и комфорт, сделав ваш день на воде незабываемым.',
     include: [
       {
         name: 'Sea Ray 230 на 3 часа',
@@ -563,7 +570,7 @@ const walksInfo = [
     price: '35.000 р',
     img: sliderParty,
     description:
-      'Вечеринка на нашем катере Sea Ray 230 станет запоминающимся событием для всех. Собирайте своих друзей и близких и отправляйтесь на воду, чтобы провести день рождения оригинально, весело и солнечно!',
+      'Ищете уникальный и запоминающийся способ отпраздновать предстоящую свадьбу с самыми близкими друзьями? Проведите вечеринку на воде, наслаждаясь такими развлечениями, как вейкбординг, водные лыжи и тюбинг, а завершите вечер веселым круизом с ужином.',
     include: [
       {
         name: 'Sea Ray 230 на 3 часа',

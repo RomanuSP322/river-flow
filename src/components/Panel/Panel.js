@@ -1,6 +1,7 @@
 import React from "react";
 import linegrunge from "../../images/grungeline.png"
 import Button from "../Button/Button";
+import titlebg from "../../images/btngrungebg.png";
 
 class Panel extends React.Component {
   render() {
@@ -23,12 +24,14 @@ class Panel extends React.Component {
 
     const innerStyleV = {
       width: `${isActive ? `${openedWidth}px` : `${closedWidth}px`}`,
-      backgroundImage: `url(${imgurl})`,
+      
+      "--boat-img": `url(${imgurl})`,
       color: text_color,
     };
     const innerStyleH = {
       height: `${isActive ? `${500}px` : `200px`}`,
-      backgroundImage: `url(${imgurl})`,
+      
+      "--boat-img": `url(${imgurl})`,
       color: text_color,
     };
 
@@ -61,7 +64,10 @@ class Panel extends React.Component {
                 isActive ? "" : "panel__title_active"                
               }`}
               style={{       
-                color: `${text_color}`}}
+                color: `${text_color}`,                          
+                  "--title-bg": `url(${titlebg})`,                
+               
+                }}
             >
               {label}
             </h3>

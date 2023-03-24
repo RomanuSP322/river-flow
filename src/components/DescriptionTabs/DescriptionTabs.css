@@ -1,8 +1,14 @@
 .desc-tabs {
   position: relative;
   overflow: hidden;
-  width: 700px;
-  
+  width: 700px;  
+}
+@media screen and (max-width: 1400px) {
+  .desc-tabs {
+    position: relative;
+    overflow: hidden;
+    width: 600px;  
+  }
 }
 
 .desc-tabs__titles {
@@ -22,6 +28,13 @@
   text-align: center;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (max-width: 1400px) {
+  .desc-tabs__title {
+    font-size: 24px;
+    line-height: 34px;
+  }
 }
 
 .desc-tabs__title:not(.desc-tabs__title_active):hover {
@@ -61,6 +74,18 @@
   height: 10px;
 }
 
+@media screen and (max-width: 1400px) {
+  .desc-tabs__marker {
+    position: absolute;
+    left: 0px;
+    top: 6px;
+    
+    width: 140px;
+    height: 8px;
+  }
+  
+}
+
 .desc-tab__content-wrapper {
  
 }
@@ -74,7 +99,14 @@
   width: 635px;
   padding-left: 40px;
   padding-right: 40px;
-  
+}
+
+@media screen and (max-width: 1400px) {
+  .desc-tab__content {
+    width: 580px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .desc-tab__include {
@@ -83,6 +115,15 @@
     flex-wrap: wrap;   
     justify-content: space-between;
     
+}
+
+@media screen and (max-width: 1400px) {
+  .desc-tab__include {
+    padding-top: 10px;
+
+    
+}
+
 }
 
 .desc-tab__include-item {
@@ -116,6 +157,14 @@
     margin: 0;
     padding-top: 30px;
     padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  .desc-tab__info-title {
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
 }
 
 .desc-tab__info-text {

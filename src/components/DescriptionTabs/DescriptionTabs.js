@@ -8,8 +8,8 @@ import './DescriptionTabs.css';
 function DescriptionTabs({ data, boat}) {
   const [visibleTab, setVisibleTab] = React.useState(data[0].id);
 
- 
-
+  const tabWidth = document.body.clientWidth > 1400 ? 715 : document.body.clientWidth > 1200 ? 620 : 610
+  const markerWidth = document.body.clientWidth > 1400 ? 230 : document.body.clientWidth > 1200 ? 200 : 100
   const listTitles = data.map((item) => (
     <li
       onClick={() => setVisibleTab(item.id)}
@@ -40,7 +40,7 @@ function DescriptionTabs({ data, boat}) {
               <div className='desc-tab__include-ico-wrapper'>
                 <img src={pos.ico} className='desc-tab__include-ico' />
               </div>
-              <p className='desc-tab__include-info'>{pos.name}{' '}{pos.name ==='Вместимость' ? (boat === 'Favourit 480' ? '5 гостей' : (boat === 'Sea Ray 230' ? '7 гостей' : (boat === 'Regal Session 22' ? '7 гостей' : ''))) : ''}{pos.name ==='Катер' && boat }</p>
+              <p className='desc-tab__include-info'>{pos.name}{' '}{pos.name ==='Вместимость' ? (boat === 'Favourit 480' ? '5 гостей' : (boat === 'Sea Ray 230' ? '7 гостей' : (boat === 'Regal Session 22' ? '7 гостей' : ''))) : ''}{pos.name ==='Катер' && boat}</p>
             </div>
           ))}
         </div>
@@ -82,13 +82,13 @@ function DescriptionTabs({ data, boat}) {
     >
       <span
         className='desc-tabs__marker'
-        style={{ transform: `translateX(${visibleTab * 230}px)` }}
+        style={{ transform: `translateX(${visibleTab * markerWidth}px)` }}
       ></span>
       <ul className='desc-tabs__titles'>{listTitles}</ul>
 
       <div
         className='desc-tabs__content'
-        style={{ transform: `translateX(${visibleTab * -715}px)` }}
+        style={{ transform: `translateX(${visibleTab * - tabWidth}px)` }}
       >
         {listContent}
       </div>

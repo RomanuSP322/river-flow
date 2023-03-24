@@ -85,6 +85,7 @@ function Slider({ data }) {
     }
 
     if (diff < -5) {
+      
       prev();
     }
 

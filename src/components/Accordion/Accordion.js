@@ -3,6 +3,7 @@ import Panel from "../Panel/Panel";
 import CallMe from "../CallMe/CallMe";
 import Button from "../Button/Button";
 import pricebg from "../../images/pricebg.png";
+import boatbg from "../../images/btngrungebg.png";
 import "./Accordion.css";
 
 
@@ -35,6 +36,7 @@ class Accordion extends React.Component {
     const openedWidth = document.body.clientWidth / 2 + 300;
     const closedWidth = openedWidth / sum - 150;   
     const { onPhotoClick } = this.props;
+    const galeryCount = document.body.clientWidth > 1400 ? 4 : 2;
   
     return (
       <div
@@ -87,8 +89,8 @@ class Accordion extends React.Component {
                 {panel.subtitle}
               </h3>
               <div className="panel__content">
-                <div className="panel__photos" onClick={()=> onPhotoClick({titile: panel.label, photos: panel.photos })}>
-                  {panel.photos.map((photo, i) => (
+                <div className="panel__photos" onClick={()=> onPhotoClick({title: panel.label, photos: panel.photos, color: panel.text_color })}>
+                  {panel.photos.slice(0, 4).map((photo, i) => (
                     <img src={photo} alt={panel.label} className="panel__photo" key={i}/>
                   ))}
                 </div>
@@ -97,6 +99,9 @@ class Accordion extends React.Component {
                     className={`panel__content-title ${
                       type === "horizontal" ? "" : ""
                     }`}
+                    style={{          
+                      "--title-bg": `url(${boatbg})`,                
+                    }}
                   >
                     {panel.content_title}
                   </h2>

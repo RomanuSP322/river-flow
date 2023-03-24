@@ -2,8 +2,18 @@
     max-width: 2070px;
     margin-left: auto;
     padding-left: 155px;
-   
+ 
 }
+
+@media screen and (max-width: 1600px) {
+    .wakeboard {
+        max-width: 2070px;
+        margin-left: auto;
+        padding-left: 0px;
+     
+    }
+  }
+  
 
 .wakeboard__columns {
     display: flex;
@@ -42,10 +52,18 @@
 }
 
 .wakeboard__description {   
-    max-width: 650px;
-    
+    max-width: 650px;    
     padding-bottom: 50px;
 }
+
+
+@media screen and (max-width: 1600px) {
+    .wakeboard__description {   
+            
+        padding-bottom: 30px;
+    }
+  }
+  
 
 .wakeboard__info {
     display: flex;
