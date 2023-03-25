@@ -34,7 +34,7 @@
 
 @media screen and (max-width: 500px) {
   .chapter-description {
-    padding: 10px;
+    padding: 12px;
 
   }
 }
@@ -82,7 +82,7 @@
 @media screen and (max-width: 500px) {
   .chapter-title {   
     font-size: 28px;
-
+    padding-top: 6px;
     margin-bottom: 20px;
   }
 }
