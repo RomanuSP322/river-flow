@@ -11,6 +11,15 @@
   outline: none;   
 }
 
+@media screen and (max-width: 500px) {
+  .button {
+    width: calc(var(--width) * 0.7);
+    height: calc(var(--height) * 0.7);
+    background-size: calc(var(--width) * 0.7) calc(var(--height) * 0.7);
+  }
+}
+
+
 .button__name {
   position: relative;
   z-index: 5;
@@ -21,6 +30,13 @@
   color:#ffffff;
   text-align: center;
   padding-left: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .button__name {
+    font-size: 18px;
+    padding-left: 10px;
+  }
 }
 
 .button:hover {
@@ -39,6 +55,12 @@
   background-size: var(--width) var(--height);
   transition: all 0.4s cubic-bezier(0.65, 0, 0.076, 1);
   
+}
+
+@media screen and (max-width: 500px) {
+  .button::before {  
+    background-size: calc(var(--width) * 0.7) calc(var(--height) * 0.7);
+  }
 }
 
 .button:hover.button::before{

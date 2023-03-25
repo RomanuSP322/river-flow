@@ -177,7 +177,7 @@
 .panel__title::before {
   position: absolute;
   top: -10%;
-  left: -8%;
+  left: -7%;
   content: '';
   background-image: var(--title-bg);
   width: 110%;

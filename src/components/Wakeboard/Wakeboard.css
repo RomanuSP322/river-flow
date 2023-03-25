@@ -37,6 +37,12 @@
     width: 560px;
 }
 
+@media screen and (max-width: 1400px) {
+  .wakeboard__column_left{
+    margin-right: 15px;
+    width: 500px;
+}
+}
 .wakeboard__column_right {
  
 }
@@ -76,4 +82,12 @@
   flex-direction: column;
   align-items: center;
   padding-right: 60px;
+}
+
+
+@media screen and (max-width: 1400px) {
+  .wakeboard__prices {
+  
+    padding-right: 20px;
+  }
 }

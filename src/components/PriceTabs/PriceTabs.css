@@ -16,7 +16,7 @@ width: 580px;
     background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  width: 580px;
+  width: 540px;
   }
   
 }
@@ -54,10 +54,10 @@ width: 580px;
     display: inline-block;
     color: var(--color-darkgrey);
     cursor: pointer;
-    width: 254px;
+    width: 214px;
     padding-top: 18px;
     box-sizing: border-box;
-    padding-left: 35px;
+    padding-left: 15px;
     transition: color 0.4s cubic-bezier(0.65, 0, 0.076, 1);
   }
 }

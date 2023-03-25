@@ -10,6 +10,17 @@
     max-width: fit-content;
 }
 
+@media screen and (max-width: 500px) {
+  .socials__list {
+
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+}
+
 .socials__list_row {
   flex-direction: row;
 }
@@ -19,6 +30,14 @@
     width: 40px;
 }
 
+@media screen and (max-width: 500px) {
+  .socials__item {
+    width: 26px;
+    height: 26px;
+  }
+
+}
+
 .socials__link {
     text-decoration: none;
 }
@@ -26,6 +45,14 @@
 .socials__ico {
   width: 40px;
   height: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .socials__ico {
+    width: 26px;
+    height: 26px;
+  }
+
 }
 
 .socials__item {

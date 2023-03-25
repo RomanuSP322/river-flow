@@ -4,7 +4,6 @@
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 
@@ -12,6 +11,14 @@
   .intro {
     padding-left: 20px;
     padding-right: 20px;  
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro {
+    padding-left: 5px;
+    padding-right: 5px; 
+    min-height: 100vh; 
   }
 }
 
@@ -31,13 +38,30 @@
 @media screen and (max-width: 1400px) {
   .intro__logo {
     width: 500px;
-    
+   
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro__logo {
+    width: 300px;
+    padding-right: 0px;
   }
 }
 
 .intro__socials {
     padding-top: 100px;
 }
+
+@media screen and (max-width: 500px) {
+  .intro__socials {
+    padding-top: 6px;
+    
+    
+}
+
+}
+
 
 .intro__heading {
     display: flex;
@@ -55,6 +79,14 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .intro__heading {
+    padding-left: 20px;
+    padding-right: 20px;
+    bottom: 20%; left: 0; right: 0;  
+  }
+}
+
 .intro__button{
 position: absolute;
 bottom: 20px;
@@ -63,8 +95,20 @@ right: 0;
 
 @media screen and (max-width: 1600px) {
   .intro__button{
-
     right: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  .intro__button{
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     }
 }
 
@@ -77,4 +121,12 @@ right: 0;
   font-weight: 700;
   text-align: center;
   color: var(--color-accent);
+}
+
+@media screen and (max-width: 500px) {
+  .intro__price { 
+    padding-bottom: 6px;
+    font-size: 20px;
+   
+  }
 }

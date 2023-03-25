@@ -21,6 +21,7 @@ import baloonsWhite from '../images/baloons-ico-white.svg';
 import eatsWhite from '../images/eats-ico-white.svg';
 import waterskiicoWhite from '../images/waterski-ico-white.svg';
 import bluetoothWhite from '../images/bluetooth-ico-white.svg';
+import tableWhite from '../images/table-ico-white.svg';
 
 import searay1 from '../images/searay1.png';
 import searay2 from '../images/searay2.png';
@@ -466,8 +467,8 @@ const walksInfo = [
         ico: eatsWhite,
       },
       {
-        name: 'Тюбинг',
-        ico: tubingicoWhite,
+        name: 'Обеденная зона',
+        ico: tableWhite,
       },
     ],
   },

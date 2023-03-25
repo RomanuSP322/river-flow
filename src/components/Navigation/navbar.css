@@ -11,7 +11,17 @@
   border-radius: 30px;
   transition: width 0.4s, height 0.5s , opacity ease-in-out .4s;
   overflow: hidden;
+  z-index: 10;
+}
 
+@media screen and (max-width: 500px) {
+  .box-menu {  
+    right: 5px;
+    top: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+  }
 }
 
 
@@ -21,9 +31,19 @@
   width: 220px;
 }
 
+
+
 .wrapper {
   width: 50px;
   height: 50px;
+}
+
+@media screen and (max-width: 500px) {
+
+  .wrapper {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .hamburger {
@@ -32,6 +52,16 @@
   top: 17px;
   width: 16px;
   height: 16px;
+}
+
+@media screen and (max-width: 500px) {
+  .hamburger {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .hamburger span {
@@ -43,6 +73,7 @@
   border-radius: 10px;
   transition: all 0.3s;
 }
+
 
 .hamburger span:nth-child(1) {
   top: 3px;

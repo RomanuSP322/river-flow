@@ -8,6 +8,18 @@ import './About.css';
 
 function About({refs}) {
   const { wakesurfRef, wakeboardRef, boatrentRef, walksRef } = refs;
+  const border1 = window.innerWidth > 600 ? '20px 20px 20px 115px' : '16px 16px 16px 85px';
+  const titlepos1 = window.innerWidth > 600 ?  'translate(-28%, 200px) rotate(18deg)' : 'translate(-30%, 160px) rotate(18deg)';
+ 
+  const border2 = window.innerWidth > 600 ? '20px 115px 20px 20px ' : '16px 85px 16px 16px ';
+  const titlepos2 = window.innerWidth > 600 ?  'translate(-25%, 10px) rotate(-18deg)' : 'translate(-20%, 20px) rotate(-10deg)';
+ 
+  const border3 = window.innerWidth > 600 ? '20px 20px 20px 115px' : '16px 16px 16px 85px';
+  const titlepos3 = window.innerWidth > 600 ?  'translate(32%, 10px) rotate(-10deg)' : 'translate(25%, 15px) rotate(10deg)';
+
+  const border4 = window.innerWidth > 600 ? '20px 115px 20px 20px ' : '16px 85px 16px 16px ';
+  const titlepos4 = window.innerWidth > 600 ?  'translate(30%, 20px) rotate(18deg)' : 'translate(20%, 15px) rotate(10deg)';
+ 
   return (
     <div className='about'>
       <div className='about__description'>
@@ -30,8 +42,8 @@ function About({refs}) {
           price='Сет от 6000 р'
           info='Спот в Мякинино'
           img={wakesurf}
-          border='20px 20px 20px 115px'
-          titlepos='translate(-28%, 200px) rotate(18deg)'
+          border={border1}
+          titlepos={titlepos1}
           refs={wakesurfRef}
         />
       </div>
@@ -41,8 +53,8 @@ function About({refs}) {
           price='от 5000 р/ч'
           info='Спот в Мякинино'
           img={walks}
-          border='20px 115px 20px 20px '
-          titlepos='translate(-25%, 10px) rotate(-18deg)'
+          border={border2}
+          titlepos={titlepos2}
           refs={walksRef}
         />
       </div>
@@ -52,8 +64,8 @@ function About({refs}) {
           price='от 5000 р/ч'
           info='Спот в Мякинино'
           img={rent}
-          border='20px 20px 20px 115px '
-          titlepos='translate(32%, 10px) rotate(-10deg)'
+          border={border3}
+          titlepos={titlepos3}
           refs={boatrentRef}
         />
       </div>
@@ -63,8 +75,8 @@ function About({refs}) {
           price='от 5000 р/ч'
           info='Спот в Мякинино'
           img={wakeboard}
-          border='20px 115px 20px 20px '
-          titlepos='translate(30%, 20px) rotate(18deg)'
+          border={border4}
+          titlepos={titlepos4}
           refs={wakeboardRef}
         />
       </div>
