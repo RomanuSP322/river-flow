@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import pricebg from '../../images/pricebg.png';
 import tab from '../../images/desctabbg.svg';
 import tabmarker from '../../images/tabmarker.png';
@@ -8,8 +8,54 @@ import './DescriptionTabs.css';
 function DescriptionTabs({ data, boat}) {
   const [visibleTab, setVisibleTab] = React.useState(data[0].id);
 
-  const tabWidth = document.body.clientWidth > 1400 ? 715 : document.body.clientWidth > 1200 ? 620 : 610
-  const markerWidth = document.body.clientWidth > 1400 ? 230 : document.body.clientWidth > 1200 ? 200 : 100
+  const tabWidth = document.body.clientWidth > 1400 ? 715 : document.body.clientWidth > 1200 ? 620 : 350
+  const markerWidth = document.body.clientWidth > 1400 ? 230 : document.body.clientWidth > 1200 ? 200 : 115
+  const [touchPosition, setTouchPosition] = useState(null);
+
+
+
+  const next = () => {
+    if (visibleTab < 2) {
+      setVisibleTab((prevState) => prevState + 1);
+    }
+  };
+
+  const prev = () => {
+    if (visibleTab > 0) {
+      setVisibleTab((prevState) => prevState - 1);
+    }
+  };
+
+  const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e) => {
+    const touchDown = touchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+
+    if (diff > 3) {
+      next();
+    }
+
+    if (diff < -3) {
+      prev();
+    }
+
+    setTouchPosition(null);
+  };
+
+  
+  
+  
+  
   const listTitles = data.map((item) => (
     <li
       onClick={() => setVisibleTab(item.id)}
@@ -24,6 +70,7 @@ function DescriptionTabs({ data, boat}) {
     </li>
   ));
 
+ 
   const listContent = data.map((item) => (
     <div className='desc-tab__content-wrapper'>
       {item.desc && (
@@ -48,7 +95,7 @@ function DescriptionTabs({ data, boat}) {
       {item.info && (
         <div className='desc-tab__content desc-tab__info'>
           {item.info.map((chapter) => (
-            <ul>
+            <ul className='desc-tab__info-list'>
               <h4 className='desc-tab__info-title'>{chapter.title}</h4>
               {chapter.strings.map((item) => (
                 <li className='desc-tab__info-text'>{item.string}</li>
@@ -72,6 +119,10 @@ function DescriptionTabs({ data, boat}) {
     </div>
   ));
 
+
+
+
+
   return (
     <div
       className='desc-tabs'
@@ -79,6 +130,9 @@ function DescriptionTabs({ data, boat}) {
         '--pricebg': `url(${pricebg})`,
         '--tabmarker': `url(${tabmarker})`,
       }}
+
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
     >
       <span
         className='desc-tabs__marker'

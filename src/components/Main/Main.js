@@ -61,13 +61,13 @@ function Main({onPhotoClick}) {
     wakeboardRef: wakeboardRef,
     boatrentRef: boatrentRef,
     walksRef: walksRef,
-    windowWidth: windowWidth,
+   
     
   }} />
       </section>
       
       <section className='main__section main__wakesurf' style={{ '--wakesurfbg': `url(${wakesurfbg})`}} ref={wakesurfRef}>
-        <Wakesurf/>
+        <Wakesurf  windowWidth = {windowWidth}/>
       </section>
       <section className='main__section main__boatrent' ref={boatrentRef}>
       <Accordion

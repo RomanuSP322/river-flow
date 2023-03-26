@@ -14,6 +14,18 @@
     height: 130px;
 }
 
+
+@media screen and (max-width: 500px) {
+  .callme__bg {
+    background-image: var(--callmebg);
+    background-size: 240px 100px;
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 100px;
+}
+
+}
+
 .callme__title {
     font-size: 24px;
     line-height: 32px;
@@ -21,6 +33,16 @@
     margin:0;
     padding-bottom: 10px;
     color: var(--color-font);
+}
+
+@media screen and (max-width: 500px) {
+  .callme__title {
+    font-size: 20px;
+    line-height: 28px;
+
+    padding-bottom: 5px;   
+}
+  
 }
 
 .callme__title_white {
@@ -38,8 +60,22 @@
     transition: all ease-in-out .4s;
 }
 
+@media screen and (max-width: 500px) {
+  .callme__button { 
+    font-size: 20px;
+}
+
+}
+
 .callme__ico {
     padding-left: 10px;
+}
+@media screen and (max-width: 500px) {
+  .callme__ico {
+    height: 25px;
+    padding-left: 6px;
+}
+  
 }
 
 .callme__button:hover {

@@ -45,7 +45,7 @@ function PriceTabs(props) {
       </table>
       <a href={item.location.url} target='_blank' className='tab-table__link' >
         <img src={location}  className='tab__ico'/>
-        <p className='tab-table__name'>{item.location.name}</p>
+        <p className='tab-table__name tab-table__location-name'>{item.location.name}</p>
         <p className='tab-table__value tab-table__location'>{item.location.value}</p>
       </a>
     </div>
