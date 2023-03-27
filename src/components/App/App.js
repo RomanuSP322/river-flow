@@ -19,15 +19,14 @@ function App() {
   // });
 
 
-  const [selectedCard, setSelectedCard] = React.useState({  photos: [], title: '', color:'' });
+  const [selectedCard, setSelectedCard] = React.useState({  photos: [], title:'', color:'', index: 0 });
 
   function closeAllPopus() {
-    setSelectedCard({  photos: [], title: '', color:'' });
+    setSelectedCard({ photos: [], title: '', color:'', index: 0});
   }
 
   function handlePhotoClick(card) {
-    setSelectedCard(card);
-    
+    setSelectedCard(card);    
   }
 
 

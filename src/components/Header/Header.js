@@ -38,7 +38,8 @@ function Header({ refs }) {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 950 || windowWidth < 1000) {
+      
+      if (window.pageYOffset > 950) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -57,7 +58,7 @@ function Header({ refs }) {
     <header className='header'>
       <img src={logo} alt='RiverFlow logo' className='header__logo' />
       {windowWidth > 1000 && <Navigation refs={refs} scrollDown={scrollDown} />}
-      {isVisible &&
+      {(isVisible || windowWidth < 1000) &&
         
           <div
             className={`box-menu ${isMenuOpen ? 'full-menu' : ''}`}

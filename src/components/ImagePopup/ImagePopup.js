@@ -28,7 +28,7 @@ function ImagePopup(props) {
   const [images, setImages] = useState([]);
   const [reducedImages, setReducedImages] = useState([]);
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(props.card.index);
 
   const handlePrevClick = () => {
     setCurrentImageIndex(
@@ -42,7 +42,7 @@ function ImagePopup(props) {
     );
   };
 
-  const handleClose = () => {
+  const handleClose = () => {    
     props.onClose();
     setCurrentImageIndex(0);
   };
@@ -75,7 +75,7 @@ function ImagePopup(props) {
           <button
             type='button'
             className='popup__close-button'
-            onClick={props.onClose}
+            onClick={()=> handleClose()}
           />
           <button
             type='button'

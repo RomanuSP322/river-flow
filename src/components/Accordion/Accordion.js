@@ -1,75 +1,135 @@
-import React from "react";
-import Panel from "../Panel/Panel";
+import React, { useState } from "react";
+import Panel from "./Panel";
 import CallMe from "../CallMe/CallMe";
 import Button from "../Button/Button";
 import pricebg from "../../images/pricebg.png";
 import boatbg from "../../images/btngrungebg.png";
 import "./Accordion.css";
 
+function Accordion(props) {
+  const [activeTab, setActiveTab] = useState(0);
+  const [activePhoto, setActivePhoto] = useState(0);
+  const { panels, type, onPhotoClick, windowWidth } = props;
+  const isMobile = windowWidth < 500;
+
+  const sum = panels.length;
+  const openedWidth = windowWidth > 500 ? windowWidth / 2 + 300 : windowWidth;
+  const closedWidth = openedWidth / sum - 150;
+  const galeryCount = windowWidth > 500 ? 4 : sum;
+  const [accordionTouchPosition, setAccordionTouchPosition] = useState(null);
+  const [photoTouchPosition, setPhotoTouchPosition] = useState(null);
+
+  const sliderWidth =
+    type === "slider" ? { width: `${openedWidth - 20}px` } : {};
+
+  const activateTab = (index) => {
+    setActiveTab((prev) => (prev === index ? -1 : index));
+  };
+
+  const next = () => {
+    if (activeTab < 2) {
+      setActiveTab((prevState) => prevState + 1);
+    }
+  };
+
+  const prev = () => {
+    if (activeTab > 0) {
+      setActiveTab((prevState) => prevState - 1);
+    }
+  };
+
+  const handleAccordionTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setAccordionTouchPosition(touchDown);
+  };
+
+  const handleAccordionTouchMove = (e) => {
+    const touchDown = accordionTouchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+
+    if (diff > 3) {
+      next();
+    }
+
+    if (diff < -3) {
+      prev();
+    }
+
+    setAccordionTouchPosition(null);
+  };
+
+  const nextPhoto = () => {
+    if (activeTab < 3) {
+      setActivePhoto((prevState) => prevState + 1);
+    }
+  };
+
+  const prevPhoto = () => {
+    if (activeTab > 0) {
+      setActivePhoto((prevState) => prevState - 1);
+    }
+  };
 
 
-class Accordion extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      activeTab: 0,
-    };
-
-    this.activateTab = this.activateTab.bind(this);
-  
-  }
-
-  
-
-  activateTab(index) {
-    this.setState((prev) => ({
-      activeTab: prev.activeTab === index ? -1 : index,
-    }));
-  }
-
-  render() {
-    const { panels } = this.props;
-    const { type } = this.props;
-    const { activeTab } = this.state;
-    const sum = panels.length;
-    const openedWidth = document.body.clientWidth / 2 + 300;
-    const closedWidth = openedWidth / sum - 150;   
-    const { onPhotoClick } = this.props;
-    const galeryCount = document.body.clientWidth > 1400 ? 4 : 2;
-  
-    return (
+  return (
+    <div
+      className={`accordion-wrapper ${
+        type === "slider" ? "accordion-wrapper__type_slider" : ""
+      }`}
+      onTouchStart={handleAccordionTouchStart}
+      onTouchMove={handleAccordionTouchMove}
+    >
       <div
         className={`accordion ${
-          type === "horizontal" ? "accordion__type_horizontal" : ""
+          type === "slider" ? "accordion__type_slider" : ""
         }`}
         role="tablist"
+        style={
+          type === "slider"
+            ? {
+                transform: `translateX(-${openedWidth * activeTab}px)`,
+              }
+            : {}
+        }
       >
         {panels.map((panel, index) => (
           <React.Fragment key={index}>
-            <Panel
-              activeTab={activeTab}
-              index={index}
-              orientation={type}
-              openedWidth={openedWidth}
-              closedWidth={closedWidth}
-              length={sum}
-              {...panel}
-              activateTab={this.activateTab.bind(null, index)}
-            />
+            {windowWidth > 500 && (
+              <Panel
+                activeTab={activeTab}
+                index={index}
+                orientation={type}
+                openedWidth={openedWidth}
+                closedWidth={closedWidth}
+                length={sum}
+                {...panel}
+                activateTab={() => activateTab(index)}
+              />
+            )}
+
             <div
               className={`panel__content-wrapper  ${
-                type === "horizontal" ? "panel__content-wrapper_horizontal" : ""
+                type === "slider" ? "panel__content-wrapper_slider" : ""
               }`}
               style={{
-                opacity: `${activeTab === index ? `1` : `0`}`,
+                opacity: `${
+                  activeTab === index || type === "slider" ? `1` : `0`
+                }`,
                 "--color": `${panel.text_color}`,
                 transform: `${
-                  type === "horizontal"
-                    ? `translateY(${activeTab * 200}px)`
+                  type === "slider"
+                    ? ``
                     : `translateX(${activeTab * closedWidth}px)`
                 }`,
-                width: `${openedWidth }px`,
+
+                width: `${openedWidth}px`,
+                "--boat-img": `url(${panel.imgurl})`,
               }}
               aria-expanded={activeTab === index}
             >
@@ -88,24 +148,55 @@ class Accordion extends React.Component {
               >
                 {panel.subtitle}
               </h3>
-              <div className="panel__content">
-                <div className="panel__photos" onClick={()=> onPhotoClick({title: panel.label, photos: panel.photos, color: panel.text_color })}>
-                  {panel.photos.slice(0, 4).map((photo, i) => (
-                    <img src={photo} alt={panel.label} className="panel__photo" key={i}/>
-                  ))}
-                </div>
+              <div
+                className={`panel__content  ${
+                  type === "slider" ? "panel__content_slider" : ""
+                }`}
+                style={sliderWidth}
+              >
+                {windowWidth > 500 && (
+                  <div
+                    className="panel__photos"
+                    onClick={() =>
+                      onPhotoClick({
+                        title: panel.label,
+                        photos: panel.photos,
+                        color: panel.text_color,
+                      })
+                    }
+                  >
+                    {panel.photos.slice(0, galeryCount).map((photo, i) => (
+                      <img
+                        src={photo}
+                        alt={panel.label}
+                        className="panel__photo"
+                        key={i}
+                      />
+                    ))}
+                  </div>
+                )}
                 <div className="panel__description-wrapper">
                   <h2
                     className={`panel__content-title ${
                       type === "horizontal" ? "" : ""
                     }`}
-                    style={{          
-                      "--title-bg": `url(${boatbg})`,                
+                    style={{
+                      "--title-bg": `url(${boatbg})`,
                     }}
                   >
                     {panel.content_title}
                   </h2>
-
+                  {isMobile && (
+                    <div className="panel__label-icons">
+                      {panel.icons.map((ico, i) => (
+                        <img
+                          key={i}
+                          src={ico.img}
+                          className="panel__label-ico"
+                        />
+                      ))}
+                    </div>
+                  )}
                   <p
                     className={`panel__description ${
                       type === "horizontal"
@@ -116,27 +207,68 @@ class Accordion extends React.Component {
                     {panel.content}
                   </p>
                 </div>
+                {isMobile && (
+                  <div
+                    className="panel__photos-wrapper"
+                    style={{
+                      width: `${openedWidth*0.95}px`,
+                    }}
 
+                  >
+                    <div
+                      className="panel__photos"
+                      style={{
+                        transform: `${`translateX(-${
+                          activePhoto * openedWidth
+                        }px)`}`,
+                      }}
+                      onClick={() =>
+                        onPhotoClick({
+                          title: panel.label,
+                          photos: panel.photos,
+                          color: panel.text_color,
+                        })
+                      }
+                    >
+                      {panel.photos.slice(0, galeryCount).map((photo, i) => (
+                        <img
+                          src={photo}
+                          alt={panel.label}
+                          className="panel__photo"
+                          key={i}
+                          style={{
+                            "--photo-width": `${openedWidth}px`,                            
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
                 {panel.include && (
                   <div className="panel__include">
                     {panel.include.map((pos, i) =>
                       pos.url ? (
-                        <a className="panel__include-item panel__include-link" href={pos.url} target='_blank' key={i}>                          
+                        <a
+                          className="panel__include-item panel__include-link"
+                          href={pos.url}
+                          target="_blank"
+                          key={i}
+                        >
                           <div className="panel__include-ico-wrapper">
                             <img src={pos.ico} className="panel__include-ico" />
                           </div>
                           <div className="">
-                          <p className="panel__include-info">{pos.name}</p>
-                          <p className="panel__map-link">на карте</p>
+                            <p className="panel__include-info">{pos.name}</p>
+                            <p className="panel__map-link">на карте</p>
                           </div>
                         </a>
                       ) : (
-                        <div className="panel__include-item" key={i}>              
+                        <div className="panel__include-item" key={i}>
                           <div className="panel__include-ico-wrapper">
-                          <img src={pos.ico} className="panel__include-ico" />
+                            <img src={pos.ico} className="panel__include-ico" />
+                          </div>
+                          <p className="panel__include-info">{pos.name}</p>
                         </div>
-                        <p className="panel__include-info">{pos.name}</p>
-                      </div>
                       )
                     )}
                   </div>
@@ -146,7 +278,9 @@ class Accordion extends React.Component {
                     <h4 className="panel__info-title">{panel.info.title}</h4>
                     <ul className="panel__info-list">
                       {panel.info.strings.map((item, i) => (
-                        <li className="panel__info-item" key={i}>{item.string}</li>
+                        <li className="panel__info-item" key={i}>
+                          {item.string}
+                        </li>
                       ))}
                     </ul>
                     <div className="panel__callme">
@@ -186,8 +320,8 @@ class Accordion extends React.Component {
           </React.Fragment>
         ))}
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Accordion;

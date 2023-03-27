@@ -72,11 +72,12 @@ function Main({onPhotoClick}) {
       <section className='main__section main__boatrent' ref={boatrentRef}>
       <Accordion
           panels={panels}
-          type={windowWidth < 901 ? "horizontal" : "vertical"}
+          type={windowWidth < 501 ? "slider" : "vertical"}
           onPhotoClick={onPhotoClick}
+          windowWidth = {windowWidth}
         />
         </section>
-        <section className='main__section main__wakeboard' ref={wakeboardRef}>
+        {/* <section className='main__section main__wakeboard' ref={wakeboardRef}>
           <Wakeboard/>
         </section>
         <section className=' main__slider' ref={walksRef}>
@@ -91,7 +92,7 @@ function Main({onPhotoClick}) {
         </section>
         <section className='main__footer' ref={contactsRef}>
         <Footer />
-        </section>
+        </section> */}
     </div>
   );
 }

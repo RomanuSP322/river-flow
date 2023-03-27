@@ -24,7 +24,7 @@ width: 580px;
 @media screen and (max-width: 500px) {
   .tabs{
     background-image: var(--pricebg);
-    background-size: 260px 210px;
+    background-size: 270px 210px;
     background-position: bottom right -30px;
     background-repeat: no-repeat;
   display: flex;
