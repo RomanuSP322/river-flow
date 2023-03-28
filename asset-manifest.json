@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/river-flow/static/css/main.bcae02e7.css",
-    "main.js": "/river-flow/static/js/main.4602f4fe.js",
+    "main.css": "/river-flow/static/css/main.493061af.css",
+    "main.js": "/river-flow/static/js/main.ca232162.js",
     "static/js/787.ee7dfd47.chunk.js": "/river-flow/static/js/787.ee7dfd47.chunk.js",
     "static/media/wakesurf.png": "/river-flow/static/media/wakesurf.3023f4c73426c4385400.png",
     "static/media/walks.png": "/river-flow/static/media/walks.aa46ca4cdee4d75cc8ef.png",
@@ -16,6 +16,7 @@
     "static/media/photoswakesurf.png": "/river-flow/static/media/photoswakesurf.d20aadacbd5f4b0b16d6.png",
     "static/media/wakeboard-bg2.png": "/river-flow/static/media/wakeboard-bg2.af6964f87a8e36356b68.png",
     "static/media/certificates.png": "/river-flow/static/media/certificates.c6b0ade80152e2dfa367.png",
+    "static/media/wakeboard-bg-mobile.png": "/river-flow/static/media/wakeboard-bg-mobile.2571fee8b66038211a2a.png",
     "static/media/party-img.png": "/river-flow/static/media/party-img.e1519d722bd262bf3477.png",
     "static/media/desctabbg.svg": "/river-flow/static/media/desctabbg.dd99c3b95d8301b6ea860d71a4ac9196.svg",
     "static/media/favouritbg.png": "/river-flow/static/media/favouritbg.48ff8df8fd29d442e3ab.png",
@@ -88,12 +89,12 @@
     "static/media/map.svg": "/river-flow/static/media/map.3a34b4e634cf317a62a11e2718769d02.svg",
     "index.html": "/river-flow/index.html",
     "static/media/email-logo.svg": "/river-flow/static/media/email-logo.d375b93490ea611c0ccefc2699d3befb.svg",
-    "main.bcae02e7.css.map": "/river-flow/static/css/main.bcae02e7.css.map",
-    "main.4602f4fe.js.map": "/river-flow/static/js/main.4602f4fe.js.map",
+    "main.493061af.css.map": "/river-flow/static/css/main.493061af.css.map",
+    "main.ca232162.js.map": "/river-flow/static/js/main.ca232162.js.map",
     "787.ee7dfd47.chunk.js.map": "/river-flow/static/js/787.ee7dfd47.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcae02e7.css",
-    "static/js/main.4602f4fe.js"
+    "static/css/main.493061af.css",
+    "static/js/main.ca232162.js"
   ]
 }
