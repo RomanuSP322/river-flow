@@ -19,6 +19,14 @@
   }
 }
 
+@media screen and (max-width: 350px) {
+  .desc-tabs {
+    position: relative;
+    overflow: hidden;
+    width: 300px;  
+  }
+}
+
 .desc-tabs__titles {
   display: flex;
   list-style: none;
@@ -59,7 +67,7 @@
 
 @media screen and (max-width: 500px) {
   .desc-tabs__title {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 34px;
   }
 }
@@ -170,6 +178,13 @@
     width: 350px;
     padding-left: 00px;
     padding-right: 00px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .desc-tab__content {
+    width: 300px;
+
   }
 }
 

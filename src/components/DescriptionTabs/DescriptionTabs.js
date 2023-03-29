@@ -8,8 +8,8 @@ import './DescriptionTabs.css';
 function DescriptionTabs({ data, boat}) {
   const [visibleTab, setVisibleTab] = React.useState(data[0].id);
 
-  const tabWidth = document.body.clientWidth > 1400 ? 715 : document.body.clientWidth > 1200 ? 620 : 350
-  const markerWidth = document.body.clientWidth > 1400 ? 230 : document.body.clientWidth > 1200 ? 200 : 115
+  const tabWidth = document.body.clientWidth > 1400 ? 715 : document.body.clientWidth > 1200 ? 620 : document.body.clientWidth > 350 ? 350 : 300
+  const markerWidth = document.body.clientWidth > 1400 ? 230 : document.body.clientWidth > 1200 ? 200 : document.body.clientWidth > 350 ? 120 : 100
   const [touchPosition, setTouchPosition] = useState(null);
 
 
@@ -41,11 +41,11 @@ function DescriptionTabs({ data, boat}) {
     const currentTouch = e.touches[0].clientX;
     const diff = touchDown - currentTouch;
 
-    if (diff > 3) {
+    if (diff > 4) {
       next();
     }
 
-    if (diff < -3) {
+    if (diff < -5) {
       prev();
     }
 
@@ -105,17 +105,17 @@ function DescriptionTabs({ data, boat}) {
         </div>
       )}
 
-{/* {item.url && (  
+{item.url && (  
      <div className='desc-tab__map'>
-            <iframe
+            {/* <iframe
             src={(boat === 'Favourit 480' ? item.url[0] : (boat === 'Sea Ray 230' ? item.url[1] : (boat === 'Regal Session 22' ? item.url[2] : '')))}
             width="480"
             height="210"
             frameborder="0"
-          ></iframe>
+          ></iframe> */}
           </div>
       
-      )} */}
+      )} 
     </div>
   ));
 

@@ -3,6 +3,7 @@ import React from "react";
 import { wakeboardInfo } from "../../const/info";
 import { wakeboardPrice } from "../../const/prices";
 import wakeboardBg from "../../images/wakeboard-bg2.png";
+import wakeboardBgMobile from "../../images/wakeboard-bg-mobile.png";
 import PriceTabs from "../PriceTabs/PriceTabs";
 
 import "./Wakeboard.css";
@@ -19,7 +20,7 @@ function Wakeboard() {
 
   return (
     <div className="wakeboard">
-      <div className="wakeboard__columns"  style={{ "--wakeboard": `url(${wakeboardBg})` }}>
+      <div className="wakeboard__columns"  style={{ "--wakeboard": `url(${wakeboardBg})`, "--wakeboard-mobile": `url(${wakeboardBgMobile})`  }}>
         <div className="wakeboard__column_left" >       
         </div>
         <div className="wakeboard__column_right">
@@ -35,10 +36,10 @@ function Wakeboard() {
           </p>
           <DescriptionTabs data={wakeboardInfo} boat={visibleBoat}/>
           <div className="wakeboard__info">
-          <div className="wakeboard__prices">
+            <div className="wakeboard__prices">
             <PriceTabs data={wakeboardPrice} boat={boat}/>
            
-            <Button name='Забронировать' height={55}/>
+            <Button name='Забронировать' height={60}/>
            
           </div>
           <CallMe />

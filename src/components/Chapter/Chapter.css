@@ -121,8 +121,9 @@
 
 .chapter-btn {
   opacity: 0;
-  transition: opacity 0.35s ease-in-out;
- 
+  transition: opacity, transform 0.35s ease-in-out;
+  transform: translate(-450px);
+  
 }
 
 .chapter-info:first-child {
@@ -161,7 +162,8 @@
 
 .chapter:hover .chapter-btn {
   opacity: 1;
-  transition-delay: .4s;
+  transition-delay: .1s;
+  transform: translate(0px);
 }
 
 .chapter:hover .chapter-title {

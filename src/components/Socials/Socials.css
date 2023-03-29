@@ -10,16 +10,16 @@
     max-width: fit-content;
 }
 
-@media screen and (max-width: 500px) {
-  .socials__list {
+ @media screen and (max-width: 500px) {  .socials__list {
 
     flex-direction: row;
     gap: 8px;
     width: 100%;
     margin: 0 auto;
+    height: 26px;
 }
 
-}
+} 
 
 .socials__list_row {
   flex-direction: row;
@@ -34,6 +34,7 @@
   .socials__item {
     width: 26px;
     height: 26px;
+    
   }
 
 }

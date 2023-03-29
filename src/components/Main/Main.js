@@ -77,22 +77,24 @@ function Main({onPhotoClick}) {
           windowWidth = {windowWidth}
         />
         </section>
-        {/* <section className='main__section main__wakeboard' ref={wakeboardRef}>
+        <section className='main__section main__wakeboard' ref={wakeboardRef}>
           <Wakeboard/>
         </section>
         <section className=' main__slider' ref={walksRef}>
         <Walks/>
         </section>
+        
         <section className='main__certificats' ref={certificatsRef}>
-        <Certificates/>
-        </section>
+        <Certificates windowWidth = {windowWidth}/>
+        </section> 
         <section className='main__faq' ref={faqRef}>
         <FAQ/>
         
         </section>
+       
         <section className='main__footer' ref={contactsRef}>
         <Footer />
-        </section> */}
+        </section> 
     </div>
   );
 }

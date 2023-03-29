@@ -361,7 +361,7 @@ const panels = [
 
 const wakeboardInfo = [
   {
-    id: '0',
+    id: 0,
     title: 'Что входит',
     include: [
       {
@@ -391,7 +391,7 @@ const wakeboardInfo = [
     ],
   },
   {
-    id: '1',
+    id: 1,
     title: 'Полезно знать',
     info: [
       {
@@ -415,7 +415,7 @@ const wakeboardInfo = [
     ],
   },
   {
-    id: '2',
+    id: 2,
     title: 'Как добраться',
     url: [
       'https://yandex.ru/map-widget/v1/?um=constructor%3Adda236157aa315486602678d6bf3c09d59fe7ebad5037745381ee885e806b9f7&amp;source=constructor',

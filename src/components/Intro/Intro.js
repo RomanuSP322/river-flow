@@ -5,11 +5,11 @@ import Socials from '../Socials/Socials';
 import Button from '../Button/Button';
 
 function Intro() {
-  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
 
   return (
     <div className='intro'>
-      <div className='intro__socials'>
+       <div className='intro__socials'>
         <Socials />
       </div>
       <div className='intro__heading'>

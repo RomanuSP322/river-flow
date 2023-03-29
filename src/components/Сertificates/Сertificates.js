@@ -4,13 +4,23 @@ import certificatesImg from '../../images/certificates.png';
 import Button from '../Button/Button';
 import './Сertificates.css';
 
-function Certificates() {
+function Certificates({windowWidth}) {
+  
+  const isMobile = windowWidth < 500
+
   return (
     <div className='certificates'>
       <div className='certificates__columns'>
         <div className='certificates__column_left'>
           <h2 className='h2 certificates__title'>Подарочные сертификаты</h2>
           <h3 className='h3 certificates__subtitle'>Дарите приключения</h3>
+          { isMobile && 
+          <img
+            src={certificatesImg}
+            alt='Подарочные сертификат River Flow'
+            className='certificates__img'
+          />
+   }
           <p className='p certificates__info'>
             Ищете уникальный и запоминающийся подарок для кого-то особенного?
             Обратите внимание на наши подарочные сертификаты на речные
@@ -36,13 +46,13 @@ function Certificates() {
             <Button name='Оформить сертификат' width={360} height={75} />
           </div>
         </div>
-        <div className='certificates__column_right'>
+  { !isMobile && <div className='certificates__column_right'>
           <img
             src={certificatesImg}
             alt='Подарочные сертификат River Flow'
             className='certificates__img'
           />
-        </div>
+        </div>}
       </div>
     </div>
   );

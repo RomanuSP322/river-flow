@@ -22,14 +22,37 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .certificates {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+
 .certificates__columns {
   display: flex;
   justify-content: space-between; 
   align-items: center; 
 }
 
+@media screen and (max-width: 500px) {
+  .certificates__columns {
+
+    flex-direction: column-reverse;
+  }
+}
+
 .certificates__column_left {
   flex-basis: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .certificates__column_left {
+    flex-basis: 100%;
+  }
 }
 
 .certificates__button {
@@ -51,8 +74,16 @@
     justify-content: center;
   }
   
-  
 }
+
+@media screen and (max-width: 500px) {
+  .certificates__column_right {
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 
 .certificates__img {
   width: 100%;
@@ -61,6 +92,13 @@
 @media screen and (max-width: 1400px) {
   .certificates__img {
     width: 80%;
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  .certificates__img {
+    width: 100%;
   }
   
 }

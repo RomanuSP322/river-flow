@@ -3,6 +3,7 @@ import './Header.css';
 import logo from '../../images/logo-black.svg';
 import Navigation from '../Navigation/Navigation';
 import '../Navigation/navbar.css';
+import Socials from '../Socials/Socials';
 function Header({ refs }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -57,6 +58,7 @@ function Header({ refs }) {
   return (
     <header className='header'>
       <img src={logo} alt='RiverFlow logo' className='header__logo' />
+     { windowWidth < 1000 &&  <div className='header__socials'><Socials/> </div>}
       {windowWidth > 1000 && <Navigation refs={refs} scrollDown={scrollDown} />}
       {(isVisible || windowWidth < 1000) &&
         

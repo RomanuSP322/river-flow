@@ -51,6 +51,7 @@
 
 .intro__socials {
     padding-top: 100px;
+    z-index: 12;
 }
 
 @media screen and (max-width: 500px) {
