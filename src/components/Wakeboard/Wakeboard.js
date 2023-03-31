@@ -12,7 +12,7 @@ import Button from "../Button/Button";
 import CallMe from "../CallMe/CallMe";
 
 
-function Wakeboard() {
+function Wakeboard({windowWidth}) {
   const [visibleBoat, setVisibleBoat] = React.useState(wakeboardPrice[0].boat);
   const boat = (r) => {
     setVisibleBoat(r);
@@ -29,12 +29,12 @@ function Wakeboard() {
           <p className="p wakeboard__description">
             Вейкбординг и водные лыжи - два самых популярных и захватывающих
             вида водного спорта. Оба вида спорта обеспечивают уникальный и
-            захватывающий способ получить удовольствие от водных развлечений,
+            завораживающий способ получить удовольствие от водных развлечений,
             независимо от того, ищете ли вы адреналиновый драйв или более
             спокойный опыт. Будь вы опытным профессионалом или новичком, эти
             виды спорта подходят для людей любого уровня подготовки и возраста.
           </p>
-          <DescriptionTabs data={wakeboardInfo} boat={visibleBoat}/>
+          <DescriptionTabs data={wakeboardInfo} boat={visibleBoat} windowWidth= {windowWidth}/>
           <div className="wakeboard__info">
             <div className="wakeboard__prices">
             <PriceTabs data={wakeboardPrice} boat={boat}/>

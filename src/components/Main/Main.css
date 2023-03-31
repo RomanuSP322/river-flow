@@ -49,6 +49,9 @@
 .main__boatrent {
   background: linear-gradient(256.35deg, #e3e8e2 0%, #ecebe7 91.6%);
   padding-top: 50px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main__wakeboard {

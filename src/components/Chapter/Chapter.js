@@ -22,8 +22,8 @@ function Chapter({title, price, info, img, border, titlepos, refs}) {
        {title}
       </h2>
       <div className='chapter-info__wrapper'>
-        <p className='chapter-info'>{price}</p>
-        <p className='chapter-info'>{info}</p>           
+        <p className='chapter-info'>{info}</p>  
+        <p className='chapter-info'>{price}</p>             
       </div>
       <div className='chapter-btn'>
         <Button name="Подробнее" action={()=> scrollDown(refs)}/>

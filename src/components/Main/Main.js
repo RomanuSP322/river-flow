@@ -40,7 +40,7 @@ function Main({onPhotoClick}) {
 
   return (
     <div className='main'>
-             <Header refs={{
+            <Header refs={{
     wakesurfRef: wakesurfRef,
     wakeboardRef: wakeboardRef,
     boatrentRef: boatrentRef,
@@ -48,13 +48,14 @@ function Main({onPhotoClick}) {
     certificatsRef: certificatsRef,
     faqRef: faqRef,
     contactsRef: contactsRef,
-  }}/>
+  }}/>   
       <section
         className='main__section main__intro'
         style={{ '--introbg': `url(${introbg})` }}
       >
         <Intro />
       </section>
+ 
       <section className='main__section main__about'>
         <About   refs={{
     wakesurfRef: wakesurfRef,
@@ -65,10 +66,11 @@ function Main({onPhotoClick}) {
     
   }} />
       </section>
-      
+       
       <section className='main__section main__wakesurf' style={{ '--wakesurfbg': `url(${wakesurfbg})`}} ref={wakesurfRef}>
         <Wakesurf  windowWidth = {windowWidth}/>
       </section>
+          
       <section className='main__section main__boatrent' ref={boatrentRef}>
       <Accordion
           panels={panels}
@@ -77,8 +79,9 @@ function Main({onPhotoClick}) {
           windowWidth = {windowWidth}
         />
         </section>
-        <section className='main__section main__wakeboard' ref={wakeboardRef}>
-          <Wakeboard/>
+       
+         <section className='main__section main__wakeboard' ref={wakeboardRef}>
+          <Wakeboard windowWidth = {windowWidth}/>
         </section>
         <section className=' main__slider' ref={walksRef}>
         <Walks/>
@@ -94,7 +97,7 @@ function Main({onPhotoClick}) {
        
         <section className='main__footer' ref={contactsRef}>
         <Footer />
-        </section> 
+        </section>  
     </div>
   );
 }

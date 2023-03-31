@@ -9,7 +9,7 @@ function Slider({ data }) {
   const [visibleTab, setVisibleTab] = useState(0);
   const windowWidth = document.body.clientWidth;
   const isMobile = windowWidth < 500;
-  const slideWidth = isMobile ? windowWidth - 34 : 1150;
+  const slideWidth = isMobile ? windowWidth - 40 : 1150;
   const openedWidth = !isMobile ? windowWidth / 2 - slideWidth / 2 : 0;
   const [isDragging, setIsDragging] = useState(false);
   const [touchPosition, setTouchPosition] = useState(0);

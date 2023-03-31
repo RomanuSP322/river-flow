@@ -24,10 +24,18 @@
 
 @media screen and (max-width: 500px) {
   .certificates {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .certificates {
+    padding-right: 5px;
+    padding-left: 5px;
+   
   }
 }
 

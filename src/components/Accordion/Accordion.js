@@ -9,16 +9,16 @@ import './Accordion.css';
 
 function Accordion(props) {
   const { panels, type, onPhotoClick, windowWidth } = props;
-  const isMobile = windowWidth < 500;
+  const isMobile = windowWidth < 900;
   const [activeTab, setActiveTab] = useState(isMobile ? 0 : 0);
   const [activePhoto, setActivePhoto] = useState(0);
 
 
 
   const sum = panels.length;
-  const [openedWidth, setOpenedWidth] = useState(windowWidth > 500 ? windowWidth / 2 + 300 : windowWidth);
+  const [openedWidth, setOpenedWidth] = useState(windowWidth > 900 ? windowWidth / 2 + 300 : windowWidth);
   const closedWidth = openedWidth / sum - 150;
-  const galeryCount = windowWidth > 500 ? 4 : sum;
+  const galeryCount = windowWidth > 900 ? 4 : sum;
   const [accordionTouchPosition, setAccordionTouchPosition] = useState(null);
   const [timers, setTimers] = useState(0);
 

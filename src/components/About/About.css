@@ -18,17 +18,27 @@
 
 @media screen and (max-width: 500px) {
   .about {
-    padding-left: 5px;
-    padding-right: 5px; 
+    padding-left: 15px;
+    padding-right: 15px; 
     padding-top: 50px;
     padding-bottom: 50px;  
-    justify-content: flex-end;   
+    justify-content: center;
+   
   }
 }
 
+@media screen and (max-width: 350px) {
+  .about {
+    padding-left: 5px;
+    padding-right: 5px; 
+    padding-top: 50px;
+
+   
+  }
+}
 
 .about__description{
-  flex-basis: 30%;
+  flex-basis: 32%;
 }
 @media screen and (max-width: 1600px) {
   .about__description{
@@ -39,10 +49,14 @@
 
 @media screen and (max-width: 500px) {
   .about__description{
-    flex-basis: 95%;
-    padding-bottom: 30px;
+    flex-basis: 98%;
+    padding-bottom: 40px;
   }
   
+}
+
+.about__tag {
+ 
 }
 
 .about__chapter-wrapper {

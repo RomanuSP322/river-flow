@@ -10,7 +10,7 @@
   padding-left: 0px;
   padding-right: 0px;
   flex-direction: column;
-  
+  min-height: 1605px;
   overflow: hidden;
   }
   
@@ -63,9 +63,18 @@
     background-position: bottom ;
     min-height: 1000px;
     padding-top: 40px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-left: 0px;  
+  }
+  
+}
+
+@media screen and (max-width: 350px) {
+  .wakesurf__info { 
+
+    padding-left: 5px;
+    padding-right: 5px;     
   }
   
 }
@@ -163,7 +172,7 @@ padding-bottom: 20px;
 .wakesurf__contact { 
   padding-left: 80px;
   display: flex;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 1800px) {

@@ -22,6 +22,8 @@ import eatsWhite from '../images/eats-ico-white.svg';
 import waterskiicoWhite from '../images/waterski-ico-white.svg';
 import bluetoothWhite from '../images/bluetooth-ico-white.svg';
 import tableWhite from '../images/table-ico-white.svg';
+import sunsetWhite from '../images/sunset-ico-white.svg';
+import flowersWhite from '../images/flowers-ico-white.svg';
 
 import searay1 from '../images/searay1.png';
 import searay2 from '../images/searay2.png';
@@ -64,7 +66,7 @@ const wakesurfInfo = [
     id: 0,
     title: 'Описание',
     desc: 'Вейксерфинг - это относительно новый вид водного спорта, который приобрел популярность в последние годы. Он похож на традиционный серфинг, но вместо того, чтобы ловить волну в океане, катер создает волну на реке, по которой скользит райдер. Райдер стоит на доске для вейксерфинга и использует энергию волны для выполнения различных трюков и маневров.',
-    tag: 'Это отличный способ испытать острые ощущения от серфинга, не выезжая к океану.',
+    tag: 'Это отличный способ испытать яркие эмоции от серфинга, не выезжая к океану.',
   },
   {
     id: 1,
@@ -475,17 +477,17 @@ const walksInfo = [
   {
     id: 1,
     title: 'Свидание',
-    price: '35.000 р',
+    price: '15.000 р',
     img: sliderDate,
     description:
       'Ищете уникальную и романтическую идею для свидания? Насладитесь безмятежной атмосферой и потрясающими пейзажами вместе со своим близким человеком. Позвольте нам позаботиться о деталях и сделать вашу встречу незабываемой.',
     include: [
       {
-        name: 'Sea Ray 230 на 3 часа',
+        name: 'Favourit 480 на 2 часа',
         ico: boaticoWhite,
       },
       {
-        name: '7 гостей',
+        name: '4 гостя',
         ico: groupicoWhite,
       },
       {
@@ -493,8 +495,8 @@ const walksInfo = [
         ico: waterskiicoWhite,
       },
       {
-        name: 'Праздничное оформление',
-        ico: baloonsWhite,
+        name: 'Романтическая атмосфера',
+        ico: sunsetWhite,
       },
       {
         name: 'Bluetooth',
@@ -513,25 +515,25 @@ const walksInfo = [
         ico: eatsWhite,
       },
       {
-        name: 'Тюбинг',
-        ico: tubingicoWhite,
+        name: 'Цветы',
+        ico: flowersWhite,
       },
     ],
   },
   {
     id: 2,
     title: 'День на воде',
-    price: '35.000 р',
+    price: '50.000 р',
     img: sliderDay,
     description:
       'Проведите незабываемый день на воде со своими близкими. Насладитесь круизом по живописным местам, катанием на водных лыжах и обедом на реке. Наш дружелюбный и опытный экипаж обеспечит вашу безопасность и комфорт, сделав ваш день на воде незабываемым.',
     include: [
       {
-        name: 'Sea Ray 230 на 3 часа',
+        name: 'Sea Ray 230 на 6 часов',
         ico: boaticoWhite,
       },
       {
-        name: '7 гостей',
+        name: '9 гостей',
         ico: groupicoWhite,
       },
       {

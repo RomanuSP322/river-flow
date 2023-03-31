@@ -4,6 +4,7 @@
   display: flex;
   box-sizing: border-box; 
   position: relative;
+  
 }
 
 @media screen and (max-width: 1920px) {
@@ -65,6 +66,7 @@
   justify-content: flex-end;
   box-sizing: border-box;
   overflow: hidden;
+  max-width: 1280px;
 }
 
 .panel__border:after {
@@ -141,7 +143,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__label-icons {
     flex-direction: column;
     min-height: 130px;
@@ -161,7 +163,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__label-ico {
     height: 26px;
     max-width: fit-content;
@@ -218,7 +220,7 @@
   z-index: -1;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__title::before {
 
 
@@ -274,7 +276,7 @@
     width: 800px;
     height: 230px;
     background-position: top left;
-    background-size: 500px;
+    background-size: 900px;
     background-repeat: no-repeat;
   }
 }
@@ -290,7 +292,7 @@
     width: 480px;
     height: 220px;
     background-position: top left;
-    background-size: 500px;
+    background-size: 900px;
     background-repeat: no-repeat;
   }
 }
@@ -370,6 +372,13 @@
 }
 
 
+@media screen and (max-width: 900px) {
+  .panel__content {
+    align-items: center;
+    
+  }
+}
+
 
 .panel__content_slider {
   flex-direction: column;
@@ -402,7 +411,7 @@
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__subtitle {
     padding: 0;    
     max-width: 320px;
@@ -414,7 +423,7 @@
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 
   .panel__subtitle_span {
     max-width: 320px;
@@ -458,7 +467,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__photos {  
     padding-top: 0px;
     gap: 0px;
@@ -488,7 +497,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__photo {
     min-width: var(--photo-width);
     height: 175px;
@@ -520,6 +529,7 @@
   flex-wrap: wrap;   
   max-width: 480px;
   margin-left: auto;
+  justify-content: space-around;
   
 }
 
@@ -527,11 +537,11 @@
   .panel__include {
     flex-basis: 45%;
      padding-top: 10px;
-     
+     justify-content:unset;
    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__include {
     flex-basis: 100%;
      padding-top: 20px;
@@ -553,7 +563,7 @@
   height: 40px; 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__include-item {
     flex-direction: column;
     height: auto;
@@ -568,7 +578,7 @@
 .panel__include-ico-wrapper {
   flex-basis: 22%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__include-ico-wrapper {
     flex-basis: 30%;
   }
@@ -580,7 +590,7 @@ margin-left: auto;
 margin-right: auto;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__include-ico {  
    height: 32px;
   }
@@ -593,7 +603,7 @@ margin-right: auto;
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__include-info {
     margin-top: 6px;
   
@@ -623,7 +633,7 @@ margin-right: auto;
   padding-top: 4px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__map-link {
     font-size: 12px;
     padding-top: 2px;
@@ -639,7 +649,7 @@ margin-right: auto;
   padding-top: 10px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 
   .panel__info { 
     flex-basis: 100%;
@@ -655,10 +665,10 @@ margin-right: auto;
   margin: 0;
  text-align: center;
   padding-bottom: 10px;
-  max-width: 500px; 
+  max-width: 900px; 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 
   .panel__info-title {
     font-size: 18px;
@@ -671,10 +681,10 @@ margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
-  max-width: 500px;
+  max-width: 900px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__info-list {
     display: flex;
     flex-wrap: wrap;
@@ -689,7 +699,7 @@ margin-right: auto;
   flex-basis: 50%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__info-item {
     flex-basis: 45%;
     font-size: 15px;
@@ -702,7 +712,7 @@ margin-right: auto;
   padding-top: 10px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 
   .panel__callme {
     
@@ -728,7 +738,7 @@ color: var(--color-font);
   align-items: center;  
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__prices {   
     flex-basis:100%; 
     background-image: var(--pricebg);
@@ -748,7 +758,7 @@ color: var(--color-font);
   min-height: 170px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel-table {
    
     min-width: 300px;
@@ -762,7 +772,7 @@ color: var(--color-font);
   height: 32px; 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel-table__string {
     height: 28px; 
   }
@@ -797,7 +807,7 @@ color: var(--color-font);
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__prices-discount {
  
     padding-top: 30px;
@@ -817,7 +827,7 @@ color: var(--color-font);
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 500px;
+  max-width: 900px;
   padding-top: 20px;
 }
 
@@ -830,7 +840,7 @@ color: var(--color-font);
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__description-wrapper {
     flex-basis: 100%;
     padding-right: 0px;
@@ -857,7 +867,7 @@ margin-bottom: 10px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__description {
     font-size: 16px;
     line-height: 24px;
@@ -883,7 +893,7 @@ margin-bottom: 10px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .panel__content-title {
     max-width: 150px;
   }

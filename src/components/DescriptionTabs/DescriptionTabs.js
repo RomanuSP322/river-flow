@@ -5,13 +5,13 @@ import tabmarker from '../../images/tabmarker.png';
 
 import './DescriptionTabs.css';
 
-function DescriptionTabs({ data, boat}) {
+function DescriptionTabs({ data, boat, windowWidth}) {
   const [visibleTab, setVisibleTab] = React.useState(data[0].id);
 
   const tabWidth = document.body.clientWidth > 1400 ? 715 : document.body.clientWidth > 1200 ? 620 : document.body.clientWidth > 350 ? 350 : 300
   const markerWidth = document.body.clientWidth > 1400 ? 230 : document.body.clientWidth > 1200 ? 200 : document.body.clientWidth > 350 ? 120 : 100
   const [touchPosition, setTouchPosition] = useState(null);
-
+  const frameWidth = windowWidth > 800 ? 480 : 280;
 
 
   const next = () => {
@@ -107,12 +107,12 @@ function DescriptionTabs({ data, boat}) {
 
 {item.url && (  
      <div className='desc-tab__map'>
-            {/* <iframe
+            <iframe
             src={(boat === 'Favourit 480' ? item.url[0] : (boat === 'Sea Ray 230' ? item.url[1] : (boat === 'Regal Session 22' ? item.url[2] : '')))}
-            width="480"
+            width={frameWidth}
             height="210"
             frameborder="0"
-          ></iframe> */}
+          ></iframe>
           </div>
       
       )} 

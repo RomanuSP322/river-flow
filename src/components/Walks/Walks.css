@@ -15,19 +15,40 @@
 
   @media screen and (max-width: 500px) {
     .walks {
-       padding-left: 10px;
-       padding-right: 10px;
+      padding-left: 0px;
        padding-top: 80px;
        padding-bottom: 50px;
+       background-size: 120%;
     }
     
   }
+
+
 
 
 .walks__intro {
     margin: 0 auto;
     width: 100%;
     max-width: 1600px;
+
+}
+
+@media screen and (max-width: 500px) {
+  .walks__intro {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+}
+
+@media screen and (max-width: 350px) {
+  .walks__intro {
+
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
 }
 
 
@@ -51,7 +72,8 @@
 
 @media screen and (max-width: 500px) {
     .walks__subtitle {
-        padding-bottom: 20px;
+        padding-bottom: 0px;
+        max-width: 350px;
     }
     
     
@@ -71,4 +93,12 @@
           padding-bottom: 90px; 
       }
   }
+
+  @media screen and (max-width: 390px) {
+    .walks__description {
+      
+          padding-bottom: 110px; 
+      }
+  }
+
 

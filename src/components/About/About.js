@@ -27,20 +27,18 @@ function About({refs}) {
           Окунись в мир<br></br> водных развлечений
         </h2>
         <h3 className='h3'>По доступной цене</h3>
-        <p className='p'>
-          Являетесь ли вы опытным спортсменом, ищущим прилив адреналина, или
+        <p className='p about__tag'>
+          Являешься ли ты опытным спортсменом, ищущим прилив адреналина, или
           новичком, который начинает знакомство с водными видами спорта, в
-          River's Flow каждый найдет что-то для себя. Присоединяйся к нам, чтобы
-          отправиться в незабываемое приключение и оставить воспоминания на всю
-          жизнь.
+          River Flow каждый найдет что-то для себя. 
         </p>
       </div>
 
       <div className='about__chapter-wrapper about__chapter-wrapper_third'>
         <Chapter
           title='Вейксерф'
-          price='Сет от 6000 р'
-          info='Спот в Мякинино'
+          price='от 6000 р'
+          info='в Мякинино и Долгопрудном'
           img={wakesurf}
           border={border1}
           titlepos={titlepos1}
@@ -50,8 +48,8 @@ function About({refs}) {
       <div className='about__chapter-wrapper about__chapter-wrapper_third'>
         <Chapter
           title='Прогулки'
-          price='от 5000 р/ч'
-          info='Спот в Мякинино'
+          price='от 20000 р'
+          info='Идеи для праздника'
           img={walks}
           border={border2}
           titlepos={titlepos2}
@@ -61,8 +59,8 @@ function About({refs}) {
       <div className='about__chapter-wrapper about__chapter-wrapper_half'>
         <Chapter
           title='Аренда катера'
-          price='от 5000 р/ч'
-          info='Спот в Мякинино'
+          price='от 5000р/ч'
+          info='с капитаном и без'
           img={rent}
           border={border3}
           titlepos={titlepos3}
@@ -72,8 +70,8 @@ function About({refs}) {
       <div className='about__chapter-wrapper about__chapter-wrapper_half'>
         <Chapter
           title='Вейкборд и лыжи'
-          price='от 5000 р/ч'
-          info='Спот в Мякинино'
+          price='от 3000 р'
+          info='за катером'
           img={wakeboard}
           border={border4}
           titlepos={titlepos4}

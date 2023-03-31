@@ -25,7 +25,7 @@ const wakesurfPrice = [
   },
   {
     id: '2',
-    boat: 'MasterCraft \n X-star',
+    boat: 'MasterCraft\n X-star',
     color:'#000000',
     prices: [
       {

@@ -11,13 +11,13 @@ import DescriptionTabs from "../DescriptionTabs/DescriptionTabs";
 import Button from "../Button/Button";
 import CallMe from "../CallMe/CallMe";
 
-function Wakesurf(windowWidth) {
+function Wakesurf({windowWidth}) {
   const [visibleBoat, setVisibleBoat] = React.useState(wakesurfPrice[0].boat);
   const boat = (r) => {
     setVisibleBoat(r);
   };
-
-  const frameWidth = windowWidth < 500 ? 480 : 320;
+  const frameWidth = windowWidth > 500 ? 480 : 320;
+ 
 
   return (
     <div className="wakesurf">
@@ -43,15 +43,15 @@ function Wakesurf(windowWidth) {
               <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3Adda236157aa315486602678d6bf3c09d59fe7ebad5037745381ee885e806b9f7&amp;source=constructor"
                 width={frameWidth}
-                height="240"
+                height="250"
                 frameborder="0"
               ></iframe>
             )}
-            {visibleBoat === 'MasterCraft X-star' && (
+            {visibleBoat === 'MasterCraft\n X-star' && (
               <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a4fd4b3640fa7df6c4ddeb8c41b6136413c4831d3ea4c50fefc3b9a71155212&amp;source=constructor"
                 width={frameWidth}
-                height="240"
+                height="250"
                 frameborder="0"
               ></iframe>
             )}

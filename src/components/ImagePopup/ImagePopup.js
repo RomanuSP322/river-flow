@@ -27,7 +27,8 @@ function reduceImageSize(images) {
 function ImagePopup(props) {
   const [images, setImages] = useState([]);
   const [reducedImages, setReducedImages] = useState([]);
-
+  const windowWidth = document.width;
+  const isMobile = document.width < 900;
   const [currentImageIndex, setCurrentImageIndex] = useState(props.card.index);
 
   const handlePrevClick = () => {
@@ -42,12 +43,10 @@ function ImagePopup(props) {
     );
   };
 
-  const handleClose = () => {    
+  const handleClose = () => {
     props.onClose();
     setCurrentImageIndex(0);
   };
-
-
 
   useEffect(() => {
     const photos = props.card.photos;
@@ -75,7 +74,7 @@ function ImagePopup(props) {
           <button
             type='button'
             className='popup__close-button'
-            onClick={()=> handleClose()}
+            onClick={() => handleClose()}
           />
           <button
             type='button'
@@ -83,26 +82,26 @@ function ImagePopup(props) {
             onClick={handlePrevClick}
             disabled={currentImageIndex === 0}
           >
-         <img
+            <img
               src={arrowLeft}
               alt='grunge arrow'
               className={`slider__button-img ${
                 currentImageIndex === 0 && 'slider__button-img__inactive'
               }`}
             />
-           
           </button>
           <button
             type='button'
             className='popup__button popup__slider-button_next'
             onClick={handleNextClick}
-            disabled={currentImageIndex === images.length-1}
+            disabled={currentImageIndex === images.length - 1}
           >
-                   <img
+            <img
               src={arrowRight}
               alt='grunge arrow'
               className={`slider__button-img ${
-                currentImageIndex === images.length-1 && 'slider__button-img__inactive'
+                currentImageIndex === images.length - 1 &&
+                'slider__button-img__inactive'
               }`}
             />
           </button>
@@ -115,26 +114,28 @@ function ImagePopup(props) {
               data-index={currentImageIndex}
             />
 
-            <div className='popup__navigation'>
-              <div className='popup__navbar'>
-                {reducedImages.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image.reduced}
-                    alt='reduced image'
-                    className={`popup__nav-image ${
-                      index === currentImageIndex
-                        ? 'popup__nav-image_current'
-                        : ''
-                    }`}
-                    onClick={() => setCurrentImageIndex(index)}
-                  />
-                ))}
+            {!isMobile && (
+              <div className='popup__navigation'>
+                <div className='popup__navbar'>
+                  {reducedImages.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image.reduced}
+                      alt='reduced image'
+                      className={`popup__nav-image ${
+                        index === currentImageIndex
+                          ? 'popup__nav-image_current'
+                          : ''
+                      }`}
+                      onClick={() => setCurrentImageIndex(index)}
+                    />
+                  ))}
+                </div>
+                <p className='popup__image-counter'>
+                  {currentImageIndex + 1}/{images.length}
+                </p>
               </div>
-              <p className='popup__image-counter'>
-                {currentImageIndex + 1}/{images.length}
-              </p>
-            </div>
+            )}
           </div>
         </div>
       )}

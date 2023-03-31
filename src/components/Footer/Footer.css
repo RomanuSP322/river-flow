@@ -2,62 +2,61 @@
   background-image: var(--footer-bg);
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: bottom ;
+  background-position: bottom;
   min-height: 700px;
   display: flex;
 }
 
 @media screen and (max-width: 1600px) {
-  .footer{  
-    min-height: 600px;   
- }
-} 
+  .footer {
+    min-height: 600px;
+  }
+}
 
 @media screen and (max-width: 1400px) {
-  .footer{  
-    min-height: 500px;   
- }
+  .footer {
+    min-height: 500px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  .footer{  
+  .footer {
     min-height: 620px;
     background-size: 550%;
-    background-position: bottom ;
- }
-} 
- 
-.footer__content{
+    background-position: bottom;
+  }
+}
+
+.footer__content {
   display: flex;
   width: 100%;
-  align-items: end;
+  align-items: flex-end;
   padding-bottom: 30px;
   justify-content: space-between;
-  max-width: 1600px; 
+  max-width: 1600px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 1600px) {
-   .footer__content{  
-    max-width: 1400px;    
+  .footer__content {
+    max-width: 1400px;
   }
-} 
+}
 
 @media screen and (max-width: 1400px) {
-  .footer__content{  
-   max-width: 1300px;    
- }
-} 
+  .footer__content {
+    max-width: 1300px;
+  }
+}
 
 @media screen and (max-width: 500px) {
-  .footer__content{  
-  flex-direction: column-reverse;  
-  justify-content: flex-start;
-  padding-bottom: 10px;
-  align-items: center;
- }
-} 
-
+  .footer__content {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    align-items: center;
+  }
+}
 
 .footer__socials {
   display: flex;
@@ -66,14 +65,11 @@
   align-items: center;
 }
 
-
 @media screen and (max-width: 500px) {
   .footer__socials {
-  padding-bottom: 0px;
+    padding-bottom: 0px;
   }
-} 
-
-
+}
 
 .footer__logo {
   width: 300px;
@@ -87,26 +83,25 @@
     height: 100px;
     object-fit: contain;
   }
-} 
- 
+}
 
 .footer__maps {
   max-width: 400px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
 }
 
 @media screen and (max-width: 500px) {
   .footer__maps {
-   padding-left: 20px;
-   padding-right: 20px;
-    
+    padding-left: 20px;
+    padding-right: 20px;
   }
-} 
- 
+}
 
+.footer__maps-item {
+
+}
 
 .footer__maps-link {
   text-decoration: none;
@@ -114,29 +109,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: ease-in-out .3s;
+
+  transition: ease-in-out 0.3s;
 }
 
-.footer__maps-link:hover { 
-
-  color: var(--color-accent)
+.footer__maps-link:hover {
+  color: var(--color-accent);
 }
 
 .footer__maps-link:active {
   filter: drop-shadow(0 0 6px var(--color-accent));
 }
 
-.footer__maps-link:first-of-type {
+.footer__maps-item:first-of-type {
   flex-basis: 100%;
   padding-bottom: 40px;
 }
 
 @media screen and (max-width: 500px) {
-  .footer__maps-link:first-of-type {
+  .footer__maps-item:first-of-type {
     flex-basis: 100%;
     padding-bottom: 20px;
   }
-} 
+}
 
 .footer__maps-value {
   margin: 0;
@@ -149,7 +144,7 @@
     font-size: 14px;
     line-height: 30px;
   }
-} 
+}
 
 .footer__maps-name {
   font-weight: 700;
@@ -166,7 +161,7 @@
 }
 
 .footer__contacts {
-  color:#fff;
+  color: #fff;
   padding-right: 150px;
 }
 
@@ -180,7 +175,7 @@
     padding-right: 20px;
     padding-bottom: 20px;
   }
-} 
+}
 
 .footer__contacts-title {
   font-size: 32px;
@@ -190,9 +185,8 @@
   .footer__contacts-title {
     flex-basis: 100%;
     text-align: center;
-  
   }
-} 
+}
 
 .footer__contacts-item:not(:last-of-type) {
   padding-bottom: 22px;
@@ -200,29 +194,28 @@
 
 .footer__contacts-link {
   text-decoration: none;
-  color:#fff;
+  color: #fff;
   display: flex;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
-.footer__contacts-link:hover{
-  
-  color: var(--color-accent)
+.footer__contacts-link:hover {
+  color: var(--color-accent);
 }
 
-.footer__contacts-ico{
+.footer__contacts-ico {
   width: 35px;
   height: 35px;
   padding-right: 20px;
 }
 
 @media screen and (max-width: 500px) {
-  .footer__contacts-ico{
+  .footer__contacts-ico {
     width: 25px;
     height: 25px;
     padding-right: 10px;
   }
-} 
+}
 
 .footer__contacts-value {
   margin: 0;
@@ -234,4 +227,4 @@
     margin: 0;
     font-size: 16px;
   }
-} 
+}
