@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/river-flow/static/css/main.f4cc2741.css",
-    "main.js": "/river-flow/static/js/main.6e868afd.js",
+    "main.css": "/river-flow/static/css/main.1f491224.css",
+    "main.js": "/river-flow/static/js/main.7f2f293c.js",
     "static/js/787.ee7dfd47.chunk.js": "/river-flow/static/js/787.ee7dfd47.chunk.js",
     "static/media/wakesurf.png": "/river-flow/static/media/wakesurf.3023f4c73426c4385400.png",
     "static/media/walks.png": "/river-flow/static/media/walks.aa46ca4cdee4d75cc8ef.png",
@@ -91,12 +91,12 @@
     "static/media/map.svg": "/river-flow/static/media/map.3a34b4e634cf317a62a11e2718769d02.svg",
     "index.html": "/river-flow/index.html",
     "static/media/email-logo.svg": "/river-flow/static/media/email-logo.d375b93490ea611c0ccefc2699d3befb.svg",
-    "main.f4cc2741.css.map": "/river-flow/static/css/main.f4cc2741.css.map",
-    "main.6e868afd.js.map": "/river-flow/static/js/main.6e868afd.js.map",
+    "main.1f491224.css.map": "/river-flow/static/css/main.1f491224.css.map",
+    "main.7f2f293c.js.map": "/river-flow/static/js/main.7f2f293c.js.map",
     "787.ee7dfd47.chunk.js.map": "/river-flow/static/js/787.ee7dfd47.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4cc2741.css",
-    "static/js/main.6e868afd.js"
+    "static/css/main.1f491224.css",
+    "static/js/main.7f2f293c.js"
   ]
 }
