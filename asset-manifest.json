@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/river-flow/static/css/main.c0ab24d1.css",
-    "main.js": "/river-flow/static/js/main.4bbebe39.js",
+    "main.css": "/river-flow/static/css/main.f4cc2741.css",
+    "main.js": "/river-flow/static/js/main.6e868afd.js",
     "static/js/787.ee7dfd47.chunk.js": "/river-flow/static/js/787.ee7dfd47.chunk.js",
     "static/media/wakesurf.png": "/river-flow/static/media/wakesurf.3023f4c73426c4385400.png",
     "static/media/walks.png": "/river-flow/static/media/walks.aa46ca4cdee4d75cc8ef.png",
@@ -49,8 +49,10 @@
     "static/media/pricetabbg.png": "/river-flow/static/media/pricetabbg.f419eb69b42d29016105.png",
     "static/media/callbg.png": "/river-flow/static/media/callbg.08da71caa4669548057a.png",
     "static/media/cross.png": "/river-flow/static/media/cross.5f1fb5d80a616db88045.png",
+    "static/media/flowers-ico-white.svg": "/river-flow/static/media/flowers-ico-white.b5d5c854c26e8691ae5b6f8aad81ff17.svg",
     "static/media/table-ico.svg": "/river-flow/static/media/table-ico.30d87385e0d0ba5978738ddbced8cf2d.svg",
     "static/media/table-ico-white.svg": "/river-flow/static/media/table-ico-white.20a5218fe0180620a7b93ec3d41595c3.svg",
+    "static/media/sunset-ico-white.svg": "/river-flow/static/media/sunset-ico-white.70ee16575510617aa204c4bd0ff5c3d6.svg",
     "static/media/cap-ico-white.svg": "/river-flow/static/media/cap-ico-white.4b62ba18babf7dfbc8e2aa375cad2619.svg",
     "static/media/capico.svg": "/river-flow/static/media/capico.492b2496567ce88463d6f0e1de861b08.svg",
     "static/media/groupfavourit.svg": "/river-flow/static/media/groupfavourit.79a7df2f0a1c3ae097bd3cb6e117fa2f.svg",
@@ -89,12 +91,12 @@
     "static/media/map.svg": "/river-flow/static/media/map.3a34b4e634cf317a62a11e2718769d02.svg",
     "index.html": "/river-flow/index.html",
     "static/media/email-logo.svg": "/river-flow/static/media/email-logo.d375b93490ea611c0ccefc2699d3befb.svg",
-    "main.c0ab24d1.css.map": "/river-flow/static/css/main.c0ab24d1.css.map",
-    "main.4bbebe39.js.map": "/river-flow/static/js/main.4bbebe39.js.map",
+    "main.f4cc2741.css.map": "/river-flow/static/css/main.f4cc2741.css.map",
+    "main.6e868afd.js.map": "/river-flow/static/js/main.6e868afd.js.map",
     "787.ee7dfd47.chunk.js.map": "/river-flow/static/js/787.ee7dfd47.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0ab24d1.css",
-    "static/js/main.4bbebe39.js"
+    "static/css/main.f4cc2741.css",
+    "static/js/main.6e868afd.js"
   ]
 }
