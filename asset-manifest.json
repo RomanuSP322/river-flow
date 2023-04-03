@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/river-flow/static/css/main.1f491224.css",
-    "main.js": "/river-flow/static/js/main.7f2f293c.js",
+    "main.css": "/river-flow/static/css/main.7cab0ae3.css",
+    "main.js": "/river-flow/static/js/main.bc7d09bf.js",
     "static/js/787.ee7dfd47.chunk.js": "/river-flow/static/js/787.ee7dfd47.chunk.js",
     "static/media/wakesurf.png": "/river-flow/static/media/wakesurf.3023f4c73426c4385400.png",
     "static/media/walks.png": "/river-flow/static/media/walks.aa46ca4cdee4d75cc8ef.png",
@@ -60,9 +60,11 @@
     "static/media/groupsearay.svg": "/river-flow/static/media/groupsearay.f9db0b6b93d98d0e8386e1c2c3539f00.svg",
     "static/media/bluetooth-ico-white.svg": "/river-flow/static/media/bluetooth-ico-white.8e459889ef1078f4b373caafdfbfd5fd.svg",
     "static/media/eats-ico-white.svg": "/river-flow/static/media/eats-ico-white.40024b6d17d63de8db6eb102c04017fc.svg",
+    "static/media/trees-ico-white.svg": "/river-flow/static/media/trees-ico-white.3ca451ded984980d99e4879933725669.svg",
     "static/media/baloons-ico-white.svg": "/river-flow/static/media/baloons-ico-white.c20a8f4ef054b3fbd7f040fb93943155.svg",
     "static/media/groupico.svg": "/river-flow/static/media/groupico.0b0aef490061fa7bd88ff4505d6bef6f.svg",
     "static/media/group-ico-white.svg": "/river-flow/static/media/group-ico-white.5f8d6e176ec0a52691788617de418f8b.svg",
+    "static/media/lunch-ico-white.svg": "/river-flow/static/media/lunch-ico-white.3fac6916734cdcc47375a2e52fe5b4dc.svg",
     "static/media/instagram-logo.svg": "/river-flow/static/media/instagram-logo.e65266eb6e9bf5806a98975d56edea31.svg",
     "static/media/phoneico.svg": "/river-flow/static/media/phoneico.e5acdecdd470a382ff19575b1fb5efb0.svg",
     "static/media/phone-logo.svg": "/river-flow/static/media/phone-logo.ace175675a1a5e0ef6635899c36c487d.svg",
@@ -91,12 +93,12 @@
     "static/media/map.svg": "/river-flow/static/media/map.3a34b4e634cf317a62a11e2718769d02.svg",
     "index.html": "/river-flow/index.html",
     "static/media/email-logo.svg": "/river-flow/static/media/email-logo.d375b93490ea611c0ccefc2699d3befb.svg",
-    "main.1f491224.css.map": "/river-flow/static/css/main.1f491224.css.map",
-    "main.7f2f293c.js.map": "/river-flow/static/js/main.7f2f293c.js.map",
+    "main.7cab0ae3.css.map": "/river-flow/static/css/main.7cab0ae3.css.map",
+    "main.bc7d09bf.js.map": "/river-flow/static/js/main.bc7d09bf.js.map",
     "787.ee7dfd47.chunk.js.map": "/river-flow/static/js/787.ee7dfd47.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f491224.css",
-    "static/js/main.7f2f293c.js"
+    "static/css/main.7cab0ae3.css",
+    "static/js/main.bc7d09bf.js"
   ]
 }
