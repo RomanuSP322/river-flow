@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/river-flow/static/css/main.a8c07134.css",
-    "main.js": "/river-flow/static/js/main.98dd1d91.js",
+    "main.js": "/river-flow/static/js/main.fb0a67ee.js",
     "static/js/787.ee7dfd47.chunk.js": "/river-flow/static/js/787.ee7dfd47.chunk.js",
     "static/media/wakesurf.png": "/river-flow/static/media/wakesurf.3023f4c73426c4385400.png",
     "static/media/walks.png": "/river-flow/static/media/walks.aa46ca4cdee4d75cc8ef.png",
@@ -94,11 +94,11 @@
     "index.html": "/river-flow/index.html",
     "static/media/email-logo.svg": "/river-flow/static/media/email-logo.d375b93490ea611c0ccefc2699d3befb.svg",
     "main.a8c07134.css.map": "/river-flow/static/css/main.a8c07134.css.map",
-    "main.98dd1d91.js.map": "/river-flow/static/js/main.98dd1d91.js.map",
+    "main.fb0a67ee.js.map": "/river-flow/static/js/main.fb0a67ee.js.map",
     "787.ee7dfd47.chunk.js.map": "/river-flow/static/js/787.ee7dfd47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8c07134.css",
-    "static/js/main.98dd1d91.js"
+    "static/js/main.fb0a67ee.js"
   ]
 }
