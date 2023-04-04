@@ -5,7 +5,7 @@
   margin-right: auto;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakesurf {
   padding-left: 0px;
   padding-right: 0px;
@@ -55,7 +55,7 @@
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakesurf__info { 
     background-image: var(--wakesurf-mobile);
    
@@ -97,7 +97,7 @@
   
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakesurf__board {
   position: relative;
   }  
@@ -132,7 +132,7 @@ padding-bottom: 20px;
   
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakesurf__desc-tabs {
     padding-bottom: 40px;
   }
@@ -144,7 +144,7 @@ padding-bottom: 20px;
  
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakesurf__photos {
     position: relative;
 
@@ -157,7 +157,7 @@ padding-bottom: 20px;
   width: 100%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakesurf__photos-img {
     position: absolute;
     object-fit: cover;
@@ -184,7 +184,7 @@ padding-bottom: 20px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakesurf__contact { 
     padding-top: 210px;
     

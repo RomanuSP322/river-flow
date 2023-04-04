@@ -5,6 +5,8 @@ import Button from '../Button/Button';
 import pricebg from '../../images/pricebg.png';
 import boatbg from '../../images/btngrungebg.png';
 import linegrunge from "../../images/grungeline.png";
+import arrowSwipe from "../../images/arrow-swipe.png";
+import arrowSwipeRed from "../../images/arrow-swipe-red.png";
 import './Accordion.css';
 
 function Accordion(props) {
@@ -71,17 +73,17 @@ function Accordion(props) {
 
 
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-    if(activeTab === null){
-    setOpenedWidth((prevWidth) => prevWidth - 30);
-    setTimeout(() => {
-    setOpenedWidth((prevWidth) => prevWidth + 30);
-    }, 3000);
-    }
-    }, 4000);
-    return () => clearInterval(timer);
-    }, [activeTab]);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //   if(activeTab === null){
+  //   setOpenedWidth((prevWidth) => prevWidth - 30);
+  //   setTimeout(() => {
+  //   setOpenedWidth((prevWidth) => prevWidth + 30);
+  //   }, 3000);
+  //   }
+  //   }, 4000);
+  //   return () => clearInterval(timer);
+  //   }, [activeTab]);
 
 
 
@@ -94,7 +96,11 @@ function Accordion(props) {
       }`}
       onTouchStart={handleAccordionTouchStart}
       onTouchMove={handleAccordionTouchMove}
-    >
+    >        {isMobile && (
+      <img src={activeTab === 0 ? arrowSwipe : arrowSwipeRed} className={`accordion__arrow ${
+        activeTab === sum-1 ? '' : 'accordion__arrow_active'
+      }`}/>
+         )}
       {/* {isMobile && (
         <div className='panel__mobile-nav'>
           {panels.map((panel, index) => (
@@ -123,6 +129,7 @@ function Accordion(props) {
             : {}
         }
       >
+      
         {panels.map((panel, index) => (
           <React.Fragment key={index}>
             {!isMobile && (

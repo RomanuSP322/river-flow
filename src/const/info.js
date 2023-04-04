@@ -24,6 +24,8 @@ import bluetoothWhite from '../images/bluetooth-ico-white.svg';
 import tableWhite from '../images/table-ico-white.svg';
 import sunsetWhite from '../images/sunset-ico-white.svg';
 import flowersWhite from '../images/flowers-ico-white.svg';
+import treesWhite from '../images/trees-ico-white.svg';
+import lunchWhite from '../images/lunch-ico-white.svg';
 
 import searay1 from '../images/searay1.png';
 import searay2 from '../images/searay2.png';
@@ -141,7 +143,7 @@ const panels = [
         ico: capico,
       },
       {
-        name: '7 гостей + кэп',
+        name: '10 гостей + кэп',
         ico: groupico,
       },
 
@@ -184,14 +186,14 @@ const panels = [
     info: {
       title: 'Характеристики:',
       strings: [
-        { string: 'Длина 7 метров' },
+        { string: 'Длина 8 метров' },
         { string: 'Каюта в полный рост' },
+        { string: 'Мотор 350 л.с.' },
         { string: 'Туалет' },
-        { string: 'Газовая печь' },
-        { string: 'Bluetooth' },
-        { string: 'Гидрокостюмы' },
-        { string: 'Доставка по запросу' },
-        { string: 'Обогреватель' },
+        { string: 'Мини кухня' },
+        { string: 'Своя музыка' },
+        { string: 'Тент от дождя' },        
+        { string: 'Отопитель салона' },
       ],
     },
     photos: [
@@ -268,7 +270,7 @@ const panels = [
         { string: 'Длина 5 метров' },
         { string: 'Ширина 2 метра' },
         { string: 'Мотор Suzuki 90 л.с' },
-        { string: 'Bluetooth' },
+        { string: 'Своя музыка' },
         { string: 'Гидрокостюмы' },
         { string: 'Доставка по запросу' },
         { string: 'Обогреватель' },
@@ -277,12 +279,6 @@ const panels = [
     photos: [
        favourit1 ,
       favourit2,
-      favourit3,
-      favourit4 ,
-      favourit3,
-      favourit4 ,
-      favourit3,
-      favourit4 ,
       favourit3,
       favourit4 ,
     ],
@@ -346,7 +342,7 @@ const panels = [
         { string: 'Каюта в полный рост' },
         { string: 'Туалет' },
         { string: 'Газовая печь' },
-        { string: 'Bluetooth' },
+        { string: 'Своя музыка' },
         { string: 'Гидрокостюмы' },
         { string: 'Доставка по запросу' },
         { string: 'Обогреватель' },
@@ -441,7 +437,7 @@ const walksInfo = [
         ico: boaticoWhite,
       },
       {
-        name: '7 гостей',
+        name: '8 гостей',
         ico: groupicoWhite,
       },
       {
@@ -453,7 +449,7 @@ const walksInfo = [
         ico: baloonsWhite,
       },
       {
-        name: 'Bluetooth',
+        name: 'Своя музыка',
         ico: bluetoothWhite,
       },
       {
@@ -499,7 +495,7 @@ const walksInfo = [
         ico: sunsetWhite,
       },
       {
-        name: 'Bluetooth',
+        name: 'Своя музыка',
         ico: bluetoothWhite,
       },
       {
@@ -523,7 +519,7 @@ const walksInfo = [
   {
     id: 2,
     title: 'День на воде',
-    price: '50.000 р',
+    price: '65.000 р',
     img: sliderDay,
     description:
       'Проведите незабываемый день на воде со своими близкими. Насладитесь круизом по живописным местам, катанием на водных лыжах и обедом на реке. Наш дружелюбный и опытный экипаж обеспечит вашу безопасность и комфорт, сделав ваш день на воде незабываемым.',
@@ -541,11 +537,11 @@ const walksInfo = [
         ico: waterskiicoWhite,
       },
       {
-        name: 'Праздничное оформление',
-        ico: baloonsWhite,
+        name: 'Живописный маршрут',
+        ico: treesWhite,
       },
       {
-        name: 'Bluetooth',
+        name: 'Своя музыка',
         ico: bluetoothWhite,
       },
       {
@@ -557,8 +553,8 @@ const walksInfo = [
         ico: capicoWhite,
       },
       {
-        name: 'Фуршет',
-        ico: eatsWhite,
+        name: 'Обед',
+        ico: lunchWhite,
       },
       {
         name: 'Тюбинг',
@@ -580,7 +576,7 @@ const walksInfo = [
         ico: boaticoWhite,
       },
       {
-        name: '7 гостей',
+        name: '8 гостей',
         ico: groupicoWhite,
       },
       {
@@ -592,7 +588,7 @@ const walksInfo = [
         ico: baloonsWhite,
       },
       {
-        name: 'Bluetooth',
+        name: 'Своя музыка',
         ico: bluetoothWhite,
       },
       {

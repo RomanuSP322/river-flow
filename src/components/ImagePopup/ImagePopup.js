@@ -27,10 +27,10 @@ function reduceImageSize(images) {
 function ImagePopup(props) {
   const [images, setImages] = useState([]);
   const [reducedImages, setReducedImages] = useState([]);
-  const windowWidth = document.width;
-  const isMobile = document.width < 900;
+  const windowWidth = document.body.clientWidth;
+  const isMobile = windowWidth < 900;
   const [currentImageIndex, setCurrentImageIndex] = useState(props.card.index);
-
+  const [touchPosition, setTouchPosition] = useState(null);
   const handlePrevClick = () => {
     setCurrentImageIndex(
       currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1
@@ -46,6 +46,45 @@ function ImagePopup(props) {
   const handleClose = () => {
     props.onClose();
     setCurrentImageIndex(0);
+    
+  };
+
+  const next = () => {
+    if (currentImageIndex < images.length - 1) {
+      setCurrentImageIndex((prevState) => prevState + 1);
+    }
+  };
+
+  const prev = () => {
+    if (currentImageIndex > 0) {
+      setCurrentImageIndex((prevState) => prevState - 1);
+    }
+  };
+
+  const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e) => {
+    const touchDown = touchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+
+    if (diff > 5) {
+      next();
+    }
+
+    if (diff < -5) {
+      prev();
+    }
+
+    setTouchPosition(null);
   };
 
   useEffect(() => {
@@ -105,11 +144,17 @@ function ImagePopup(props) {
               }`}
             />
           </button>
-          <div className='popup__slide'>
+          {isMobile &&        <p className='popup__image-counter'>
+                  {currentImageIndex + 1}/{images.length}
+                </p>}
+          <div className='popup__slide '    onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}>
+     
             <h2 className='popup__image-title'>{props.card.title}</h2>
+            
             <img
               src={images[currentImageIndex]}
-              alt='Картинка Места'
+              alt='Фото лодки'
               className='popup__image noselect'
               data-index={currentImageIndex}
             />

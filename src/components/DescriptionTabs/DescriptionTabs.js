@@ -12,7 +12,7 @@ function DescriptionTabs({ data, boat, windowWidth}) {
   const markerWidth = document.body.clientWidth > 1400 ? 230 : document.body.clientWidth > 1200 ? 200 : document.body.clientWidth > 350 ? 120 : 100
   const [touchPosition, setTouchPosition] = useState(null);
   const frameWidth = windowWidth > 800 ? 480 : 280;
-
+  const [frameStyle, setFrameStyle] = useState({"pointer-events": "none"});
 
   const next = () => {
     if (visibleTab < 2) {
@@ -106,12 +106,14 @@ function DescriptionTabs({ data, boat, windowWidth}) {
       )}
 
 {item.url && (  
-     <div className='desc-tab__map'>
+     <div className='desc-tab__map' onClick={()=> setFrameStyle({"pointer-events": "auto"})}>
             <iframe
             src={(boat === 'Favourit 480' ? item.url[0] : (boat === 'Sea Ray 230' ? item.url[1] : (boat === 'Regal Session 22' ? item.url[2] : '')))}
             width={frameWidth}
             height="210"
             frameborder="0"
+                   
+            style={frameStyle}
           ></iframe>
           </div>
       
