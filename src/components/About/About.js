@@ -6,19 +6,19 @@ import wakeboard from '../../images/wakeboard.png';
 import Chapter from '../Chapter/Chapter';
 import './About.css';
 
-function About({refs}) {
+function About({refs, windowWidth}) {
   const { wakesurfRef, wakeboardRef, boatrentRef, walksRef } = refs;
-  const border1 = window.innerWidth > 600 ? '20px 20px 20px 115px' : '16px 16px 16px 85px';
-  const titlepos1 = window.innerWidth > 600 ?  'translate(-28%, 200px) rotate(18deg)' : 'translate(-30%, 160px) rotate(18deg)';
+  const border1 = windowWidth > 600 ? '20px 20px 20px 115px' : '16px 16px 16px 85px';
+  const titlepos1 = windowWidth > 600 ?  'translate(-28%, 200px) rotate(18deg)' : 'translate(-30%, 160px) rotate(18deg)';
  
-  const border2 = window.innerWidth > 600 ? '20px 115px 20px 20px ' : '16px 85px 16px 16px ';
-  const titlepos2 = window.innerWidth > 600 ?  'translate(-25%, 10px) rotate(-18deg)' : 'translate(-20%, 20px) rotate(-10deg)';
+  const border2 = windowWidth > 600 ? '20px 115px 20px 20px ' : '16px 85px 16px 16px ';
+  const titlepos2 = windowWidth > 600 ?  'translate(-25%, 10px) rotate(-18deg)' : 'translate(-20%, 20px) rotate(-10deg)';
  
-  const border3 = window.innerWidth > 600 ? '20px 20px 20px 115px' : '16px 16px 16px 85px';
-  const titlepos3 = window.innerWidth > 600 ?  'translate(32%, 10px) rotate(-10deg)' : 'translate(25%, 15px) rotate(10deg)';
+  const border3 = windowWidth > 600 ? '20px 20px 20px 115px' : '16px 16px 16px 85px';
+  const titlepos3 = windowWidth > 600 ?  'translate(32%, 10px) rotate(-10deg)' : 'translate(25%, 15px) rotate(10deg)';
 
-  const border4 = window.innerWidth > 600 ? '20px 115px 20px 20px ' : '16px 85px 16px 16px ';
-  const titlepos4 = window.innerWidth > 600 ?  'translate(30%, 20px) rotate(18deg)' : 'translate(20%, 15px) rotate(10deg)';
+  const border4 = windowWidth > 600 ? '20px 115px 20px 20px ' : '16px 85px 16px 16px ';
+  const titlepos4 = windowWidth > 600 ?  'translate(30%, 20px) rotate(18deg)' : 'translate(20%, 15px) rotate(10deg)';
  
   return (
     <div className='about'>
@@ -38,7 +38,7 @@ function About({refs}) {
         <Chapter
           title='Вейксерф'
           price='от 6000 р'
-          info='в Мякинино и Долгопрудном'
+          info='в Мякинино и Мытищах'
           img={wakesurf}
           border={border1}
           titlepos={titlepos1}
@@ -48,7 +48,7 @@ function About({refs}) {
       <div className='about__chapter-wrapper about__chapter-wrapper_third'>
         <Chapter
           title='Прогулки'
-          price='от 20000 р'
+          price='от 15000 р'
           info='Идеи для праздника'
           img={walks}
           border={border2}

@@ -99,7 +99,7 @@ function Accordion(props) {
     >        {isMobile && (
       <img src={activeTab === 0 ? arrowSwipe : arrowSwipeRed} className={`accordion__arrow ${
         activeTab === sum-1 ? '' : 'accordion__arrow_active'
-      }`}/>
+      }`} onClick={()=> next()}/>
          )}
       {/* {isMobile && (
         <div className='panel__mobile-nav'>

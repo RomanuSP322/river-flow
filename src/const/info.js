@@ -160,8 +160,8 @@ const panels = [
         ico: table,
       },
       {
-        name: 'Мякинино',
-        url: 'https://yandex.ru/maps/-/CCUOaBTvxC',
+        name: 'Долгопрудный',
+        url: 'https://yandex.ru/maps/-/CCUOaJFNxD',
         ico: mapico,
       },
     ],
@@ -180,7 +180,7 @@ const panels = [
       },
       {
         name: '24 часа',
-        value: '120.000 р/сут',
+        value: '90.000 р/сут',
       },
     ],
     info: {
@@ -191,8 +191,8 @@ const panels = [
         { string: 'Мотор 350 л.с.' },
         { string: 'Туалет' },
         { string: 'Мини кухня' },
-        { string: 'Своя музыка' },
-        { string: 'Тент от дождя' },        
+        { string: 'Зона для загара' },
+        { string: 'Тент от дождя/солнца' },        
         { string: 'Отопитель салона' },
       ],
     },
@@ -216,7 +216,7 @@ const panels = [
     content_title: 'Favourit 480',
     text_color: '#B44748',
     content:
-      'Отличный выбор для небольшой компании, которая ищет универсальную и практичную моторную лодку. Благодаря просторному кокпиту, мощному подвесному двигателю Favourit 480 идеально подходит для круизов, рыбалки и водных видов спорта.',
+      'Отличный выбор для небольшой компании, которая ищет универсальную и практичную моторную лодку. Благодаря открытой носовой части с диваном, малому весу Favourit 480 идеально подходит для драйвовых покатушек, рыбалки и водных видов спорта.',
     imgurl: accordionImg2,
     include: [
       {
@@ -257,11 +257,11 @@ const panels = [
       },
       {
         name: 'Без капитана',
-        value: '4.000 р/ч',
+        value: '5.000 р/ч',
       },
       {
         name: '24 часа',
-        value: '60.000 р/сут',
+        value: '35.000 р/сут',
       },
     ],
     info: {
@@ -271,9 +271,9 @@ const panels = [
         { string: 'Ширина 2 метра' },
         { string: 'Мотор Suzuki 90 л.с' },
         { string: 'Своя музыка' },
-        { string: 'Гидрокостюмы' },
+        { string: 'Тент от дождя/солнца' },
         { string: 'Доставка по запросу' },
-        { string: 'Обогреватель' },
+        { string: 'Отопитель салона' },
       ],
     },
     photos: [
@@ -292,7 +292,7 @@ const panels = [
     text_color: '#D9C108',
     content_title: 'Regal Session22',
     content:
-      'Идеальный катер для любителей вейксерфа c передовой конструкцией корпуса, современными технологиями и вместительному салону. Regal Session 22 обеспечивает комфортный ход и является превосходной базой для водных видов спорта.',
+      'Идеальный катер для любителей вейксерфа c передовой конструкцией корпуса, современными технологиями и вместительным салоном. Regal Session 22 обеспечивает комфортный ход и является превосходной базой для шумного отдыха большой компанией и водных видов спорта.',
     imgurl: accordionImg3,
     include: [
       {
@@ -300,7 +300,7 @@ const panels = [
         ico: capico,
       },
       {
-        name: '7 гостей + кэп',
+        name: '8 гостей + кэп',
         ico: groupico,
       },
       {
@@ -316,36 +316,35 @@ const panels = [
         ico: waterskiico,
       },
       {
-        name: 'Мякинино',
-        url: 'https://yandex.ru/maps/-/CCUOaBTvxC',
+        name: 'Долгопрудный',
+        url:'https://yandex.ru/maps/-/CCUKnNtGXA',
         ico: mapico,
       },
     ],
     prices: [
       {
         name: 'Будни',
-        value: '10.000 р/ч',
+        value: '9.000 р/ч',
       },
       {
         name: 'Выходные',
-        value: '11.000 р/ч',
+        value: '10.000 р/ч',
       },
       {
         name: '24 часа',
-        value: '120.000 р/сут',
+        value: '80.000 р/сут',
       },
     ],
     info: {
       title: 'Характеристики:',
       strings: [
+        { string: 'Вейк-буксировщик'},
         { string: 'Длина 7 метров' },
-        { string: 'Каюта в полный рост' },
-        { string: 'Туалет' },
-        { string: 'Газовая печь' },
-        { string: 'Своя музыка' },
-        { string: 'Гидрокостюмы' },
-        { string: 'Доставка по запросу' },
-        { string: 'Обогреватель' },
+        { string: 'Ширина 2.5 метра' },
+        { string: 'Мотор 350 л.с.' }, 
+        { string: 'Музыкальная система'},
+        { string: 'Гидрокостюмы'},
+        { string: 'Доставка по запросу'},
       ],
     },
     photos: [
@@ -417,11 +416,12 @@ const wakeboardInfo = [
     title: 'Как добраться',
     url: [
       'https://yandex.ru/map-widget/v1/?um=constructor%3Adda236157aa315486602678d6bf3c09d59fe7ebad5037745381ee885e806b9f7&amp;source=constructor',
-      'https://yandex.ru/map-widget/v1/?um=constructor%3A1a4fd4b3640fa7df6c4ddeb8c41b6136413c4831d3ea4c50fefc3b9a71155212&amp;source=constructor',
-      'https://yandex.ru/map-widget/v1/?um=constructor%3Adda236157aa315486602678d6bf3c09d59fe7ebad5037745381ee885e806b9f7&amp;source=constructor',
+      'https://yandex.ru/map-widget/v1/?um=constructor%3A1b7269cb565ad9b029b871f543a12b8d06c4609e1b89d40a09fdf6d97e529947&amp;source=constructor',
+      'https://yandex.ru/map-widget/v1/?um=constructor%3A1b7269cb565ad9b029b871f543a12b8d06c4609e1b89d40a09fdf6d97e529947&amp;source=constructor',
     ],
   },
 ];
+
 
 const walksInfo = [
   {
@@ -437,7 +437,7 @@ const walksInfo = [
         ico: boaticoWhite,
       },
       {
-        name: '8 гостей',
+        name: '10 гостей',
         ico: groupicoWhite,
       },
       {
@@ -529,7 +529,7 @@ const walksInfo = [
         ico: boaticoWhite,
       },
       {
-        name: '9 гостей',
+        name: '10 гостей',
         ico: groupicoWhite,
       },
       {
@@ -576,7 +576,7 @@ const walksInfo = [
         ico: boaticoWhite,
       },
       {
-        name: '8 гостей',
+        name: '10 гостей',
         ico: groupicoWhite,
       },
       {
@@ -660,7 +660,7 @@ const contactsInfo =
     phone: '+7 999 555 32 45',
     locations: [
       {
-        name: 'Мякинино',
+        name: 'Мякинино (с июня)',
         value: 'Яхт-клуб Парк Рублево',
         url: 'https://yandex.ru/maps/-/CCUKjWq3KB',
       },

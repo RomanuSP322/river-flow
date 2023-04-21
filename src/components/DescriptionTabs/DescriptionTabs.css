@@ -116,39 +116,25 @@
   opacity: 0;
 }
 
-.desc-tabs__marker {
+.desc-tabs__title::after {
   position: absolute;
-  left: 0px;
+  content: '';
+  top: -10px;
+  left:-10px;
   background-image: var(--tabmarker);
-  transition: all 0.4s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all .4s cubic-bezier(0.65, 0, 0.076, 1);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 180px;
+  width: 110%;
   height: 10px;
+  opacity: 0;  
 }
 
-@media screen and (max-width: 1400px) {
-  .desc-tabs__marker {
-    position: absolute;
-    left: 0px;
-    top: 6px;
-    
-    width: 140px;
-    height: 8px;
-  }
-  
+.desc-tabs__title_active.desc-tabs__title::after {
+  opacity: 1;
 }
 
-@media screen and (max-width: 1400px) {
-  .desc-tabs__marker {
-    position: absolute;
-    left: -10px;
-    top: 0px;    
-    width: 100px;
-    height: 6px;
-  }
-  
-}
+
 
 .desc-tab__content-wrapper {
  
@@ -312,8 +298,15 @@
 }
 
 .desc-tab__map {
-  padding-top: 20px;
+  padding-top: 30px;
 padding-left: 50px
+}
+
+@media screen and (max-width: 500px) {
+  .desc-tab__map {
+    padding-top: 20px;
+  padding-left: 0px
+  }
 }
 
 .desc-tab__info-list {

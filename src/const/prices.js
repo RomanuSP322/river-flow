@@ -6,30 +6,6 @@ const wakesurfPrice = [
     prices: [
       {
         name: 'Сет',
-        value: '3000 р/25м',
-      },
-      {
-        name: 'Будни',
-        value: '5000 р/ч',
-      },
-      {
-        name: 'Выходные',
-        value: '6000 р/ч',
-      },
-    ],
-    location: {
-      name: 'Мякинино',
-      value:'Яхт-клуб Парк Рублево',
-      url:'https://yandex.ru/maps/-/CCUKjWq3KB'
-    }
-  },
-  {
-    id: '2',
-    boat: 'MasterCraft\n X-star',
-    color:'#000000',
-    prices: [
-      {
-        name: 'Сет',
         value: '4000 р/25м',
       },
       {
@@ -39,6 +15,30 @@ const wakesurfPrice = [
       {
         name: 'Выходные',
         value: '8000 р/ч',
+      },
+    ],
+    location: {
+      name: 'Долгопрудный',
+      value:'Санаторий Березки',
+      url:'https://yandex.ru/maps/-/CCUKnNtGXA'
+    }
+  },
+  {
+    id: '2',
+    boat: 'MasterCraft\n X-star',
+    color:'#000000',
+    prices: [
+      {
+        name: 'Сет',
+        value: '4500 р/25м',
+      },
+      {
+        name: 'Будни',
+        value: '8000 р/ч',
+      },
+      {
+        name: 'Выходные',
+        value: '9000 р/ч',
       },
     ],
     location: {
@@ -94,9 +94,9 @@ const wakeboardPrice = [
       },
     ],
     location: {
-      name: 'Мякинино',
-      value:'Яхт-клуб Парк Рублево',
-      url:'https://yandex.ru/maps/-/CCUKjWq3KB'
+      name: 'Долгопрудный',
+      value:'Яхт Клуб Спартак',
+      url:'https://yandex.ru/maps/-/CCUOaJFNxD'
     }
   },
   {
@@ -110,17 +110,17 @@ const wakeboardPrice = [
       },
       {
         name: 'Будни',
-        value: '9000 р/ч',
+        value: '8000 р/ч',
       },
       {
         name: 'Выходные',
-        value: '10000 р/ч',
+        value: '9000 р/ч',
       },
     ],
     location: {
-      name: 'Мякинино',
-      value:'Яхт-клуб Парк Рублево',
-      url:'https://yandex.ru/maps/-/CCUKjWq3KB'
+      name: 'Долгопрудный',
+      value:'Санаторий Березки',
+      url:'https://yandex.ru/maps/-/CCUKnNtGXA'
     }
   },
 ];

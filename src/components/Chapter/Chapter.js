@@ -12,7 +12,7 @@ function Chapter({title, price, info, img, border, titlepos, refs}) {
   };
 
   return (
-    <figure className=' chapter' style={{"border-radius": `${border}`}}>
+    <figure className='chapter' style={{borderRadius: `${border}`}}>
     <img className='chapter-image'
       src={img}
       alt='img21'

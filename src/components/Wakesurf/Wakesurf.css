@@ -178,7 +178,7 @@ padding-bottom: 20px;
 @media screen and (max-width: 1800px) {
   .wakesurf__contact { 
     padding-top: 0px;
-    padding-left: 10px;
+    padding-left: 0px;
    flex-direction: column;
    align-items: center;
   }

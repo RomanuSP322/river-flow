@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
 import "./Slider.css";
 import arrowLeft from "../../images/arrow-left.png";
 import arrowRight from "../../images/arrow-right.png";
@@ -95,6 +95,7 @@ function Slider({ data }) {
 
   const listTitles = data.map((item) => (
     <li
+    key={item.id}
       onClick={() => {
         setPosX(item.id * slideWidth);
         setVisibleTab(item.id);
@@ -111,7 +112,7 @@ function Slider({ data }) {
   ));
 
   const listContent = data.map((item) => (
-    <div className="slider-item">
+    <div className="slider-item" key={item.id}>
       <div
         className="slider-item__columns noselect"
         style={{
@@ -142,8 +143,8 @@ function Slider({ data }) {
           <p className="p slider-item__description">{item.description}</p>
           {item.include && (
             <div className="slider-item__include">
-              {item.include.map((pos) => (
-                <div className="slider-item__include-item">
+              {item.include.map((pos, i) => (
+                <div className="slider-item__include-item" key={i}>
                   <div className="slider-item__include-ico-wrapper">
                     <img src={pos.ico} className="slider-item__include-ico" />
                   </div>

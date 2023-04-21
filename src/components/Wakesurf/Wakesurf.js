@@ -16,8 +16,8 @@ function Wakesurf({ windowWidth }) {
   const boat = (r) => {
     setVisibleBoat(r);
   };
-  const frameWidth = windowWidth > 1215 ? 480 : windowWidth > 500 ? 400 : 320;
-  const [frameStyle, setFrameStyle] = useState({ 'pointer-events': 'none' });
+  const frameWidth = windowWidth > 1215 ? 480 : windowWidth > 500 ? 400 : windowWidth;
+  const [frameStyle, setFrameStyle] = useState({ 'pointerEvents': 'none' });
 
   return (
     <div className='wakesurf'>
@@ -42,28 +42,28 @@ function Wakesurf({ windowWidth }) {
         <img src={wakesurfPhotos} className='wakesurf__photos-img' />
         <div className='wakesurf__contact'>
           <div
-            onClick={() => setFrameStyle({ 'pointer-events': 'auto' })}
+            onClick={() => setFrameStyle({ 'pointerEvents': 'auto' })}
             className='frame'
           >
             {visibleBoat === 'Regal Session 22' && (
               <iframe
-                src='https://yandex.ru/map-widget/v1/?um=constructor%3Adda236157aa315486602678d6bf3c09d59fe7ebad5037745381ee885e806b9f7&amp;source=constructor'
+                src='https://yandex.ru/map-widget/v1/?um=constructor%3A1b7269cb565ad9b029b871f543a12b8d06c4609e1b89d40a09fdf6d97e529947&amp;source=constructor'
                 width={frameWidth}
-                height='250'
-                frameborder='0'
+                height='280'
+                frameBorder='0'
                 className='frame'
                 style={frameStyle}
               ></iframe>
             )}
             {visibleBoat === 'MasterCraft\n X-star' && (
               <iframe
-                src='https://yandex.ru/map-widget/v1/?um=constructor%3A1a4fd4b3640fa7df6c4ddeb8c41b6136413c4831d3ea4c50fefc3b9a71155212&amp;source=constructor'
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A2cb7bf31e340136ebd28f430374e2c75763b1a77b4c411ccfaf8386d0bf83cc0&amp;source=constructor"
                 width={frameWidth}
-                height='250'
-                frameborder='0'
+                height='280'
+                frameBorder='0'
                 className='frame'
                 style={frameStyle}
-              ></iframe>
+              ></iframe>        
             )}
           </div>
           <div className='wakesurf__callme'>

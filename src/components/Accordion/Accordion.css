@@ -65,9 +65,9 @@
 .accordion__arrow {
   position: absolute;
   top: 30px;
-  right: 15px;
+  right: 10px;
   width: 40px;
-  transition: all 0.6s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.8s cubic-bezier(0.65, 0, 0.076, 1);
   z-index: 5;
   opacity: 0;
 }
@@ -79,10 +79,10 @@
 
 @keyframes trans {
   0% {
-    transform: translateX(0px);
+    transform: translateX(-4px);
   }
-  30% {
-    transform: translateX(10px);
+  25% {
+    transform: translateX(15px);
   }
   100% {
     transform: translateX(0px);
@@ -794,11 +794,10 @@ color: var(--color-font);
   .panel__prices {   
     flex-basis:100%; 
     background-image: var(--pricebg);
-    background-size: 400px 190px;
+    background-size: 340px 190px;
     background-position: top center;
     background-repeat: no-repeat;
     font-size: 18px;
-
     
   }
 }
@@ -811,9 +810,8 @@ color: var(--color-font);
 }
 
 @media screen and (max-width: 900px) {
-  .panel-table {
-   
-    min-width: 300px;
+  .panel-table {   
+    min-width: 310px;
     padding-top: 30px;
     padding-left: 20px;   
     min-height: 160px;

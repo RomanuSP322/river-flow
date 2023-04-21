@@ -21,8 +21,8 @@
 
 @media screen and (max-width: 650px) {
   .scrolltop {
-    right: 0px;
-    bottom: 10px;
+    right: 2px;
+    bottom: 20px;
   }
 }
 

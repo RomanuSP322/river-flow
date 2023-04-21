@@ -8,11 +8,11 @@ import './DescriptionTabs.css';
 function DescriptionTabs({ data, boat, windowWidth}) {
   const [visibleTab, setVisibleTab] = React.useState(data[0].id);
 
-  const tabWidth = document.body.clientWidth > 1400 ? 715 : document.body.clientWidth > 1200 ? 620 : document.body.clientWidth > 350 ? 350 : 300
-  const markerWidth = document.body.clientWidth > 1400 ? 230 : document.body.clientWidth > 1200 ? 200 : document.body.clientWidth > 350 ? 120 : 100
+  const tabWidth = document.body.clientWidth > 1400 ? 715 : document.body.clientWidth > 900 ? 620 : document.body.clientWidth > 350 ? 350 : 300
+  // const markerWidth = document.body.clientWidth > 1400 ? 230 : document.body.clientWidth > 1200 ? 200 : document.body.clientWidth > 350 ? 120 : 100
   const [touchPosition, setTouchPosition] = useState(null);
-  const frameWidth = windowWidth > 800 ? 480 : 280;
-  const [frameStyle, setFrameStyle] = useState({"pointer-events": "none"});
+  const frameWidth = windowWidth > 800 ? 480 : windowWidth-20;
+  const [frameStyle, setFrameStyle] = useState({"pointerEvents": "none"});
 
   const next = () => {
     if (visibleTab < 2) {
@@ -59,6 +59,7 @@ function DescriptionTabs({ data, boat, windowWidth}) {
   const listTitles = data.map((item) => (
     <li
       onClick={() => setVisibleTab(item.id)}
+      key={item.id}
       style={{ '--tab': `url(${tab})` }}
       className={
         visibleTab === item.id
@@ -72,7 +73,7 @@ function DescriptionTabs({ data, boat, windowWidth}) {
 
  
   const listContent = data.map((item) => (
-    <div className='desc-tab__content-wrapper'>
+    <div className='desc-tab__content-wrapper' key={item.id}>
       {item.desc && (
         <div className='desc-tab__content'>
           <p className='p'>{item.desc}</p>
@@ -82,8 +83,8 @@ function DescriptionTabs({ data, boat, windowWidth}) {
       {item.include && (
         <div className='desc-tab__content desc-tab__include'>
        
-          {item.include.map((pos) => (
-            <div className='desc-tab__include-item'>
+          {item.include.map((pos, idx) => (
+            <div className='desc-tab__include-item' key={idx}>
               <div className='desc-tab__include-ico-wrapper'>
                 <img src={pos.ico} className='desc-tab__include-ico' />
               </div>
@@ -94,11 +95,11 @@ function DescriptionTabs({ data, boat, windowWidth}) {
       )}
       {item.info && (
         <div className='desc-tab__content desc-tab__info'>
-          {item.info.map((chapter) => (
-            <ul className='desc-tab__info-list'>
+          {item.info.map((chapter, idx) => (
+            <ul className='desc-tab__info-list' key={idx}>
               <h4 className='desc-tab__info-title'>{chapter.title}</h4>
-              {chapter.strings.map((item) => (
-                <li className='desc-tab__info-text'>{item.string}</li>
+              {chapter.strings.map((item, i) => (
+                <li key={i}className='desc-tab__info-text'>{item.string}</li>
               ))}
             </ul>
           ))}
@@ -106,13 +107,12 @@ function DescriptionTabs({ data, boat, windowWidth}) {
       )}
 
 {item.url && (  
-     <div className='desc-tab__map' onClick={()=> setFrameStyle({"pointer-events": "auto"})}>
+     <div className='desc-tab__map' onClick={()=> setFrameStyle({"pointerEvents": "auto"})}>
             <iframe
             src={(boat === 'Favourit 480' ? item.url[0] : (boat === 'Sea Ray 230' ? item.url[1] : (boat === 'Regal Session 22' ? item.url[2] : '')))}
             width={frameWidth}
-            height="210"
-            frameborder="0"
-                   
+            height="260"
+            frameBorder="0"                   
             style={frameStyle}
           ></iframe>
           </div>
@@ -136,10 +136,7 @@ function DescriptionTabs({ data, boat, windowWidth}) {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
     >
-      <span
-        className='desc-tabs__marker'
-        style={{ transform: `translateX(${visibleTab * markerWidth}px)` }}
-      ></span>
+
       <ul className='desc-tabs__titles'>{listTitles}</ul>
 
       <div

@@ -23,7 +23,7 @@ function Footer() {
         <div className='footer__maps'>
           {contactsInfo.locations.map((item, idx) => {
             return (
-              <div className='footer__maps-item'>
+              <div className='footer__maps-item' key= {idx}>
               <a href={item.url} target='_blank' className='footer__maps-link'>
                 <div className='footer__ico-wrapper'>
                   <img src={location} className='footer__maps-ico' />
