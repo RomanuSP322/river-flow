@@ -4,9 +4,9 @@ import Slider from '../Slider/Slider';
 import walksBg from '../../images/walks-bg.png';
 import './Walks.css';
 
-function Walks() {
+function Walks({panels, onPhotoClick, onContactClick}) {
   return (
-    <div className='walks' style={{ '--walksbg': `url(${walksBg})` }}>
+    <div className='walks' style={{ '--walksbg': `url(${walksBg})` }}  id='boatwalks'>
       <div className='walks__intro'>
         <h2 className='h2 walks__title'>Прогулки на катере</h2>
         <h3 className='h3 walks__subtitle'>Живописные приключения</h3>
@@ -19,7 +19,7 @@ function Walks() {
           увлекательное приключение на воде.
         </p>
       </div>
-      <Slider data={walksInfo} />
+      <Slider data={walksInfo} booking={true}  panels={panels} onPhotoClick={onPhotoClick} onContactClick={onContactClick}/>
     </div>
   );
 }

@@ -12,7 +12,7 @@
   align-items: center;
   visibility: hidden;
   opacity: 0; 
-  transition: visibility 0.5s cubic-bezier(0.5, 0, 0, 1);
+  
   z-index: 12;
 }
 
@@ -21,14 +21,21 @@
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.35);
   border-radius: 10px 10px 100px 10px;
   position: relative;
-  width: 75%;
-  height: 95%;
+  width: 90%;
+  height: 100%;
 }
 
 @media screen and (max-width: 900px) {
   .popup__image-container {
     width: 100%;
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .popup__image-container {
+    width: 100%;
+    height: 88%;
   }
 }
 
@@ -59,6 +66,7 @@
     padding-right: 0px;
     padding-top: 10px;
     box-sizing: border-box;
+    height: 78%;
   }
 }
 
@@ -70,10 +78,11 @@
 
 .popup__image {
   width: 100%;
-  object-fit: cover;
-  max-height: 650px;
+  object-fit: contain;
+  max-height: 720px;
   pointer-events: none;
   border-radius: 15px;
+  margin-bottom: auto;
 }
 
  @media screen and (max-width: 1600px) {
@@ -93,8 +102,16 @@
 } 
 @media screen and (max-width: 900px) {
   .popup__image {
-   
+    padding-top: 0px;
     max-height: 400px;
+  
+  }
+} 
+
+@media screen and (max-width: 500px) {
+  .popup__image {
+    padding-top: 20px;
+ 
 
   }
 } 
@@ -127,7 +144,8 @@
     line-height: 32px;
     color: var(--color);  
     padding-bottom: 5px;
-    padding-left: 10px;  
+    padding-left: 10px; 
+    margin-bottom: auto; 
   }
 } 
 
@@ -183,22 +201,28 @@
 
 
 .popup__button {
+  position: absolute;
   background: transparent;
   border: none;
   padding: 10px;
   outline: none;
   transition: all 0.2s cubic-bezier(0.5, 0, 0, 1);
+  top: 45%;
 }
 
-.popup__slider-button_prev {
-  position: absolute;
-  top: 45%;
+@media screen and (max-width: 500px) {
+  .popup__button {
+    bottom: -15%;
+  }
+  
+} 
+
+
+.popup__slider-button_prev {  
   left: 0px;
 }
 
 .popup__slider-button_next {
-  position: absolute;
-  top: 45%;
   right: 0px;
 }
 
@@ -259,3 +283,6 @@
   }
   
 } 
+
+
+

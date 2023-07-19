@@ -10,7 +10,7 @@
     max-width: fit-content;
 }
 
- @media screen and (max-width: 500px) {  .socials__list {
+ @media screen and (max-width: 900px) {  .socials__list {
 
     flex-direction: row;
     gap: 8px;

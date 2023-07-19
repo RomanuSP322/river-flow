@@ -45,8 +45,7 @@ function ImagePopup(props) {
 
   const handleClose = () => {
     props.onClose();
-    setCurrentImageIndex(0);
-    
+    setCurrentImageIndex(0);    
   };
 
   const next = () => {
@@ -76,11 +75,11 @@ function ImagePopup(props) {
     const currentTouch = e.touches[0].clientX;
     const diff = touchDown - currentTouch;
 
-    if (diff > 5) {
+    if (diff > 4) {
       next();
     }
 
-    if (diff < -5) {
+    if (diff < -4) {
       prev();
     }
 

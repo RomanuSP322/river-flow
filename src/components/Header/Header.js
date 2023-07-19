@@ -22,6 +22,10 @@ function Header({ refs }) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleClose = () => {
+    setIsMenuOpen(false);
+  };
+
   const scrollDown = (ref) => {
     window.scrollTo({
       top: ref.current.offsetTop + 50,
@@ -65,6 +69,7 @@ function Header({ refs }) {
           <div
             className={`box-menu ${isMenuOpen ? 'full-menu' : ''}`}
             onMouseLeave={() => setIsMenuOpen(false)}
+                onClick={(e) => e.currentTarget === e.target && handleClose()}
           >
             <div className='wrapper' onClick={toggleMenu}>
               <div className={`hamburger ${isMenuOpen ? 'active' : ''}`}>
@@ -76,26 +81,27 @@ function Header({ refs }) {
             </div>
 
             <div className='menu'>
-              <a className='active' onClick={() => scrollDown(wakesurfRef)}>
-                <span className='text'>Вейксерф</span>
-              </a>
-              <a onClick={() => scrollDown(boatrentRef)}>
-                <span className='text'>Аренда катера</span>
-              </a>
-              <a onClick={() => scrollDown(wakeboardRef)}>
-                <span className='text'>Вейкборд и лыжи</span>
+            <a onClick={() => scrollDown(boatrentRef)}>
+                <span className='text noselect'>Аренда катера</span>
               </a>
               <a onClick={() => scrollDown(walksRef)}>
-                <span className='text'>Прогулки на катере</span>
+                <span className='text noselect'>Прогулки на катере</span>
               </a>
+              <a onClick={() => scrollDown(wakeboardRef)}>
+                <span className='text noselect'>Вейкборд и лыжи</span>
+              </a>
+
+              <a className='active' onClick={() => scrollDown(wakesurfRef)}>
+                <span className='text'>Вейксерф</span>
+              </a>   
               <a onClick={() => scrollDown(certificatsRef)}>
-                <span className='text'>Cертификаты</span>
+                <span className='text noselect'>Cертификаты</span>
               </a>
               <a onClick={() => scrollDown(faqRef)}>
-                <span className='text'>Вопросы</span>
+                <span className='text noselect'>Вопросы</span>
               </a>
               <a onClick={() => scrollDown(contactsRef)}>
-                <span className='text'>Контакты</span>
+                <span className='text noselect'>Контакты</span>
               </a>
             </div>
           </div>

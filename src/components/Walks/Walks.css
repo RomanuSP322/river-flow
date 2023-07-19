@@ -55,6 +55,7 @@
 .walks__title {
     max-width: 550px; 
     color: #ffffff !important;
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.25) !important;
 }
 
 @media screen and (max-width: 500px) {
@@ -84,20 +85,27 @@
   
    
     max-width: 715px; 
-    padding-bottom: 50px; 
+    padding-bottom: 30px; 
 }
 
-@media screen and (max-width: 1600px) {
-    .walks__description {
-      
-          padding-bottom: 90px; 
-      }
-  }
-
-  @media screen and (max-width: 390px) {
+@media screen and (max-width: 1500px) {
     .walks__description {
       
           padding-bottom: 110px; 
+      }
+  }
+
+  @media screen and (max-width: 900px) {
+    .walks__description {
+      
+          padding-bottom: 130px; 
+      }
+  }
+
+  @media screen and (max-width: 345px) {
+    .walks__description {
+      
+          padding-bottom: 150px; 
       }
   }
 

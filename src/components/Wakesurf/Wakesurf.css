@@ -141,13 +141,12 @@ padding-bottom: 20px;
 }
 
 .wakesurf__photos {
- 
+  
 }
 
 @media screen and (max-width: 900px) {
   .wakesurf__photos {
-    position: relative;
-
+    
   }
   
 }
@@ -155,6 +154,8 @@ padding-bottom: 20px;
 .wakesurf__photos-img {
   object-fit: cover;
   width: 100%;
+  z-index: 3;
+  position: relative;
 }
 
 @media screen and (max-width: 900px) {
@@ -162,9 +163,38 @@ padding-bottom: 20px;
     position: absolute;
     object-fit: cover;
     width: 130%;
-    top: -150px;
+    top: -200px;
     left: -15%;   
   
+  }
+  
+}
+
+.wakesurf__photos-wrapper {
+  position: relative;
+ 
+}
+
+
+
+.wakesurf__video {
+  position: absolute;
+  width: 35%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto;
+  padding: 10px;
+  background-color: #ECEBE7;
+  z-index: 2;
+}
+
+@media screen and (max-width: 900px) {
+  .wakesurf__video {
+    
+    width: 45%;
+
   }
   
 }

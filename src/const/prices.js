@@ -1,48 +1,24 @@
 const wakesurfPrice = [
   {
     id: '1',
-    boat: 'Regal Session 22',
-    color:'#D9C108',
-    prices: [
-      {
-        name: 'Сет',
-        value: '4000 р/25м',
-      },
-      {
-        name: 'Будни',
-        value: '7000 р/ч',
-      },
-      {
-        name: 'Выходные',
-        value: '8000 р/ч',
-      },
-    ],
-    location: {
-      name: 'Долгопрудный',
-      value:'Санаторий Березки',
-      url:'https://yandex.ru/maps/-/CCUKnNtGXA'
-    }
-  },
-  {
-    id: '2',
-    boat: 'MasterCraft\n X-star',
+    boat: 'Мастер Х',
     color:'#000000',
     prices: [
       {
         name: 'Сет',
-        value: '4500 р/25м',
+        value: '25 минут',
       },
       {
         name: 'Будни',
-        value: '8000 р/ч',
+        value: '4500 р/сет',
       },
       {
         name: 'Выходные',
-        value: '9000 р/ч',
+        value: '5000 р/сет',
       },
     ],
     location: {
-      name: 'Долгопрудный',
+      name: 'Пироговское',
       value:'Санаторий Березки',
       url:'https://yandex.ru/maps/-/CCUKnNtGXA'
     }
@@ -53,20 +29,20 @@ const wakesurfPrice = [
 const wakeboardPrice = [
   {
     id: '1',
-    boat: 'Favourit 480',
+    boat: 'Фавор',
     color:'#B44748',
     prices: [
       {
         name: 'Сет',
-        value: '3000 р/25м',
+        value: '25 минут',
       },
       {
         name: 'Будни',
-        value: '5000 р/ч',
+        value: '3000 р/сет',
       },
       {
         name: 'Выходные',
-        value: '6000 р/ч',
+        value: '3500 р/сет',
       },
     ],
     location: {
@@ -75,52 +51,29 @@ const wakeboardPrice = [
       url:'https://yandex.ru/maps/-/CCUOaJFNxD'
     }
   },
+
   {
     id: '2',
-    boat: 'Sea Ray 230',
-    color: '#47B48F',
-    prices: [
-      {
-        name: 'Сет',
-        value: '6000 р/25м',
-      },
-      {
-        name: 'Будни',
-        value: '10000 р/ч',
-      },
-      {
-        name: 'Выходные',
-        value: '11000 р/ч',
-      },
-    ],
-    location: {
-      name: 'Долгопрудный',
-      value:'Яхт Клуб Спартак',
-      url:'https://yandex.ru/maps/-/CCUOaJFNxD'
-    }
-  },
-  {
-    id: '3',
-    boat: 'Regal Session 22',
+    boat: 'Регал',
     color:'#D9C108',
     prices: [
       {
         name: 'Сет',
-        value: '6000 р/25м',
+        value: '25 минут',
       },
       {
         name: 'Будни',
-        value: '8000 р/ч',
+        value: '4500 р/сет',
       },
       {
         name: 'Выходные',
-        value: '9000 р/ч',
+        value: '5000 р/сет',
       },
     ],
     location: {
-      name: 'Долгопрудный',
-      value:'Санаторий Березки',
-      url:'https://yandex.ru/maps/-/CCUKnNtGXA'
+      name: 'Пироговское',
+      value:'Хлебниково',
+      url:'https://yandex.ru/maps/-/CDcvAzC'
     }
   },
 ];

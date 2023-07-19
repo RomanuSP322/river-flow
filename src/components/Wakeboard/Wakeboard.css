@@ -1,8 +1,17 @@
 .wakeboard {
   max-width: 2070px;
   margin-left: auto;
-  padding-left: 155px;
+ 
 }
+
+@media screen and (max-width: 1920px) {
+  .wakeboard {
+    max-width: 2070px;
+    margin-left: auto;
+    padding-left: 155px;
+  }
+}
+
 
 @media screen and (max-width: 1600px) {
   .wakeboard {
@@ -13,17 +22,54 @@
 }
 
 
-
 .wakeboard__columns {
   display: flex;
-  background-image: var(--wakeboard);
-  background-size: cover;
+  background-image: var(--wakeboard-wide);
+  background-size: contain;
   background-position: top left;
   background-repeat: no-repeat;
   padding-bottom: 50px;
 }
 
-@media screen and (max-width: 500px) {
+
+
+@media screen and (max-width: 1920px) {
+  .wakeboard__columns {
+    display: flex;
+    background-image: var(--wakeboard);
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+  }
+  
+}
+
+@media screen and (max-width: 1300px) {
+  .wakeboard__columns {
+    display: flex;
+    background-image: var(--wakeboard-wide);
+    background-size: 37%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+  }
+  
+}
+
+@media screen and (max-width: 1150px) {
+  .wakeboard__columns {
+    display: flex;
+    background-image: var(--wakeboard-wide);
+    background-size: 30%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+  }
+  
+}
+
+@media screen and (max-width: 900px) {
   .wakeboard__columns {
     background-image: var(--wakeboard-mobile);
     background-size: 100%;
@@ -48,8 +94,17 @@
 
 .wakeboard__column_left {
   margin-right: 45px;
-  width: 560px;
+  width: 660px;
 }
+
+
+@media screen and (max-width: 1920px) {
+  .wakeboard__column_left {
+    margin-right: 45px;
+    width: 560px;
+  }
+}
+
 
 @media screen and (max-width: 1400px) {
   .wakeboard__column_left {
@@ -58,7 +113,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakeboard__column_left {
     margin-right: 0px;
     padding-top: 0px;
@@ -67,6 +122,17 @@
 }
 
 .wakeboard__column_right {
+
+}
+
+
+@media screen and (max-width: 900px) {
+  .wakeboard__column_right {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
 }
 
 .wakeboard__title {
@@ -74,7 +140,7 @@
   max-width: 460px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakeboard__title {
     
     padding-top: 10px;
@@ -85,10 +151,10 @@
   max-width: 460px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakeboard__subtitle {
     
-    padding-bottom: 110%;
+    padding-bottom: 112%;
   }
 }
 
@@ -109,7 +175,7 @@
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakeboard__info {
     flex-direction: column;
     align-items: center;
@@ -130,7 +196,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .wakeboard__prices {
     padding-right: 0px;
     width: 100%;

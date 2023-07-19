@@ -14,7 +14,7 @@ function Footer() {
   };
 
   return (
-    <footer style={styles} className='footer'>
+    <footer style={styles} className='footer' id='contacts'>
       <div className='footer__content'>
         <div className='footer__socials'>
           <img src={logoWhite} alt='RiverFlow logo' className='footer__logo' />
@@ -41,7 +41,7 @@ function Footer() {
             
             <a
               className='footer__contacts-link'
-              href={`tel: ${contactsInfo.phone}`}
+              href={`tel:${contactsInfo.phone}`}
             >
               <img src={phoneIcon} alt='' className='footer__contacts-ico' />
               <p className='footer__contacts-value'>{contactsInfo.phone}</p>
@@ -50,7 +50,7 @@ function Footer() {
           <div className='footer__contacts-item'>
             <a
               className='footer__contacts-link'
-              href={`mailto: ${contactsInfo.email}`}
+              href={`mailto:${contactsInfo.email}`}
             >
               <img src={emailIcon} alt='' className='footer__contacts-ico' />
               <p className='footer__contacts-value'>{contactsInfo.email}</p>

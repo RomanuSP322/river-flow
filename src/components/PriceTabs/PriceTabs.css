@@ -6,6 +6,7 @@
 display: flex;
 align-items: center;
 width: 580px;
+position: relative;
 }
 
 @media screen and (max-width: 1400px) {
@@ -21,7 +22,7 @@ width: 580px;
   
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .tabs{
     background-image: var(--pricebg);
     background-size: 270px 220px;
@@ -29,7 +30,7 @@ width: 580px;
     background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  max-width: 350px;
+  width: 350px;
   }
   
 }
@@ -42,10 +43,44 @@ width: 580px;
     background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  max-width: 100%;
+  width: 320px;
   }
   
 }
+
+
+.tabs__choice {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  color: var(--color-secondary);
+  font-size: 18px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .tabs__choice {
+   
+    top: 5%;
+    left: 10%;
+  
+    font-size: 14px;
+  }
+  
+}
+
+
+@media screen and (max-width: 360px) {
+  .tabs__choice {
+    
+    top: 5%;
+    left: 5%;
+  
+    font-size: 14px;
+  }
+  
+}
+
 
 
 
@@ -70,6 +105,7 @@ width: 580px;
   box-sizing: border-box;
   padding-left: 15px;
   transition: color 0.4s cubic-bezier(0.65, 0, 0.076, 1);
+  
 }
 
 
@@ -89,7 +125,7 @@ width: 580px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .tab__title{
     font-size: 16px;
     line-height: 24px;
@@ -111,14 +147,13 @@ width: 580px;
 }
 
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 360px) {
   .tab__title{
     padding-left: 0px;
     width: 130px;
     font-size: 14px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+   flex-wrap: wrap;
     padding-left: 10px; 
   }
 }
@@ -145,7 +180,7 @@ width: 580px;
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .tab__title_active {
     background-image: var(--activetab);
     background-size: 150px 100%;
@@ -177,7 +212,7 @@ width: 580px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .tabs__content { 
     padding-top: 20px; 
     font-size: 16px;
@@ -196,7 +231,7 @@ width: 580px;
   position: absolute;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .tab__content { 
     display: flex;
     flex-direction: column;
@@ -227,11 +262,21 @@ width: 580px;
   fill: var(--active-color);
 }
 
+@media screen and (max-width: 360px) {
+  .tab__boat-ico {
+    width: 100%;
+  }
+  
+}
+
+
+
+
 .tab-table {
   min-width: 350px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .tab-table {
     min-width: 180px;
    
@@ -240,11 +285,30 @@ width: 580px;
 }
 
 
+.tab__about-ico {
+  padding-left: 4px; 
+  transition: all  0.4s cubic-bezier(0.65, 0, 0.076, 1); 
+}
+
+.tab__title:hover .tab__about-ico{
+  animation: scale 1s infinite;
+  }
+
+
+.tab__about-ico:hover {
+  cursor: help;
+}
+
+.tab__title:not(.tab__title_active) .tab__about-ico {
+  display: none;
+}
+
+
 .tab-table__name {
   margin: 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .tab-table__name {
     font-size: 16px;
   }
@@ -264,7 +328,7 @@ width: 580px;
   /* color: var(--active-color); */
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .tab-table__value {
     font-size: 16px;
   }
@@ -294,7 +358,7 @@ width: 580px;
   transition: all  0.4s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .tab-table__link {     
     flex-wrap: wrap;
     align-items: center;
@@ -312,12 +376,38 @@ width: 580px;
   margin-left: 15px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .tab-table__location {
     margin-left: 0;
     text-align: center;
     flex: 100%;
     
     padding-top: 5px;
+  }
+}
+
+.tab-table__link:hover  .tab-table__location-ico{
+transform: scale(1.5);
+}
+
+
+
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  
+  40% {
+    transform: scale(1.3);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+
+  100% {
+    transform: scale(1);
   }
 }

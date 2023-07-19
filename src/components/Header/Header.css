@@ -64,3 +64,10 @@
   flex-grow: 1;
   padding-right: 84px;
 }
+
+@media screen and (max-width: 500px) {
+  .header__socials {
+    flex-grow: 1;
+    padding-right: 24px;
+  }
+}

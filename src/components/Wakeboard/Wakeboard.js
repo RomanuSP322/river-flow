@@ -2,8 +2,9 @@ import React from "react";
 
 import { wakeboardInfo } from "../../const/info";
 import { wakeboardPrice } from "../../const/prices";
-import wakeboardBg from "../../images/wakeboard-bg2.png";
-import wakeboardBgMobile from "../../images/wakeboard-bg-mobile.png";
+import wakeboardBg from "../../images/wakeboard-bg2.webp";
+import wakeboardBgMobile from "../../images/wakeboard-bg-mobile.webp";
+import wakeboardBgWide from "../../images/wakeboard-bg-wide.png";
 import PriceTabs from "../PriceTabs/PriceTabs";
 
 import "./Wakeboard.css";
@@ -12,15 +13,15 @@ import Button from "../Button/Button";
 import CallMe from "../CallMe/CallMe";
 
 
-function Wakeboard({windowWidth}) {
+function Wakeboard({windowWidth, panels, onPhotoClick}) {
   const [visibleBoat, setVisibleBoat] = React.useState(wakeboardPrice[0].boat);
   const boat = (r) => {
     setVisibleBoat(r);
   };
 
   return (
-    <div className="wakeboard">
-      <div className="wakeboard__columns"  style={{ "--wakeboard": `url(${wakeboardBg})`, "--wakeboard-mobile": `url(${wakeboardBgMobile})`  }}>
+    <div className="wakeboard"  id='wakeboard'>
+      <div className="wakeboard__columns"  style={{ "--wakeboard": `url(${wakeboardBg})`, "--wakeboard-mobile": `url(${wakeboardBgMobile})`,"--wakeboard-wide": `url(${wakeboardBgWide})`   }}>
         <div className="wakeboard__column_left" >       
         </div>
         <div className="wakeboard__column_right">
@@ -37,9 +38,9 @@ function Wakeboard({windowWidth}) {
           <DescriptionTabs data={wakeboardInfo} boat={visibleBoat} windowWidth= {windowWidth}/>
           <div className="wakeboard__info">
             <div className="wakeboard__prices">
-            <PriceTabs data={wakeboardPrice} boat={boat}/>
+            <PriceTabs data={wakeboardPrice} boat={boat} panels={panels} onPhotoClick={onPhotoClick}/>
            
-            <Button name='Забронировать' height={60}/>
+            <Button name='Онлайн запись' height={60} booking={true} url={visibleBoat==="Фавор" ? "https://w931545.yclients.com/widgetJS"  : "https://w931543.yclients.com/widgetJS" }/>
            
           </div>
           <CallMe />

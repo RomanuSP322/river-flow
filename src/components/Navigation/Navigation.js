@@ -14,26 +14,10 @@ function Navigation({ refs, scrollDown }) {
   } = refs;
 
   return (
-    <div className='navigation'>
-      <nav className='navigation__menu'>
+    <div className='navigation '>
+      <nav className='navigation__menu '>
         <ul className='navigation__list '>
-          <li className='navigation__item_type_header'>
-            <button
-              onClick={() => scrollDown(wakesurfRef)}
-              className='navigation__button navigation__link_type_header'
-            >
-              Вейксерф
-            </button>
-          </li>
-          <li className='navigation__item_type_header'>
-            <button
-              onClick={() => scrollDown(wakeboardRef)}
-              className='navigation__button navigation__link_type_header'
-            >
-              Вейкборд и лыжи
-            </button>
-          </li>
-          <li className='navigation__item_type_header'>
+        <li className='navigation__item_type_header'>
             <button
               onClick={() => scrollDown(boatrentRef)}
               className='navigation__button navigation__link_type_header'
@@ -47,6 +31,23 @@ function Navigation({ refs, scrollDown }) {
               className='navigation__button navigation__link_type_header'
             >
               Прогулки на катере
+            </button>
+          </li>
+
+          <li className='navigation__item_type_header '>
+            <button
+              onClick={() => scrollDown(wakeboardRef)}
+              className='navigation__button navigation__link_type_header '
+            >
+              Вейкборд и лыжи
+            </button>
+          </li>
+          <li className='navigation__item_type_header '>
+            <button
+              onClick={() => scrollDown(wakesurfRef)}
+              className='navigation__button navigation__link_type_header '
+            >
+              Вейксерф
             </button>
           </li>
           <li className='navigation__item_type_header'>

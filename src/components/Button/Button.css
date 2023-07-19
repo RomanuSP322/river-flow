@@ -21,12 +21,13 @@
 
 
 .button__name {
+  font-family: "Baloo", "Arial", sans-serif;
   position: relative;
   z-index: 5;
   margin: 0;
   padding: 0;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 23px;
+  font-weight: 400;
   color:#ffffff;
   text-align: center;
   padding-left: 10px;
@@ -34,7 +35,7 @@
 
 @media screen and (max-width: 500px) {
   .button__name {
-    font-size: 18px;
+    font-size: 17px;
     padding-left: 10px;
   }
 }

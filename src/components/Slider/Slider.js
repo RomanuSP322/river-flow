@@ -1,17 +1,18 @@
-import React, {useState } from "react";
-import "./Slider.css";
-import arrowLeft from "../../images/arrow-left.png";
-import arrowRight from "../../images/arrow-right.png";
-import pricebgLine from "../../images/pricebg-line.png";
-import Button from "../Button/Button";
+import React, { useState } from 'react';
+import './Slider.css';
+import arrowLeft from '../../images/arrow-left.png';
+import arrowRight from '../../images/arrow-right.png';
+import pricebgLine from '../../images/pricebg-line.png';
+import Button from '../Button/Button';
+import CallMe from '../CallMe/CallMe';
 
-function Slider({ data }) {
+function Slider({ data, panels, onPhotoClick, onContactClick }) {
   const [visibleTab, setVisibleTab] = useState(0);
   const windowWidth = document.body.clientWidth;
   const isMobile = windowWidth < 500;
   const slideWidth = isMobile ? windowWidth - 40 : 1150;
   const openedWidth = !isMobile ? windowWidth / 2 - slideWidth / 2 : 0;
-  const [isDragging, setIsDragging] = useState(false);
+
   const [touchPosition, setTouchPosition] = useState(0);
   const [transition, setTransition] = useState(0);
   const length = data.length - 1;
@@ -31,41 +32,6 @@ function Slider({ data }) {
     }
   };
 
-  const handleClickStart = (e) => {
-    const touchDown = e.clientX;
-    setTouchPosition(touchDown);
-    setIsDragging(true);
-    setTransition(0);
-  };
-
-  const handleMouseUp = (event) => {
-    setIsDragging(false);
-    setTransition(0.4);
-    setPosX(visibleTab * slideWidth);
-  };
-
-  const handleMouseEnter = (event) => {
-    setTransition(0);
-  };
-
-  const handleClickMove = (e) => {
-    if (isDragging) {
-      const touchDown = touchPosition;
-      if (touchDown === null) {
-        return;
-      }
-      const currentTouch = e.clientX;
-      const diff = touchDown - currentTouch;
-      const newPosX = posX + diff * 1.5;
-
-      if (newPosX > 0 && newPosX < length * slideWidth) {
-        setPosX(newPosX);
-        setTouchPosition(e.clientX);
-        setVisibleTab(Math.round(newPosX / slideWidth));
-      }
-    }
-  };
-
   const handleTouchStart = (e) => {
     setTransition(0.4);
     const touchDown = e.touches[0].clientX;
@@ -82,20 +48,38 @@ function Slider({ data }) {
     const currentTouch = e.touches[0].clientX;
     const diff = touchDown - currentTouch;
 
-    if (diff > 5) {
+    if (diff > 6) {
       next();
     }
 
-    if (diff < -5) {
+    if (diff < -6) {
       prev();
     }
 
     setTouchPosition(null);
   };
 
+  const photoBoatHandler = (boat) => {
+    const boatpanel = panels.find((panel) => panel.label === boat);
+
+    onPhotoClick({
+      title: boatpanel.label,
+      photos: boatpanel.photos,
+      color: boatpanel.text_color,
+    });
+  };
+
+  const slideHandler = (item) => {
+    onPhotoClick({
+      title: item.title,
+      photos: item.photos,
+      color: '#0E2A36',
+    });
+  };
+
   const listTitles = data.map((item) => (
     <li
-    key={item.id}
+      key={item.id}
       onClick={() => {
         setPosX(item.id * slideWidth);
         setVisibleTab(item.id);
@@ -103,8 +87,8 @@ function Slider({ data }) {
       }}
       className={
         visibleTab === item.id
-          ? "slider__title slider__title_active"
-          : "slider__title"
+          ? 'slider__title slider__title_active'
+          : 'slider__title'
       }
     >
       {item.title}
@@ -112,43 +96,72 @@ function Slider({ data }) {
   ));
 
   const listContent = data.map((item) => (
-    <div className="slider-item" key={item.id}>
+    <div
+      className='slider-item'
+      key={item.id}     
+    >
       <div
-        className="slider-item__columns noselect"
+        className='slider-item__columns noselect'
         style={{
           width: `${slideWidth}px`,
         }}
       >
-        <div className="slider-item__clumn_left">
+        <div className='slider-item__clumn_left' onClick={item.photos ? () => slideHandler(item) : undefined}>
           <img
             src={item.img}
             alt={item.title}
-            className="slider-item__img noselect"
+            className='slider-item__img noselect'
           />
-          <div className="slider-item__btn">
-            <Button name="Забронировать" width="200" height="50" />
+          <div className='slider-item__btn'>
+            <Button
+              name='Забронировать'
+              width='200'
+              height='50'
+              action={(e) => {
+                e.stopPropagation();
+                onContactClick('Забронировать прогулку по телефону:')}
+              }
+            />
           </div>
         </div>
 
-        <div className="slider-item__clumn_right">
-          <div className="slider-item__section">
-            <p className="slider-item__title">{item.title}</p>
+        <div className='slider-item__clumn_right'>
+          <div className='slider-item__section'>
+            <p className='slider-item__title'>{item.title}</p>
             <p
-              className="slider-item__price"
-              style={{ "--pricebg-line": `url(${pricebgLine})` }}
+              className='slider-item__price slider-item__price_active'
+              style={{ '--pricebg-line': `url(${pricebgLine})` }}
+              onClick={() => onPhotoClick({
+                title: item.price,
+                photos: item.maps,
+                
+              })}
+              title={
+                item.id === 0
+                  ? ''
+                  : 'За указанную продолжительность. Можно изменить.'
+              }
             >
-              <span className="slider-item__price-span">Цена</span> {item.price}
+               {item.price}
             </p>
           </div>
-          <p className="p slider-item__description">{item.description}</p>
+          <p className='p slider-item__description' onClick={item.photos ? () => slideHandler(item) : null}>{item.description}</p>
           {item.include && (
-            <div className="slider-item__include">
+            <div className='slider-item__include'  onClick={item.photos ? () => slideHandler(item) : null}>
               {item.include.map((pos, i) => (
-                <div className="slider-item__include-item" key={i}>
-                  <div className="slider-item__include-ico-wrapper">
-                    <img src={pos.ico} className="slider-item__include-ico" />
+                <div
+                  className={`slider-item__include-item ${
+                    i === 0 && 'slider-item__boat-item'
+                  }`}
+                  key={i}
+                  onClick={
+                    i === 0 ? () => photoBoatHandler(item.boat) : null
+                  }
+                >
+                  <div className='slider-item__include-ico-wrapper'>
+                    <img src={pos.ico} className='slider-item__include-ico' />
                   </div>
-                  <p className="slider-item__include-info">{pos.name}</p>
+                  <p className='slider-item__include-info'>{pos.name}</p>
                 </div>
               ))}
             </div>
@@ -159,18 +172,14 @@ function Slider({ data }) {
   ));
 
   return (
-    <div className="slider">
-      <ul className="slider__titles">{listTitles}</ul>
+    <div className='slider'>
+      <ul className='slider__titles'>{listTitles}</ul>
 
-      <div className="slider__content">
+      <div className='slider__content'>
         <div
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
-          onMouseDown={handleClickStart}
-          onMouseMove={handleClickMove}
-          onMouseUp={handleMouseUp}
-          onMouseEnter={handleMouseEnter}
-          className="slider-item__content-wrapper"
+          className='slider-item__content-wrapper'
           // style={{
           //   transform: `translateX(${visibleTab * -slideWidth + openedWidth + diff}px)`,
           // }}
@@ -181,39 +190,44 @@ function Slider({ data }) {
         >
           {listContent}
         </div>
-        <div className="slider__buttons">
-          <button
-            className="slider__button slider__button_left "
-            onClick={() => {
-              prev();
-              setTransition(0.6);
-            }}
-            disabled={visibleTab === 0}
-          >
-            <img
-              src={arrowLeft}
-              alt="grunge arrow"
-              className={`slider__button-img ${
-                visibleTab === 0 && "slider__button-img__inactive"
-              }`}
-            />
-          </button>
-          <button
-            className="slider__button slider__button_right"
-            onClick={() => {
-              next();
-              setTransition(0.6);
-            }}
-            disabled={visibleTab === length}
-          >
-            <img
-              src={arrowRight}
-              alt="grunge arrow"
-              className={`slider__button-img ${
-                visibleTab === length && "slider__button-img__inactive"
-              }`}
-            />
-          </button>
+        <div className='slider__navigation'>
+          <div className='slider__buttons'>
+            <button
+              className='slider__button slider__button_left '
+              onClick={() => {
+                prev();
+                setTransition(0.6);
+              }}
+              disabled={visibleTab === 0}
+            >
+              <img
+                src={arrowLeft}
+                alt='grunge arrow'
+                className={`slider__button-img ${
+                  visibleTab === 0 && 'slider__button-img__inactive'
+                }`}
+              />
+            </button>
+            <button
+              className='slider__button slider__button_right'
+              onClick={() => {
+                next();
+                setTransition(0.6);
+              }}
+              disabled={visibleTab === length}
+            >
+              <img
+                src={arrowRight}
+                alt='grunge arrow'
+                className={`slider__button-img ${
+                  visibleTab === length && 'slider__button-img__inactive'
+                }`}
+              />
+            </button>
+          </div>
+          <div className='slider__callme'>
+            <CallMe bg={true} />
+          </div>
         </div>
       </div>
     </div>

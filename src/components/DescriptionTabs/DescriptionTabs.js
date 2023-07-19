@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import pricebg from '../../images/pricebg.png';
 import tab from '../../images/desctabbg.svg';
 import tabmarker from '../../images/tabmarker.png';
@@ -9,9 +9,9 @@ function DescriptionTabs({ data, boat, windowWidth}) {
   const [visibleTab, setVisibleTab] = React.useState(data[0].id);
 
   const tabWidth = document.body.clientWidth > 1400 ? 715 : document.body.clientWidth > 900 ? 620 : document.body.clientWidth > 350 ? 350 : 300
-  // const markerWidth = document.body.clientWidth > 1400 ? 230 : document.body.clientWidth > 1200 ? 200 : document.body.clientWidth > 350 ? 120 : 100
+ 
   const [touchPosition, setTouchPosition] = useState(null);
-  const frameWidth = windowWidth > 800 ? 480 : windowWidth-20;
+  const frameWidth = windowWidth > 1400 ? 635 : document.body.clientWidth > 900 ? 580 : document.body.clientWidth > 350 ? 350 : 300
   const [frameStyle, setFrameStyle] = useState({"pointerEvents": "none"});
 
   const next = () => {
@@ -88,7 +88,7 @@ function DescriptionTabs({ data, boat, windowWidth}) {
               <div className='desc-tab__include-ico-wrapper'>
                 <img src={pos.ico} className='desc-tab__include-ico' />
               </div>
-              <p className='desc-tab__include-info'>{pos.name}{' '}{pos.name ==='Вместимость' ? (boat === 'Favourit 480' ? '5 гостей' : (boat === 'Sea Ray 230' ? '7 гостей' : (boat === 'Regal Session 22' ? '7 гостей' : ''))) : ''}{pos.name ==='Катер' && boat}</p>
+              <p className='desc-tab__include-info'>{pos.name}{' '}{pos.name ==='Вместимость' ? (boat === 'Фавор' ? '5 гостей' : (boat === 'Sea Ray 230' ? '7 гостей' : (boat === 'Регал' ? '7 гостей' : ''))) : ''}{pos.name ==='Катер' && boat}</p>
             </div>
           ))}
         </div>
@@ -109,9 +109,9 @@ function DescriptionTabs({ data, boat, windowWidth}) {
 {item.url && (  
      <div className='desc-tab__map' onClick={()=> setFrameStyle({"pointerEvents": "auto"})}>
             <iframe
-            src={(boat === 'Favourit 480' ? item.url[0] : (boat === 'Sea Ray 230' ? item.url[1] : (boat === 'Regal Session 22' ? item.url[2] : '')))}
+            src={(boat === 'Фавор' ? item.url[0] : (boat === 'Sea Ray 230' ? item.url[1] : (boat === 'Регал' ? item.url[2] : '')))}
             width={frameWidth}
-            height="260"
+            height="280"
             frameBorder="0"                   
             style={frameStyle}
           ></iframe>

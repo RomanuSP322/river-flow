@@ -17,7 +17,17 @@
 @media screen and (max-width: 500px) {
   .box-menu {  
     right: 5px;
-    top: 2px;
+    top: 40%;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .box-menu {  
+    right: 5px;
+    top: 5px;
     width: 35px;
     height: 35px;
     border-radius: 20px;
@@ -120,10 +130,8 @@
   text-decoration: none;
   width: 220px;
   height: 48px;
-  line-height: 48px;
-  
+  line-height: 48px;  
 }
-
 
 
 .menu a span {

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { faq } from "../../const/info";
+
 import "./FAQ.css";
 import circle from "../../images/circle.png"
 
@@ -16,7 +17,7 @@ function FAQ() {
 
   function dropdownItem(item, idx) {
     return (
-      <div className="faq__item" key={idx}>
+      <div className="faq__item" key={idx} id='faq'>
         <button
           onClick={() => onClick(idx)}
           className={`faq__button ${

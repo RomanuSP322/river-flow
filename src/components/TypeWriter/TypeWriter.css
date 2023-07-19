@@ -1,0 +1,37 @@
+
+
+.typewriter {
+  max-width: 100%;
+  text-align: center;
+}
+
+.sentence:not(.last-sentence) {
+  display: block;
+}
+
+.last-sentence {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.dynamic-text {
+  position: relative;
+}
+.dynamic-text:after {
+  content: "|";
+  position: absolute;
+  left: calc(100% - 0px);
+  bottom: 4px;
+}
+.dynamic-text.fade:after {
+  animation: fade 1s infinite ease-in-out;
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

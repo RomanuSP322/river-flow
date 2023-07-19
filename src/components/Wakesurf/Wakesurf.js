@@ -1,26 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+
 import { wakesurfPrice } from '../../const/prices';
 import { wakesurfInfo } from '../../const/info';
 import wakesurfboard from '../../images/wakesurfboard.png';
 import wakesurfboardMobile from '../../images/wakeboardfull.png';
-import wakesurfPhotos from '../../images/photoswakesurf.png';
+import wakesurfPhotos from '../../images/photoswakesurf3.webp';
 import PriceTabs from '../PriceTabs/PriceTabs';
+
 
 import './Wakesurf.css';
 import DescriptionTabs from '../DescriptionTabs/DescriptionTabs';
 import Button from '../Button/Button';
 import CallMe from '../CallMe/CallMe';
-
-function Wakesurf({ windowWidth }) {
+const LazyVideo = React.lazy(() => import('./Video'));
+function Wakesurf({ windowWidth, panels, onPhotoClick}) {
   const [visibleBoat, setVisibleBoat] = React.useState(wakesurfPrice[0].boat);
   const boat = (r) => {
     setVisibleBoat(r);
   };
-  const frameWidth = windowWidth > 1215 ? 480 : windowWidth > 500 ? 400 : windowWidth;
+  const frameWidth = windowWidth > 1215 ? 480 : windowWidth > 1000 ? 280 : windowWidth > 500 ? 400 : windowWidth;
   const [frameStyle, setFrameStyle] = useState({ 'pointerEvents': 'none' });
 
+  const videoRef = useRef(null); // Create a ref for the video element
+
+  const handleButtonClick = () => {
+    // Pause or stop the video based on its current state
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+     
+    }
+  };
+
   return (
-    <div className='wakesurf'>
+    <div className='wakesurf' id="wakesurf">
       <div
         className='wakesurf__info'
         style={{
@@ -30,41 +44,36 @@ function Wakesurf({ windowWidth }) {
       >
         <div className='wakesurf__board'>
           <h2 className='h2'>Вейксерф</h2>
-          <h3 className='h3 wakesurf__subtitle'>Твоя бесконечная волна</h3>
-          <PriceTabs data={wakesurfPrice} boat={boat} />
+          <h3 className='h3 wakesurf__subtitle'>На пироговском вдхр</h3>
+          <PriceTabs data={wakesurfPrice} boat={boat} panels={panels} onPhotoClick={onPhotoClick}/>
           <div className='wakesurf__desc-tabs'>
             <DescriptionTabs data={wakesurfInfo} boat={visibleBoat} />
           </div>
-          <Button name='Записаться' />
+          <Button name='Онлайн запись' booking={true} url={visibleBoat==="Regal 22"  ? "https://w931543.yclients.com/widgetJS":"https://w931544.yclients.com/widgetJS"}/>
         </div>
       </div>
-      <div className='wakesurf__photos'>
-        <img src={wakesurfPhotos} className='wakesurf__photos-img' />
+      <div className='wakesurf__photos' onClick={handleButtonClick}>
+        <div className='wakesurf__photos-wrapper' >         
+        <img src={wakesurfPhotos} className='wakesurf__photos-img' />        
+<LazyVideo videoRef={videoRef} />
+
+     
+       
+        </div>
         <div className='wakesurf__contact'>
           <div
             onClick={() => setFrameStyle({ 'pointerEvents': 'auto' })}
             className='frame'
           >
-            {visibleBoat === 'Regal Session 22' && (
+           
               <iframe
-                src='https://yandex.ru/map-widget/v1/?um=constructor%3A1b7269cb565ad9b029b871f543a12b8d06c4609e1b89d40a09fdf6d97e529947&amp;source=constructor'
+                src='https://yandex.ru/map-widget/v1/?um=constructor%3Adda236157aa315486602678d6bf3c09d59fe7ebad5037745381ee885e806b9f7&amp;source=constructor'
                 width={frameWidth}
                 height='280'
                 frameBorder='0'
                 className='frame'
                 style={frameStyle}
               ></iframe>
-            )}
-            {visibleBoat === 'MasterCraft\n X-star' && (
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A2cb7bf31e340136ebd28f430374e2c75763b1a77b4c411ccfaf8386d0bf83cc0&amp;source=constructor"
-                width={frameWidth}
-                height='280'
-                frameBorder='0'
-                className='frame'
-                style={frameStyle}
-              ></iframe>        
-            )}
           </div>
           <div className='wakesurf__callme'>
             <CallMe bg={true} />

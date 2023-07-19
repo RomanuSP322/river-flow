@@ -1,7 +1,8 @@
 import React, { useState, useEffect,useRef } from 'react';
 import Header from "../Header/Header";
-import introbg from '../../images/mainbg.png';
-import wakesurfbg from '../../images/wakesurf-bg.png';
+import introbg from '../../images/mainbg.webp';
+import wakesurfbg from '../../images/wakesurf-bg.webp';
+import introbgMobile from "../../images/mainbg-mobile.webp";
 import {panels} from "../../const/info";
 import About from '../About/About';
 import Intro from '../Intro/Intro';
@@ -10,17 +11,13 @@ import Accordion from '../Accordion/Accordion';
 import './Main.css';
 import Wakeboard from '../Wakeboard/Wakeboard';
 import Walks from '../Walks/Walks';
-import Certificates from '../Сertificates/Сertificates';
-import FAQ from '../FAQ/FAQ';
-import Footer from '../Footer/Footer';
+import Button from "../Button/Button";
 
-function Main({onPhotoClick}) {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+const Certificates = React.lazy(() => import("../Сertificates/Сertificates"));
+const FAQ = React.lazy(() => import("../FAQ/FAQ"));
+const Footer = React.lazy(() => import("../Footer/Footer"));
 
-  // useEffect(() => {
-  //   document.title = "ЦТИ";
-  // });
-
+function Main({onPhotoClick, onContactClick}) {
   const wakesurfRef = useRef(null);
   const wakeboardRef = useRef(null);
   const boatrentRef = useRef(null);
@@ -28,7 +25,7 @@ function Main({onPhotoClick}) {
   const faqRef = useRef(null);
   const contactsRef = useRef(null);
   const certificatsRef = useRef(null);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     function handleResize() {
       setWindowWidth(window.innerWidth);
@@ -51,9 +48,12 @@ function Main({onPhotoClick}) {
   }}/>   
       <section
         className='main__section main__intro'
-        style={{ '--introbg': `url(${introbg})` }}
+        style={{ '--introbg': `url(${introbg})`, "--introbg-mobile": `url(${introbgMobile})` }}
+      
       >
-        <Intro />
+        <Intro refs={{
+    boatrentRef: boatrentRef, 
+  }}/>
       </section>
  
       <section className='main__section main__about'>
@@ -67,36 +67,49 @@ function Main({onPhotoClick}) {
   />
       </section>
        
-      <section className='main__section main__wakesurf' style={{ '--wakesurfbg': `url(${wakesurfbg})`}} ref={wakesurfRef}>
-        <Wakesurf  windowWidth = {windowWidth}/>
-      </section>
-          
+
       <section className='main__section main__boatrent' ref={boatrentRef}>
       <Accordion
           panels={panels}
-          type={windowWidth < 501 ? "slider" : "vertical"}
+          type={windowWidth < 901 ? "slider" : "vertical"}
           onPhotoClick={onPhotoClick}
           windowWidth = {windowWidth}
+          onContactClick={onContactClick}      
         />
         </section>
-       
-         <section className='main__section main__wakeboard' ref={wakeboardRef}>
-          <Wakeboard windowWidth = {windowWidth}/>
-        </section>
         <section className=' main__slider' ref={walksRef}>
-        <Walks/>
+        <Walks  panels={panels} onPhotoClick={onPhotoClick} onContactClick={onContactClick}/>
         </section>
-        
+
+      <section className='main__section main__wakeboard' ref={wakeboardRef}>
+          <Wakeboard windowWidth = {windowWidth} panels={panels} onPhotoClick={onPhotoClick} />
+        </section>
+
+
+        <section className='main__section main__wakesurf' style={{ '--wakesurfbg': `url(${wakesurfbg})`}} ref={wakesurfRef}>
+        <Wakesurf windowWidth = {windowWidth} panels={panels} onPhotoClick={onPhotoClick}/>
+      </section>
+
+       
         <section className='main__certificats' ref={certificatsRef}>
-        <Certificates windowWidth = {windowWidth}/>
+        <Certificates windowWidth = {windowWidth} onContactClick={onContactClick}/>
         </section> 
         <section className='main__faq' ref={faqRef}>
         <FAQ/>
         
         </section>
-       
+        <section className='main__lastcall'> 
+    <h2 className='h2 main__lastcall-tittle'>Бронируй катер уже сегодня и <span className="main__lastcall_span"> подари яркие эмоции </span> себе и близким!</h2>
+    <br></br>
+   
+    <Button
+                    name='Забронировать'
+                    width={250}
+                    action={onContactClick}
+                  />
+                  </section>
         <section className='main__footer' ref={contactsRef}>
-        <Footer />
+        <Footer  windowWidth = {windowWidth}/>
         </section>  
     </div>
   );

@@ -31,7 +31,7 @@
     line-height: 32px;
     font-weight: 400;
     margin:0;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     color: var(--color-font);
 }
 
@@ -45,6 +45,30 @@
   
 }
 
+.callme__subtitle {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  margin:0;
+  padding-top: 6px;
+  color: var(--color-font);
+}
+
+@media screen and (max-width: 500px) {
+.callme__subtitle {
+  font-size: 12px;
+  line-height: 24px;
+
+  padding-top: 5px;   
+}
+
+}
+
+.callme__subtitle_white {
+  color: #FFFFFF;
+}
+
+
 .callme__title_white {
     color: #FFFFFF;
 }
@@ -56,8 +80,14 @@
     font-weight: 700;
     display: flex;
     align-items: center;
+    text-decoration: none;
     border: none; 
     transition: all ease-in-out .4s;
+
+}
+
+.callme__button:not(:first-child) {
+  padding-left: 15px; 
 }
 
 @media screen and (max-width: 500px) {
@@ -66,14 +96,28 @@
 }
 
 }
-
-.callme__ico {
-    padding-left: 10px;
+@media screen and (max-width: 500px) {
+.callme__button:not(:first-child) {
+  padding-left: 8px; 
 }
+
+
+}
+
+.callme__links {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.callme__ico {    
+    width: 40px;
+}
+
+
+
 @media screen and (max-width: 500px) {
   .callme__ico {
-    height: 25px;
-    padding-left: 6px;
+    height: 30px;
 }
   
 }

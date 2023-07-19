@@ -1,15 +1,15 @@
 import React from 'react';
 
-import certificatesImg from '../../images/certificates.png';
+import certificatesImg from '../../images/certificates2.webp';
 import Button from '../Button/Button';
 import './Сertificates.css';
 
-function Certificates({windowWidth}) {
+function Certificates({windowWidth, onContactClick}) {
   
   const isMobile = windowWidth < 500
 
   return (
-    <div className='certificates'>
+    <div className='certificates' id='certificates'>
       <div className='certificates__columns'>
         <div className='certificates__column_left'>
           <h2 className='h2 certificates__title'>Подарочные сертификаты</h2>
@@ -42,7 +42,7 @@ function Certificates({windowWidth}) {
             Подарите приключение с помощью подарочного сертификата River Flow уже сегодня!
           </p>
           <div className='certificates__button'>
-            <Button name='Оформить сертификат' width={360} height={75} />
+            <Button name='Оформить сертификат' width={360} height={75} action={()=>onContactClick("Оформить сертификат по телефону:")} />
           </div>
         </div>
   { !isMobile && <div className='certificates__column_right'>
